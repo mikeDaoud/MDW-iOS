@@ -16,6 +16,7 @@
 		4CEF75A71E99694500AA3E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEF75A51E99694500AA3E07 /* LaunchScreen.storyboard */; };
 		CC5352421E9F3C0800F18F37 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5352411E9F3C0800F18F37 /* HomeViewController.m */; };
 		CC5352451E9F3D1A00F18F37 /* SideBarListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5352441E9F3D1A00F18F37 /* SideBarListViewController.m */; };
+		CC5352481E9F64DB00F18F37 /* MyAgendaBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5352471E9F64DB00F18F37 /* MyAgendaBarController.m */; };
 		CC64AA101E9F1DB90058EB6A /* agenda.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9CB1E9F1DB80058EB6A /* agenda.png */; };
 		CC64AA111E9F1DB90058EB6A /* allDays.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9CC1E9F1DB80058EB6A /* allDays.png */; };
 		CC64AA121E9F1DB90058EB6A /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9CD1E9F1DB80058EB6A /* background.png */; };
@@ -109,6 +110,8 @@
 		CC5352411E9F3C0800F18F37 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		CC5352431E9F3D1A00F18F37 /* SideBarListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideBarListViewController.h; sourceTree = "<group>"; };
 		CC5352441E9F3D1A00F18F37 /* SideBarListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideBarListViewController.m; sourceTree = "<group>"; };
+		CC5352461E9F64DB00F18F37 /* MyAgendaBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAgendaBarController.h; sourceTree = "<group>"; };
+		CC5352471E9F64DB00F18F37 /* MyAgendaBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAgendaBarController.m; sourceTree = "<group>"; };
 		CC64A9CB1E9F1DB80058EB6A /* agenda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agenda.png; sourceTree = "<group>"; };
 		CC64A9CC1E9F1DB80058EB6A /* allDays.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allDays.png; sourceTree = "<group>"; };
 		CC64A9CD1E9F1DB80058EB6A /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
@@ -232,6 +235,8 @@
 				CC5352441E9F3D1A00F18F37 /* SideBarListViewController.m */,
 				CC5352401E9F3C0800F18F37 /* HomeViewController.h */,
 				CC5352411E9F3C0800F18F37 /* HomeViewController.m */,
+				CC5352461E9F64DB00F18F37 /* MyAgendaBarController.h */,
+				CC5352471E9F64DB00F18F37 /* MyAgendaBarController.m */,
 				4CEF75A01E99694500AA3E07 /* Main.storyboard */,
 				4CEF75A31E99694500AA3E07 /* Assets.xcassets */,
 				4CEF75A51E99694500AA3E07 /* LaunchScreen.storyboard */,
@@ -538,6 +543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CEF759F1E99694500AA3E07 /* ViewController.m in Sources */,
+				CC5352481E9F64DB00F18F37 /* MyAgendaBarController.m in Sources */,
 				4CEF759C1E99694500AA3E07 /* AppDelegate.m in Sources */,
 				CC5352451E9F3D1A00F18F37 /* SideBarListViewController.m in Sources */,
 				CC7E39491E9E6349002EE671 /* SWRevealViewController.m in Sources */,
