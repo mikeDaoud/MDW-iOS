@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UILabel *show;
-- (IBAction)getRequest:(id)sender;
+
 
 
 @end
