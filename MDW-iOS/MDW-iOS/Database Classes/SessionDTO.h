@@ -22,5 +22,7 @@
     @property NSArray *speakers;
     
     -(instancetype)initWithDate:(long)date name:(NSString *)name location:(NSString *)location startDate:(long)startDate endDate:(long)endDate sessionType:(NSString *)sessionType status:(int)status sessionDescription:(NSString *)sessionDescription liked:(BOOL)liked speakers:(NSArray *)speakers;
-    
+
+
+    -(void)printOject;
 @end

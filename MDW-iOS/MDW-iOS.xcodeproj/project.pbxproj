@@ -14,6 +14,12 @@
 		4C81C11C1E9F87ED0076D2F4 /* SpeakerDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1191E9F87ED0076D2F4 /* SpeakerDTO.m */; };
 		4C81C11F1E9F88030076D2F4 /* ExhibitorDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C11E1E9F88030076D2F4 /* ExhibitorDAO.m */; };
 		4C81C1221E9F880B0076D2F4 /* Attendee.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1211E9F880B0076D2F4 /* Attendee.m */; };
+		4C81C12E1E9FB71D0076D2F4 /* fields_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C81C12D1E9FB71D0076D2F4 /* fields_background.png */; };
+		4C81C1301E9FB7580076D2F4 /* loginHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C81C12F1E9FB7580076D2F4 /* loginHeader.png */; };
+		4C81C1321E9FB7680076D2F4 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C81C1311E9FB7680076D2F4 /* background.png */; };
+		4C81C1351E9FB9F20076D2F4 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1341E9FB9F20076D2F4 /* SignInViewController.m */; };
+		4C81C1371E9FBC810076D2F4 /* fields_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C81C1361E9FBC810076D2F4 /* fields_background.png */; };
+		4C81C13A1E9FDE7D0076D2F4 /* WebServiceDataFetching.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1391E9FDE7D0076D2F4 /* WebServiceDataFetching.m */; };
 		4CBEEB901E99F11B006F848F /* ServiceURLs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */; };
 		4CEF75991E99694500AA3E07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF75981E99694500AA3E07 /* main.m */; };
 		4CEF759C1E99694500AA3E07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF759B1E99694500AA3E07 /* AppDelegate.m */; };
@@ -115,6 +121,14 @@
 		4C81C11E1E9F88030076D2F4 /* ExhibitorDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExhibitorDAO.m; path = "Database Classes/ExhibitorDAO.m"; sourceTree = "<group>"; };
 		4C81C1201E9F880B0076D2F4 /* Attendee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Attendee.h; path = "Database Classes/Attendee.h"; sourceTree = "<group>"; };
 		4C81C1211E9F880B0076D2F4 /* Attendee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Attendee.m; path = "Database Classes/Attendee.m"; sourceTree = "<group>"; };
+		4C81C12D1E9FB71D0076D2F4 /* fields_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fields_background.png; path = "MDW UI/fields_background.png"; sourceTree = "<group>"; };
+		4C81C12F1E9FB7580076D2F4 /* loginHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loginHeader.png; path = "MDW UI/loginHeader.png"; sourceTree = "<group>"; };
+		4C81C1311E9FB7680076D2F4 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = "MDW UI/background.png"; sourceTree = "<group>"; };
+		4C81C1331E9FB9F20076D2F4 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		4C81C1341E9FB9F20076D2F4 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		4C81C1361E9FBC810076D2F4 /* fields_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fields_background.png; path = "MDW UI/fields_background.png"; sourceTree = "<group>"; };
+		4C81C1381E9FDE7D0076D2F4 /* WebServiceDataFetching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceDataFetching.h; sourceTree = "<group>"; };
+		4C81C1391E9FDE7D0076D2F4 /* WebServiceDataFetching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceDataFetching.m; sourceTree = "<group>"; };
 		4CBEEB8E1E99F11B006F848F /* ServiceURLs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceURLs.h; path = "utility Classes/ServiceURLs.h"; sourceTree = "<group>"; };
 		4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceURLs.m; path = "utility Classes/ServiceURLs.m"; sourceTree = "<group>"; };
 		4CEF75941E99694500AA3E07 /* MDW-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MDW-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,11 +269,49 @@
 			name = DAOs;
 			sourceTree = "<group>";
 		};
+		4C81C1261E9FB3590076D2F4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4CEF759D1E99694500AA3E07 /* ViewController.h */,
+				4CEF759E1E99694500AA3E07 /* ViewController.m */,
+				CC5352431E9F3D1A00F18F37 /* SideBarListViewController.h */,
+				CC5352441E9F3D1A00F18F37 /* SideBarListViewController.m */,
+				CC5352401E9F3C0800F18F37 /* HomeViewController.h */,
+				CC5352411E9F3C0800F18F37 /* HomeViewController.m */,
+				CC5352461E9F64DB00F18F37 /* MyAgendaBarController.h */,
+				CC5352471E9F64DB00F18F37 /* MyAgendaBarController.m */,
+				4C81C1331E9FB9F20076D2F4 /* SignInViewController.h */,
+				4C81C1341E9FB9F20076D2F4 /* SignInViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4C81C1271E9FB67C0076D2F4 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				4C81C1281E9FB6890076D2F4 /* signInView */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		4C81C1281E9FB6890076D2F4 /* signInView */ = {
+			isa = PBXGroup;
+			children = (
+				4C81C1361E9FBC810076D2F4 /* fields_background.png */,
+				4C81C1311E9FB7680076D2F4 /* background.png */,
+				4C81C12F1E9FB7580076D2F4 /* loginHeader.png */,
+				4C81C12D1E9FB71D0076D2F4 /* fields_background.png */,
+			);
+			name = signInView;
+			sourceTree = "<group>";
+		};
 		4CBEEB8D1E99F0A5006F848F /* Utility Classes */ = {
 			isa = PBXGroup;
 			children = (
 				4CBEEB8E1E99F11B006F848F /* ServiceURLs.h */,
 				4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */,
+				4C81C1381E9FDE7D0076D2F4 /* WebServiceDataFetching.h */,
+				4C81C1391E9FDE7D0076D2F4 /* WebServiceDataFetching.m */,
 			);
 			name = "Utility Classes";
 			sourceTree = "<group>";
@@ -285,17 +337,11 @@
 		4CEF75961E99694500AA3E07 /* MDW-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				4C81C1271E9FB67C0076D2F4 /* images */,
+				4C81C1261E9FB3590076D2F4 /* ViewControllers */,
 				4C81C0FB1E9F86430076D2F4 /* DataBase */,
 				4CEF759A1E99694500AA3E07 /* AppDelegate.h */,
 				4CEF759B1E99694500AA3E07 /* AppDelegate.m */,
-				4CEF759D1E99694500AA3E07 /* ViewController.h */,
-				4CEF759E1E99694500AA3E07 /* ViewController.m */,
-				CC5352431E9F3D1A00F18F37 /* SideBarListViewController.h */,
-				CC5352441E9F3D1A00F18F37 /* SideBarListViewController.m */,
-				CC5352401E9F3C0800F18F37 /* HomeViewController.h */,
-				CC5352411E9F3C0800F18F37 /* HomeViewController.m */,
-				CC5352461E9F64DB00F18F37 /* MyAgendaBarController.h */,
-				CC5352471E9F64DB00F18F37 /* MyAgendaBarController.m */,
 				4CEF75A01E99694500AA3E07 /* Main.storyboard */,
 				4CEF75A31E99694500AA3E07 /* Assets.xcassets */,
 				4CEF75A51E99694500AA3E07 /* LaunchScreen.storyboard */,
@@ -481,6 +527,7 @@
 				CC64AA2C1E9F1DB90058EB6A /* Icon-83.5@2x 2.png in Resources */,
 				CC64AA431E9F1DB90058EB6A /* phoneIcon.png in Resources */,
 				CC64AA511E9F1DB90058EB6A /* starclicked.png in Resources */,
+				4C81C1301E9FB7580076D2F4 /* loginHeader.png in Resources */,
 				CC64AA501E9F1DB90058EB6A /* star.png in Resources */,
 				CC64AA311E9F1DB90058EB6A /* Icon-Small@2x.png in Resources */,
 				CC64AA3E1E9F1DB90058EB6A /* logout.png in Resources */,
@@ -496,11 +543,13 @@
 				CC64AA221E9F1DB90058EB6A /* Icon-40@3x 3.png in Resources */,
 				CC64AA2D1E9F1DB90058EB6A /* Icon-83.5@2x.png in Resources */,
 				CC64AA301E9F1DB90058EB6A /* Icon-Small@2x 2.png in Resources */,
+				4C81C1371E9FBC810076D2F4 /* fields_background.png in Resources */,
 				CC64AA3B1E9F1DB90058EB6A /* loginTextBoxsBackGround.png in Resources */,
 				CC64AA281E9F1DB90058EB6A /* Icon-76 2.png in Resources */,
 				CC64AA3F1E9F1DB90058EB6A /* MDW 2016 Mobile APP150-47.png in Resources */,
 				CC64AA491E9F1DB90058EB6A /* sessionapproved.png in Resources */,
 				CC64AA391E9F1DB90058EB6A /* loginButton.png in Resources */,
+				4C81C1321E9FB7680076D2F4 /* background.png in Resources */,
 				CC64AA351E9F1DB90058EB6A /* jetsmoblab.PNG in Resources */,
 				CC64AA1A1E9F1DB90058EB6A /* hacathon.png in Resources */,
 				CC64AA2B1E9F1DB90058EB6A /* Icon-76@2x.png in Resources */,
@@ -509,6 +558,7 @@
 				CC64AA4B1E9F1DB90058EB6A /* sessionpending.png in Resources */,
 				CC64AA291E9F1DB90058EB6A /* Icon-76.png in Resources */,
 				CC64AA201E9F1DB90058EB6A /* Icon-40@2x.png in Resources */,
+				4C81C12E1E9FB71D0076D2F4 /* fields_background.png in Resources */,
 				CC64AA521E9F1DB90058EB6A /* thirdDay.png in Resources */,
 				CC64AA4C1E9F1DB90058EB6A /* sideMenuBackGround.png in Resources */,
 				CC64AA3D1E9F1DB90058EB6A /* logo1.png in Resources */,
@@ -604,11 +654,13 @@
 				4C81C11A1E9F87ED0076D2F4 /* ExhibitorDTO.m in Sources */,
 				4C81C1221E9F880B0076D2F4 /* Attendee.m in Sources */,
 				4C81C11C1E9F87ED0076D2F4 /* SpeakerDTO.m in Sources */,
+				4C81C13A1E9FDE7D0076D2F4 /* WebServiceDataFetching.m in Sources */,
 				4C81C10D1E9F874A0076D2F4 /* SpeakerDAO.m in Sources */,
 				4CEF759F1E99694500AA3E07 /* ViewController.m in Sources */,
 				4C81C1131E9F877A0076D2F4 /* SessionDAO.m in Sources */,
 				CC5352481E9F64DB00F18F37 /* MyAgendaBarController.m in Sources */,
 				4CEF759C1E99694500AA3E07 /* AppDelegate.m in Sources */,
+				4C81C1351E9FB9F20076D2F4 /* SignInViewController.m in Sources */,
 				4C81C11B1E9F87ED0076D2F4 /* SessionDTO.m in Sources */,
 				CC5352451E9F3D1A00F18F37 /* SideBarListViewController.m in Sources */,
 				CC7E39491E9E6349002EE671 /* SWRevealViewController.m in Sources */,

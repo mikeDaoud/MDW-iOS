@@ -23,6 +23,7 @@
     -(instancetype)initWithFirstName:(NSString *)firstName middleName:(NSString *)middleName lastName:(NSString *)lastName title:(NSString *)title companyName:(NSString *)companyName email:(NSString *)email mobile:(NSString *)mobile imageURL:(NSString *)imageURL code:(NSString *)code;
     
     -(NSString *)getFullName;
+-(void) printObjectData;
 
 
 @end

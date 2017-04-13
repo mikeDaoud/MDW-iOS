@@ -7,6 +7,7 @@
 //
 
 #import "SessionDTO.h"
+#import "SpeakerDTO.h"
 
 @implementation SessionDTO
     
@@ -34,5 +35,22 @@
         }
         return self;
     }
+
+-(void)printOject{
+    NSLog(@"--------- date %ld", _date);
+    NSLog(@"--------- name %@", _name);
+    NSLog(@"--------- liked %@", (_liked?@"YES" : @"NO"));
+    NSLog(@"--------- status %d", _status);
+    NSLog(@"--------- endDate %ld", _endDate);
+    NSLog(@"--------- location %@", _location);
+    NSLog(@"--------- startDate %ld", _startDate);
+    NSLog(@"--------- sessionType %@", _sessionType);
+    NSLog(@"--------- Description%@", _sessionDescription);
+    
+    for (SpeakerDTO * speaker in _speakers) {
+        [speaker printObjectData];
+    }
+    
+}
     
 @end

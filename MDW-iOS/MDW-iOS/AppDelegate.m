@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ServiceURLs.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,28 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //TODO: remove the following line that resets NSuserdefaults for testing purposes
+    //    [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"signedIn"];
+    
+    //getting the ViewController using Storyboard ID
+    UIStoryboard* main = [UIStoryboard storyboardWithName:@"Main"
+                                                   bundle:[NSBundle mainBundle]];
+    UIViewController *viewContr;
+    NSString * signedIn = [[NSUserDefaults standardUserDefaults]objectForKey:@"signedIn"];
+    
+    if ([signedIn isEqualToString:@"yes"]) {
+        [ServiceURLs loginRequestWithUserEmail:[[NSUserDefaults standardUserDefaults]objectForKey:@"userEmail"] andPassword:nil];
+        viewContr= [main instantiateViewControllerWithIdentifier:@"mainView"];
+        
+    }else{
+        viewContr = [main instantiateViewControllerWithIdentifier:@"signInView"];
+    }
+    
+    // Assigning the Root
+    self.window.rootViewController = viewContr;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

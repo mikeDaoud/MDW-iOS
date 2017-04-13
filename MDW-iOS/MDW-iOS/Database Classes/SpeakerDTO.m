@@ -32,5 +32,16 @@
         }
         return [fullName stringByAppendingString:_lastName];
     }
+
+    -(void)printObjectData{
+        NSLog(@"---------- %@", _firstName);
+        NSLog(@"---------- %@", _middleName);
+        NSLog(@"---------- %@", _lastName);
+        NSLog(@"---------- %@", _companyName);
+        NSLog(@"---------- %@", _imageURL);
+        NSLog(@"---------- %@", _title);
+        NSLog(@"---------- %@", _biography);
+        NSLog(@"---------- %d", _speakerId);
+    }
     
 @end

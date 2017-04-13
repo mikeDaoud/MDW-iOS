@@ -22,5 +22,7 @@
     -(instancetype)initWithSpeakerId:(int)speakerId firstName:(NSString *)firstName middleName:(NSString *)middleName lastName:(NSString *)lastName title:(NSString *)title companyName:(NSString *)companyName imageURL:(NSString *)imageURL biography:(NSString *)biography;
     
     -(NSString *)getFullName;
+
+-(void)printObjectData;
     
 @end
