@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C81C10D1E9F874A0076D2F4 /* SpeakerDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C10C1E9F874A0076D2F4 /* SpeakerDAO.m */; };
+		4C81C1131E9F877A0076D2F4 /* SessionDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1121E9F877A0076D2F4 /* SessionDAO.m */; };
+		4C81C11A1E9F87ED0076D2F4 /* ExhibitorDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1151E9F87ED0076D2F4 /* ExhibitorDTO.m */; };
+		4C81C11B1E9F87ED0076D2F4 /* SessionDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1171E9F87ED0076D2F4 /* SessionDTO.m */; };
+		4C81C11C1E9F87ED0076D2F4 /* SpeakerDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1191E9F87ED0076D2F4 /* SpeakerDTO.m */; };
+		4C81C11F1E9F88030076D2F4 /* ExhibitorDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C11E1E9F88030076D2F4 /* ExhibitorDAO.m */; };
+		4C81C1221E9F880B0076D2F4 /* Attendee.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1211E9F880B0076D2F4 /* Attendee.m */; };
 		4CBEEB901E99F11B006F848F /* ServiceURLs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */; };
 		4CEF75991E99694500AA3E07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF75981E99694500AA3E07 /* main.m */; };
 		4CEF759C1E99694500AA3E07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF759B1E99694500AA3E07 /* AppDelegate.m */; };
@@ -94,6 +101,20 @@
 		313D000E55E67A5144795EC9 /* Pods-MDW-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDW-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MDW-iOS/Pods-MDW-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		3204402F86974672082D0EB9 /* Pods-MDW-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDW-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MDW-iOS/Pods-MDW-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		3D11EF6796886A51818D1FAE /* libPods-MDW-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MDW-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C81C10B1E9F874A0076D2F4 /* SpeakerDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeakerDAO.h; path = "Database Classes/SpeakerDAO.h"; sourceTree = "<group>"; };
+		4C81C10C1E9F874A0076D2F4 /* SpeakerDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeakerDAO.m; path = "Database Classes/SpeakerDAO.m"; sourceTree = "<group>"; };
+		4C81C1111E9F877A0076D2F4 /* SessionDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SessionDAO.h; path = "Database Classes/SessionDAO.h"; sourceTree = "<group>"; };
+		4C81C1121E9F877A0076D2F4 /* SessionDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SessionDAO.m; path = "Database Classes/SessionDAO.m"; sourceTree = "<group>"; };
+		4C81C1141E9F87ED0076D2F4 /* ExhibitorDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExhibitorDTO.h; path = "Database Classes/ExhibitorDTO.h"; sourceTree = "<group>"; };
+		4C81C1151E9F87ED0076D2F4 /* ExhibitorDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExhibitorDTO.m; path = "Database Classes/ExhibitorDTO.m"; sourceTree = "<group>"; };
+		4C81C1161E9F87ED0076D2F4 /* SessionDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SessionDTO.h; path = "Database Classes/SessionDTO.h"; sourceTree = "<group>"; };
+		4C81C1171E9F87ED0076D2F4 /* SessionDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SessionDTO.m; path = "Database Classes/SessionDTO.m"; sourceTree = "<group>"; };
+		4C81C1181E9F87ED0076D2F4 /* SpeakerDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeakerDTO.h; path = "Database Classes/SpeakerDTO.h"; sourceTree = "<group>"; };
+		4C81C1191E9F87ED0076D2F4 /* SpeakerDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeakerDTO.m; path = "Database Classes/SpeakerDTO.m"; sourceTree = "<group>"; };
+		4C81C11D1E9F88030076D2F4 /* ExhibitorDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExhibitorDAO.h; path = "Database Classes/ExhibitorDAO.h"; sourceTree = "<group>"; };
+		4C81C11E1E9F88030076D2F4 /* ExhibitorDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExhibitorDAO.m; path = "Database Classes/ExhibitorDAO.m"; sourceTree = "<group>"; };
+		4C81C1201E9F880B0076D2F4 /* Attendee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Attendee.h; path = "Database Classes/Attendee.h"; sourceTree = "<group>"; };
+		4C81C1211E9F880B0076D2F4 /* Attendee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Attendee.m; path = "Database Classes/Attendee.m"; sourceTree = "<group>"; };
 		4CBEEB8E1E99F11B006F848F /* ServiceURLs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceURLs.h; path = "utility Classes/ServiceURLs.h"; sourceTree = "<group>"; };
 		4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceURLs.m; path = "utility Classes/ServiceURLs.m"; sourceTree = "<group>"; };
 		4CEF75941E99694500AA3E07 /* MDW-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MDW-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +218,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C81C0FB1E9F86430076D2F4 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				4C81C1201E9F880B0076D2F4 /* Attendee.h */,
+				4C81C1211E9F880B0076D2F4 /* Attendee.m */,
+				4C81C0FD1E9F86730076D2F4 /* DAOs */,
+				4C81C0FC1E9F86630076D2F4 /* DTOs */,
+			);
+			name = DataBase;
+			sourceTree = "<group>";
+		};
+		4C81C0FC1E9F86630076D2F4 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				4C81C1141E9F87ED0076D2F4 /* ExhibitorDTO.h */,
+				4C81C1151E9F87ED0076D2F4 /* ExhibitorDTO.m */,
+				4C81C1161E9F87ED0076D2F4 /* SessionDTO.h */,
+				4C81C1171E9F87ED0076D2F4 /* SessionDTO.m */,
+				4C81C1181E9F87ED0076D2F4 /* SpeakerDTO.h */,
+				4C81C1191E9F87ED0076D2F4 /* SpeakerDTO.m */,
+			);
+			name = DTOs;
+			sourceTree = "<group>";
+		};
+		4C81C0FD1E9F86730076D2F4 /* DAOs */ = {
+			isa = PBXGroup;
+			children = (
+				4C81C11D1E9F88030076D2F4 /* ExhibitorDAO.h */,
+				4C81C11E1E9F88030076D2F4 /* ExhibitorDAO.m */,
+				4C81C10B1E9F874A0076D2F4 /* SpeakerDAO.h */,
+				4C81C10C1E9F874A0076D2F4 /* SpeakerDAO.m */,
+				4C81C1111E9F877A0076D2F4 /* SessionDAO.h */,
+				4C81C1121E9F877A0076D2F4 /* SessionDAO.m */,
+			);
+			name = DAOs;
+			sourceTree = "<group>";
+		};
 		4CBEEB8D1E99F0A5006F848F /* Utility Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +285,7 @@
 		4CEF75961E99694500AA3E07 /* MDW-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				4C81C0FB1E9F86430076D2F4 /* DataBase */,
 				4CEF759A1E99694500AA3E07 /* AppDelegate.h */,
 				4CEF759B1E99694500AA3E07 /* AppDelegate.m */,
 				4CEF759D1E99694500AA3E07 /* ViewController.h */,
@@ -542,12 +601,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C81C11A1E9F87ED0076D2F4 /* ExhibitorDTO.m in Sources */,
+				4C81C1221E9F880B0076D2F4 /* Attendee.m in Sources */,
+				4C81C11C1E9F87ED0076D2F4 /* SpeakerDTO.m in Sources */,
+				4C81C10D1E9F874A0076D2F4 /* SpeakerDAO.m in Sources */,
 				4CEF759F1E99694500AA3E07 /* ViewController.m in Sources */,
+				4C81C1131E9F877A0076D2F4 /* SessionDAO.m in Sources */,
 				CC5352481E9F64DB00F18F37 /* MyAgendaBarController.m in Sources */,
 				4CEF759C1E99694500AA3E07 /* AppDelegate.m in Sources */,
+				4C81C11B1E9F87ED0076D2F4 /* SessionDTO.m in Sources */,
 				CC5352451E9F3D1A00F18F37 /* SideBarListViewController.m in Sources */,
 				CC7E39491E9E6349002EE671 /* SWRevealViewController.m in Sources */,
 				4CEF75991E99694500AA3E07 /* main.m in Sources */,
+				4C81C11F1E9F88030076D2F4 /* ExhibitorDAO.m in Sources */,
 				4CBEEB901E99F11B006F848F /* ServiceURLs.m in Sources */,
 				CC5352421E9F3C0800F18F37 /* HomeViewController.m in Sources */,
 			);
