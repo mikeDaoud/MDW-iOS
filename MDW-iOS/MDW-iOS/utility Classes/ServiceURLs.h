@@ -15,5 +15,7 @@
 +(NSURLRequest *)speakersRequest;
 +(NSURLRequest *)userProfileRequest;
 +(NSURLRequest *)profileImageRequest;
++(NSURLRequest *)exhibitorsDataRequest;
++(NSURLRequest *)requestRegisterToSessionWithID: (int) sessionID;
 
 @end

@@ -21,6 +21,7 @@
 		4C81C1371E9FBC810076D2F4 /* fields_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C81C1361E9FBC810076D2F4 /* fields_background.png */; };
 		4C81C13A1E9FDE7D0076D2F4 /* WebServiceDataFetching.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1391E9FDE7D0076D2F4 /* WebServiceDataFetching.m */; };
 		4CBEEB901E99F11B006F848F /* ServiceURLs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */; };
+		4CC5466C1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5466B1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m */; };
 		4CEF75991E99694500AA3E07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF75981E99694500AA3E07 /* main.m */; };
 		4CEF759C1E99694500AA3E07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF759B1E99694500AA3E07 /* AppDelegate.m */; };
 		4CEF759F1E99694500AA3E07 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF759E1E99694500AA3E07 /* ViewController.m */; };
@@ -131,6 +132,8 @@
 		4C81C1391E9FDE7D0076D2F4 /* WebServiceDataFetching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceDataFetching.m; sourceTree = "<group>"; };
 		4CBEEB8E1E99F11B006F848F /* ServiceURLs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceURLs.h; path = "utility Classes/ServiceURLs.h"; sourceTree = "<group>"; };
 		4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceURLs.m; path = "utility Classes/ServiceURLs.m"; sourceTree = "<group>"; };
+		4CC5466A1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+UIImageView_CashingWebImage.h"; sourceTree = "<group>"; };
+		4CC5466B1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+UIImageView_CashingWebImage.m"; sourceTree = "<group>"; };
 		4CEF75941E99694500AA3E07 /* MDW-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MDW-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CEF75981E99694500AA3E07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CEF759A1E99694500AA3E07 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -312,6 +315,8 @@
 				4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */,
 				4C81C1381E9FDE7D0076D2F4 /* WebServiceDataFetching.h */,
 				4C81C1391E9FDE7D0076D2F4 /* WebServiceDataFetching.m */,
+				4CC5466A1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.h */,
+				4CC5466B1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m */,
 			);
 			name = "Utility Classes";
 			sourceTree = "<group>";
@@ -651,6 +656,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CC5466C1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m in Sources */,
 				4C81C11A1E9F87ED0076D2F4 /* ExhibitorDTO.m in Sources */,
 				4C81C1221E9F880B0076D2F4 /* Attendee.m in Sources */,
 				4C81C11C1E9F87ED0076D2F4 /* SpeakerDTO.m in Sources */,

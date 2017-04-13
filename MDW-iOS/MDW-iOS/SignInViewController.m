@@ -100,66 +100,11 @@
                     
                 }];
                 
-                //Getting Sessions data and adding it to database
+                //Getting Sessions, speakers and exhibitors data and adding it to database
                 [WebServiceDataFetching fetchSessionsFromWebServicewithSessionManager:_mgr];
+                [WebServiceDataFetching fetchSpeakersFromWebServicewithSessionManager:_mgr];
+                [WebServiceDataFetching fetchExhibitorsFromWebServicewithSessionManager:_mgr];
                 
-                
-//                    NSURLSessionDataTask *dataTask = [_mgr dataTaskWithRequest:[ServiceURLs allSessionsRequest] completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
-//                        if (error) {
-//                            NSLog(@"Error: %@", error);
-//                        } else {
-//                            NSLog(@"%@ ----  %@", response, responseObject);
-//                            NSMutableArray * sessions;
-//                            NSDictionary * result = [responseObject objectForKey:@"result"];
-//                            NSArray * agendas = [result objectForKey:@"agenda"];
-//                            
-//                            for (NSDictionary *day in agendas) {
-//                                NSNumber * date = [day objectForKey:@"date"];
-//                                NSArray * daySessions = [day objectForKey:@"sessions"];
-//                                
-//                                //Getting list of sessions
-//                                for (NSDictionary * session in daySessions) {
-//                                    
-//                                    //getting session speakers
-//                                    NSMutableArray * sessionSpearkers;
-//                                    for (NSDictionary * speaker in [session objectForKey:@"speakers"]) {
-//                                        NSNumber * speakerID = [speaker objectForKey:@"id"];
-//                                        SpeakerDTO * speakerDTO = [[SpeakerDTO alloc]
-//                                                                initWithSpeakerId:[speakerID intValue]
-//                                                                firstName: [speaker objectForKey:@"firstName"]
-//                                                                middleName:[speaker objectForKey:@"middleName"]
-//                                                                lastName:[speaker objectForKey:@""]
-//                                                                title:[speaker objectForKey:@"title"]
-//                                                                companyName:[speaker objectForKey:@"companyName"]
-//                                                                imageURL:[speaker objectForKey:@"imageURL"]
-//                                                                biography:[speaker objectForKey:@"biography"]];
-//                                        [sessionSpearkers addObject:speakerDTO];
-//                                    }
-//                                    
-//                                    NSNumber * startDate = [session valueForKey:@"startDate"];
-//                                    NSNumber * endDate = [session valueForKey:@"endDate"];
-//                                    NSNumber * status = [session valueForKey:@"status"];
-//                                    
-//                            SessionDTO * sessiondto = [[SessionDTO alloc]
-//                                initWithDate:[date longValue]
-//                                name:[session objectForKey:@"name"]
-//                                location:[session objectForKey:@"location"]
-//                                startDate: [startDate longValue]
-//                                endDate: [endDate longValue]
-//                                sessionType:[session objectForKey:@"sessionType"]
-//                                status: [status intValue]
-//                                sessionDescription:[session objectForKey:@"description"]
-//                                liked:[session valueForKey:@"liked"]
-//                                speakers:sessionSpearkers];
-//                                    
-//                                    [sessions addObject:sessiondto];
-//                                    
-//                                }
-//                            }
-//                            
-//                        }
-//                    }];
-//                    [dataTask resume];
                 
             }
         }];

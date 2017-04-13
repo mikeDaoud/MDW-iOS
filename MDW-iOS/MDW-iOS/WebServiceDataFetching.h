@@ -13,9 +13,16 @@
 #import "Attendee.h"
 #import "SessionDTO.h"
 #import "SpeakerDTO.h"
+#import "ExhibitorDTO.h"
 
 @interface WebServiceDataFetching : NSObject
 
 +(void)fetchSessionsFromWebServicewithSessionManager: (AFURLSessionManager *) mgr;
+
++(void)fetchSpeakersFromWebServicewithSessionManager: (AFURLSessionManager *) mgr;
+
++(void)fetchExhibitorsFromWebServicewithSessionManager: (AFURLSessionManager *) mgr;
+
++(void)fetchImageWithURL: (NSString *) imageURL andRefreshImageView: (UIImageView *) imageView;
 
 @end
