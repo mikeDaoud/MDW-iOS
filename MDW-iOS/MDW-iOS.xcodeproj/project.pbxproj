@@ -31,6 +31,10 @@
 		CC1150501EA12A5800692A6E /* FirstDaySessionsAgenda.m in Sources */ = {isa = PBXBuildFile; fileRef = CC11504F1EA12A5800692A6E /* FirstDaySessionsAgenda.m */; };
 		CC1150531EA12CEA00692A6E /* SecondDaySessionsAgenda.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1150521EA12CEA00692A6E /* SecondDaySessionsAgenda.m */; };
 		CC1150561EA130F800692A6E /* ThirdDaySessionsAgenda.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1150551EA130F800692A6E /* ThirdDaySessionsAgenda.m */; };
+		CC1150591EA13FF300692A6E /* AllSessionsMyAgenda.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1150581EA13FF300692A6E /* AllSessionsMyAgenda.m */; };
+		CC11505C1EA142BF00692A6E /* FirstDaySessionsMyAgenda.m in Sources */ = {isa = PBXBuildFile; fileRef = CC11505B1EA142BF00692A6E /* FirstDaySessionsMyAgenda.m */; };
+		CC11505F1EA1447300692A6E /* SecondDaySessionsMyAgenda.m in Sources */ = {isa = PBXBuildFile; fileRef = CC11505E1EA1447300692A6E /* SecondDaySessionsMyAgenda.m */; };
+		CC1150621EA147B600692A6E /* ThirdDaySessionsMyAgenda.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1150611EA147B600692A6E /* ThirdDaySessionsMyAgenda.m */; };
 		CC5352421E9F3C0800F18F37 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5352411E9F3C0800F18F37 /* HomeViewController.m */; };
 		CC5352451E9F3D1A00F18F37 /* SideBarListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5352441E9F3D1A00F18F37 /* SideBarListViewController.m */; };
 		CC5352481E9F64DB00F18F37 /* MyAgendaBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5352471E9F64DB00F18F37 /* MyAgendaBarController.m */; };
@@ -154,6 +158,14 @@
 		CC1150521EA12CEA00692A6E /* SecondDaySessionsAgenda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondDaySessionsAgenda.m; sourceTree = "<group>"; };
 		CC1150541EA130F700692A6E /* ThirdDaySessionsAgenda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdDaySessionsAgenda.h; sourceTree = "<group>"; };
 		CC1150551EA130F800692A6E /* ThirdDaySessionsAgenda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdDaySessionsAgenda.m; sourceTree = "<group>"; };
+		CC1150571EA13FF300692A6E /* AllSessionsMyAgenda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllSessionsMyAgenda.h; sourceTree = "<group>"; };
+		CC1150581EA13FF300692A6E /* AllSessionsMyAgenda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllSessionsMyAgenda.m; sourceTree = "<group>"; };
+		CC11505A1EA142BF00692A6E /* FirstDaySessionsMyAgenda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstDaySessionsMyAgenda.h; sourceTree = "<group>"; };
+		CC11505B1EA142BF00692A6E /* FirstDaySessionsMyAgenda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstDaySessionsMyAgenda.m; sourceTree = "<group>"; };
+		CC11505D1EA1447300692A6E /* SecondDaySessionsMyAgenda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondDaySessionsMyAgenda.h; sourceTree = "<group>"; };
+		CC11505E1EA1447300692A6E /* SecondDaySessionsMyAgenda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondDaySessionsMyAgenda.m; sourceTree = "<group>"; };
+		CC1150601EA147B600692A6E /* ThirdDaySessionsMyAgenda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdDaySessionsMyAgenda.h; sourceTree = "<group>"; };
+		CC1150611EA147B600692A6E /* ThirdDaySessionsMyAgenda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdDaySessionsMyAgenda.m; sourceTree = "<group>"; };
 		CC5352401E9F3C0800F18F37 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		CC5352411E9F3C0800F18F37 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		CC5352431E9F3D1A00F18F37 /* SideBarListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideBarListViewController.h; sourceTree = "<group>"; };
@@ -305,6 +317,14 @@
 				CC1150521EA12CEA00692A6E /* SecondDaySessionsAgenda.m */,
 				CC1150541EA130F700692A6E /* ThirdDaySessionsAgenda.h */,
 				CC1150551EA130F800692A6E /* ThirdDaySessionsAgenda.m */,
+				CC1150571EA13FF300692A6E /* AllSessionsMyAgenda.h */,
+				CC1150581EA13FF300692A6E /* AllSessionsMyAgenda.m */,
+				CC11505A1EA142BF00692A6E /* FirstDaySessionsMyAgenda.h */,
+				CC11505B1EA142BF00692A6E /* FirstDaySessionsMyAgenda.m */,
+				CC11505D1EA1447300692A6E /* SecondDaySessionsMyAgenda.h */,
+				CC11505E1EA1447300692A6E /* SecondDaySessionsMyAgenda.m */,
+				CC1150601EA147B600692A6E /* ThirdDaySessionsMyAgenda.h */,
+				CC1150611EA147B600692A6E /* ThirdDaySessionsMyAgenda.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -692,10 +712,14 @@
 				4C81C11B1E9F87ED0076D2F4 /* SessionDTO.m in Sources */,
 				CC5352451E9F3D1A00F18F37 /* SideBarListViewController.m in Sources */,
 				CC53528A1EA11B5900F18F37 /* AllSessionsAgenda.m in Sources */,
+				CC11505C1EA142BF00692A6E /* FirstDaySessionsMyAgenda.m in Sources */,
+				CC1150591EA13FF300692A6E /* AllSessionsMyAgenda.m in Sources */,
 				CC7E39491E9E6349002EE671 /* SWRevealViewController.m in Sources */,
 				4CEF75991E99694500AA3E07 /* main.m in Sources */,
+				CC11505F1EA1447300692A6E /* SecondDaySessionsMyAgenda.m in Sources */,
 				CC1150501EA12A5800692A6E /* FirstDaySessionsAgenda.m in Sources */,
 				4C81C11F1E9F88030076D2F4 /* ExhibitorDAO.m in Sources */,
+				CC1150621EA147B600692A6E /* ThirdDaySessionsMyAgenda.m in Sources */,
 				4CBEEB901E99F11B006F848F /* ServiceURLs.m in Sources */,
 				CC5352421E9F3C0800F18F37 /* HomeViewController.m in Sources */,
 			);
