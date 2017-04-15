@@ -28,9 +28,17 @@
 		4CEF75A21E99694500AA3E07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEF75A01E99694500AA3E07 /* Main.storyboard */; };
 		4CEF75A41E99694500AA3E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CEF75A31E99694500AA3E07 /* Assets.xcassets */; };
 		4CEF75A71E99694500AA3E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEF75A51E99694500AA3E07 /* LaunchScreen.storyboard */; };
+		CC1150501EA12A5800692A6E /* FirstDaySessionsAgenda.m in Sources */ = {isa = PBXBuildFile; fileRef = CC11504F1EA12A5800692A6E /* FirstDaySessionsAgenda.m */; };
+		CC1150531EA12CEA00692A6E /* SecondDaySessionsAgenda.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1150521EA12CEA00692A6E /* SecondDaySessionsAgenda.m */; };
+		CC1150561EA130F800692A6E /* ThirdDaySessionsAgenda.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1150551EA130F800692A6E /* ThirdDaySessionsAgenda.m */; };
+		CC1150591EA13FF300692A6E /* AllSessionsMyAgenda.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1150581EA13FF300692A6E /* AllSessionsMyAgenda.m */; };
+		CC11505C1EA142BF00692A6E /* FirstDaySessionsMyAgenda.m in Sources */ = {isa = PBXBuildFile; fileRef = CC11505B1EA142BF00692A6E /* FirstDaySessionsMyAgenda.m */; };
+		CC11505F1EA1447300692A6E /* SecondDaySessionsMyAgenda.m in Sources */ = {isa = PBXBuildFile; fileRef = CC11505E1EA1447300692A6E /* SecondDaySessionsMyAgenda.m */; };
+		CC1150621EA147B600692A6E /* ThirdDaySessionsMyAgenda.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1150611EA147B600692A6E /* ThirdDaySessionsMyAgenda.m */; };
 		CC5352421E9F3C0800F18F37 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5352411E9F3C0800F18F37 /* HomeViewController.m */; };
 		CC5352451E9F3D1A00F18F37 /* SideBarListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5352441E9F3D1A00F18F37 /* SideBarListViewController.m */; };
 		CC5352481E9F64DB00F18F37 /* MyAgendaBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5352471E9F64DB00F18F37 /* MyAgendaBarController.m */; };
+		CC53528A1EA11B5900F18F37 /* AllSessionsAgenda.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5352891EA11B5900F18F37 /* AllSessionsAgenda.m */; };
 		CC64AA101E9F1DB90058EB6A /* agenda.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9CB1E9F1DB80058EB6A /* agenda.png */; };
 		CC64AA111E9F1DB90058EB6A /* allDays.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9CC1E9F1DB80058EB6A /* allDays.png */; };
 		CC64AA121E9F1DB90058EB6A /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9CD1E9F1DB80058EB6A /* background.png */; };
@@ -144,12 +152,28 @@
 		4CEF75A31E99694500AA3E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CEF75A61E99694500AA3E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CEF75A81E99694500AA3E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC11504E1EA12A5800692A6E /* FirstDaySessionsAgenda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstDaySessionsAgenda.h; sourceTree = "<group>"; };
+		CC11504F1EA12A5800692A6E /* FirstDaySessionsAgenda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstDaySessionsAgenda.m; sourceTree = "<group>"; };
+		CC1150511EA12CEA00692A6E /* SecondDaySessionsAgenda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondDaySessionsAgenda.h; sourceTree = "<group>"; };
+		CC1150521EA12CEA00692A6E /* SecondDaySessionsAgenda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondDaySessionsAgenda.m; sourceTree = "<group>"; };
+		CC1150541EA130F700692A6E /* ThirdDaySessionsAgenda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdDaySessionsAgenda.h; sourceTree = "<group>"; };
+		CC1150551EA130F800692A6E /* ThirdDaySessionsAgenda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdDaySessionsAgenda.m; sourceTree = "<group>"; };
+		CC1150571EA13FF300692A6E /* AllSessionsMyAgenda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllSessionsMyAgenda.h; sourceTree = "<group>"; };
+		CC1150581EA13FF300692A6E /* AllSessionsMyAgenda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllSessionsMyAgenda.m; sourceTree = "<group>"; };
+		CC11505A1EA142BF00692A6E /* FirstDaySessionsMyAgenda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstDaySessionsMyAgenda.h; sourceTree = "<group>"; };
+		CC11505B1EA142BF00692A6E /* FirstDaySessionsMyAgenda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstDaySessionsMyAgenda.m; sourceTree = "<group>"; };
+		CC11505D1EA1447300692A6E /* SecondDaySessionsMyAgenda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondDaySessionsMyAgenda.h; sourceTree = "<group>"; };
+		CC11505E1EA1447300692A6E /* SecondDaySessionsMyAgenda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondDaySessionsMyAgenda.m; sourceTree = "<group>"; };
+		CC1150601EA147B600692A6E /* ThirdDaySessionsMyAgenda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdDaySessionsMyAgenda.h; sourceTree = "<group>"; };
+		CC1150611EA147B600692A6E /* ThirdDaySessionsMyAgenda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdDaySessionsMyAgenda.m; sourceTree = "<group>"; };
 		CC5352401E9F3C0800F18F37 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		CC5352411E9F3C0800F18F37 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		CC5352431E9F3D1A00F18F37 /* SideBarListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideBarListViewController.h; sourceTree = "<group>"; };
 		CC5352441E9F3D1A00F18F37 /* SideBarListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideBarListViewController.m; sourceTree = "<group>"; };
 		CC5352461E9F64DB00F18F37 /* MyAgendaBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAgendaBarController.h; sourceTree = "<group>"; };
 		CC5352471E9F64DB00F18F37 /* MyAgendaBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAgendaBarController.m; sourceTree = "<group>"; };
+		CC5352881EA11B5900F18F37 /* AllSessionsAgenda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllSessionsAgenda.h; sourceTree = "<group>"; };
+		CC5352891EA11B5900F18F37 /* AllSessionsAgenda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllSessionsAgenda.m; sourceTree = "<group>"; };
 		CC64A9CB1E9F1DB80058EB6A /* agenda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agenda.png; sourceTree = "<group>"; };
 		CC64A9CC1E9F1DB80058EB6A /* allDays.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allDays.png; sourceTree = "<group>"; };
 		CC64A9CD1E9F1DB80058EB6A /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
@@ -285,6 +309,22 @@
 				CC5352471E9F64DB00F18F37 /* MyAgendaBarController.m */,
 				4C81C1331E9FB9F20076D2F4 /* SignInViewController.h */,
 				4C81C1341E9FB9F20076D2F4 /* SignInViewController.m */,
+				CC5352881EA11B5900F18F37 /* AllSessionsAgenda.h */,
+				CC5352891EA11B5900F18F37 /* AllSessionsAgenda.m */,
+				CC11504E1EA12A5800692A6E /* FirstDaySessionsAgenda.h */,
+				CC11504F1EA12A5800692A6E /* FirstDaySessionsAgenda.m */,
+				CC1150511EA12CEA00692A6E /* SecondDaySessionsAgenda.h */,
+				CC1150521EA12CEA00692A6E /* SecondDaySessionsAgenda.m */,
+				CC1150541EA130F700692A6E /* ThirdDaySessionsAgenda.h */,
+				CC1150551EA130F800692A6E /* ThirdDaySessionsAgenda.m */,
+				CC1150571EA13FF300692A6E /* AllSessionsMyAgenda.h */,
+				CC1150581EA13FF300692A6E /* AllSessionsMyAgenda.m */,
+				CC11505A1EA142BF00692A6E /* FirstDaySessionsMyAgenda.h */,
+				CC11505B1EA142BF00692A6E /* FirstDaySessionsMyAgenda.m */,
+				CC11505D1EA1447300692A6E /* SecondDaySessionsMyAgenda.h */,
+				CC11505E1EA1447300692A6E /* SecondDaySessionsMyAgenda.m */,
+				CC1150601EA147B600692A6E /* ThirdDaySessionsMyAgenda.h */,
+				CC1150611EA147B600692A6E /* ThirdDaySessionsMyAgenda.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -659,6 +699,7 @@
 				4CC5466C1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m in Sources */,
 				4C81C11A1E9F87ED0076D2F4 /* ExhibitorDTO.m in Sources */,
 				4C81C1221E9F880B0076D2F4 /* Attendee.m in Sources */,
+				CC1150561EA130F800692A6E /* ThirdDaySessionsAgenda.m in Sources */,
 				4C81C11C1E9F87ED0076D2F4 /* SpeakerDTO.m in Sources */,
 				4C81C13A1E9FDE7D0076D2F4 /* WebServiceDataFetching.m in Sources */,
 				4C81C10D1E9F874A0076D2F4 /* SpeakerDAO.m in Sources */,
@@ -667,11 +708,18 @@
 				CC5352481E9F64DB00F18F37 /* MyAgendaBarController.m in Sources */,
 				4CEF759C1E99694500AA3E07 /* AppDelegate.m in Sources */,
 				4C81C1351E9FB9F20076D2F4 /* SignInViewController.m in Sources */,
+				CC1150531EA12CEA00692A6E /* SecondDaySessionsAgenda.m in Sources */,
 				4C81C11B1E9F87ED0076D2F4 /* SessionDTO.m in Sources */,
 				CC5352451E9F3D1A00F18F37 /* SideBarListViewController.m in Sources */,
+				CC53528A1EA11B5900F18F37 /* AllSessionsAgenda.m in Sources */,
+				CC11505C1EA142BF00692A6E /* FirstDaySessionsMyAgenda.m in Sources */,
+				CC1150591EA13FF300692A6E /* AllSessionsMyAgenda.m in Sources */,
 				CC7E39491E9E6349002EE671 /* SWRevealViewController.m in Sources */,
 				4CEF75991E99694500AA3E07 /* main.m in Sources */,
+				CC11505F1EA1447300692A6E /* SecondDaySessionsMyAgenda.m in Sources */,
+				CC1150501EA12A5800692A6E /* FirstDaySessionsAgenda.m in Sources */,
 				4C81C11F1E9F88030076D2F4 /* ExhibitorDAO.m in Sources */,
+				CC1150621EA147B600692A6E /* ThirdDaySessionsMyAgenda.m in Sources */,
 				4CBEEB901E99F11B006F848F /* ServiceURLs.m in Sources */,
 				CC5352421E9F3C0800F18F37 /* HomeViewController.m in Sources */,
 			);

@@ -1,36 +1,61 @@
 //
-//  SideBarListViewController.m
+//  SecondDaySessionsAgenda.m
 //  MDW-iOS
 //
-//  Created by JETS on 4/13/17.
+//  Created by JETS on 4/14/17.
 //  Copyright © 2017 MAD. All rights reserved.
 //
 
-#import "SideBarListViewController.h"
-#import "SWRevealViewController.h"
+#import "SecondDaySessionsAgenda.h"
 
-@interface SideBarListViewController ()
+@interface SecondDaySessionsAgenda ()
+{
+    
+    
+    NSMutableArray *sessions;
+    UIRefreshControl *refreshControl;
+}
 
 @end
 
-@implementation SideBarListViewController
-{
-    NSArray *menue;
-}
+@implementation SecondDaySessionsAgenda
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    menue=@[@"Agenda",@"My Agenda",@"Speakers",@"Exhibitors",@"Profile",@"Log Out"];
+    sessions=[[NSMutableArray alloc] init];
+    refreshControl=[[UIRefreshControl alloc] init];
+    //set background
     self.tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
+    //refresh table
+    [refreshControl addTarget:self action:@selector(refreshMytableView) forControlEvents:UIControlEventValueChanged];
+}
 
+
+
+// reload the dataa
+-(void) refreshMytableView
+{
+    [self.tableView reloadData];
+    [refreshControl endRefreshing];
     
 }
+//html label
+
+
+-(NSAttributedString*) renderHTML:(NSString*) htmlString{
+    
+    NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+    
+    
+    return attrStr;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-  
 }
 
 #pragma mark - Table view data source
@@ -42,17 +67,26 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    
-    return [menue count] ;
+    //return [sessions count];
+    return 1;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *cellident=[menue objectAtIndex:indexPath.row];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellident forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     // Configure the cell...
+    
     [cell setBackgroundColor: [UIColor clearColor]];
+    
+    UIImageView *img =[cell  viewWithTag:1] ;
+    [img setImage:[UIImage imageNamed:@"secondDay.png"]];
+    UILabel * name = [cell viewWithTag:2];
+    name.attributedText = [self renderHTML:@"<b>Name</b>"];
+    UILabel *t2=[cell viewWithTag:3];
+    [t2 setText:@"byee"];
+    UILabel *t3=[cell viewWithTag:4];
+   [t3 setText:@"Hii"];
     
     return cell;
 }
@@ -92,27 +126,14 @@
 }
 */
 
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if([segue isKindOfClass:[SWRevealViewControllerSegueSetController class]])
-    {
-        
-        
-        UIViewController *dvc = [segue destinationViewController];
-        
-        UINavigationController *navCtrl = (UINavigationController *) self.revealViewController.frontViewController;
-        
-        [navCtrl setViewControllers:@[dvc] animated:NO];
-        
-        [self.revealViewController setFrontViewPosition:FrontViewPositionLeft animated:YES];
-        
-    }
 }
-
+*/
 
 @end
