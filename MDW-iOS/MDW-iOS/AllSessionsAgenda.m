@@ -7,6 +7,9 @@
 //
 
 #import "AllSessionsAgenda.h"
+#import "UIImageView+UIImageView_CashingWebImage.h"
+#import "ImageDTO.h"
+#import "ImageDAO.h"
 
 @interface AllSessionsAgenda ()
 {
@@ -23,10 +26,9 @@
     sessions=[[NSMutableArray alloc] init];
      refreshControl=[[UIRefreshControl alloc] init];
     //set background
-    self.tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
+        self.tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
     //refresh table
         [refreshControl addTarget:self action:@selector(refreshMytableView) forControlEvents:UIControlEventValueChanged];
-    
 }
 // reload the dataa
 -(void) refreshMytableView
@@ -71,8 +73,14 @@
     // Configure the cell...
      [cell setBackgroundColor: [UIColor clearColor]];
     
+    //Try
+    ImageDTO *imgData = [[ImageDAO new] getImage:@"http://www.mobiledeveloperweekend.net/service/speakerImage?id=20624"];
+    UIImage * imgt = [UIImage imageWithData:imgData.image];
+
+    
     UIImageView *img =[cell  viewWithTag:1] ;
-    [img setImage:[UIImage imageNamed:@"firstDay.png"]];
+//    [img setImage:[UIImage imageNamed:@"firstDay.png"]];
+    [img setImage:imgt];
     UILabel * name = [cell viewWithTag:2];
     name.attributedText = [self renderHTML:@"<b>Name</b>"];
     UILabel *t2=[cell viewWithTag:3];

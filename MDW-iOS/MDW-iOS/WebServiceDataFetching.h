@@ -14,8 +14,11 @@
 #import "SessionDTO.h"
 #import "SpeakerDTO.h"
 #import "ExhibitorDTO.h"
+#import "ImageDTO.h"
+
 
 @interface WebServiceDataFetching : NSObject
+
 
 +(void)fetchSessionsFromWebServicewithSessionManager: (AFURLSessionManager *) mgr;
 

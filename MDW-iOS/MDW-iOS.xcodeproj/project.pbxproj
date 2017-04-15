@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C81C10D1E9F874A0076D2F4 /* SpeakerDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C10C1E9F874A0076D2F4 /* SpeakerDAO.m */; };
-		4C81C1131E9F877A0076D2F4 /* SessionDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1121E9F877A0076D2F4 /* SessionDAO.m */; };
-		4C81C11A1E9F87ED0076D2F4 /* ExhibitorDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1151E9F87ED0076D2F4 /* ExhibitorDTO.m */; };
-		4C81C11B1E9F87ED0076D2F4 /* SessionDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1171E9F87ED0076D2F4 /* SessionDTO.m */; };
-		4C81C11C1E9F87ED0076D2F4 /* SpeakerDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1191E9F87ED0076D2F4 /* SpeakerDTO.m */; };
-		4C81C11F1E9F88030076D2F4 /* ExhibitorDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C11E1E9F88030076D2F4 /* ExhibitorDAO.m */; };
-		4C81C1221E9F880B0076D2F4 /* Attendee.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1211E9F880B0076D2F4 /* Attendee.m */; };
 		4C81C12E1E9FB71D0076D2F4 /* fields_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C81C12D1E9FB71D0076D2F4 /* fields_background.png */; };
 		4C81C1301E9FB7580076D2F4 /* loginHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C81C12F1E9FB7580076D2F4 /* loginHeader.png */; };
 		4C81C1321E9FB7680076D2F4 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C81C1311E9FB7680076D2F4 /* background.png */; };
 		4C81C1351E9FB9F20076D2F4 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1341E9FB9F20076D2F4 /* SignInViewController.m */; };
 		4C81C1371E9FBC810076D2F4 /* fields_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C81C1361E9FBC810076D2F4 /* fields_background.png */; };
 		4C81C13A1E9FDE7D0076D2F4 /* WebServiceDataFetching.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1391E9FDE7D0076D2F4 /* WebServiceDataFetching.m */; };
+		4CBE198A1EA1E63A00C5C553 /* AgendaDays.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE19871EA1E63A00C5C553 /* AgendaDays.m */; };
+		4CBE198B1EA1E63A00C5C553 /* SessionTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE19891EA1E63A00C5C553 /* SessionTypes.m */; };
+		4CBE198E1EA1E7EF00C5C553 /* ImageDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE198D1EA1E7EF00C5C553 /* ImageDAO.m */; };
+		4CBE19911EA1E7FE00C5C553 /* ImageDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE19901EA1E7FE00C5C553 /* ImageDTO.m */; };
+		4CBE19941EA1E81900C5C553 /* Attendee.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE19931EA1E81900C5C553 /* Attendee.m */; };
+		4CBE19971EA1E82700C5C553 /* ExhibitorDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE19961EA1E82700C5C553 /* ExhibitorDAO.m */; };
+		4CBE199A1EA1E83800C5C553 /* ExhibitorDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE19991EA1E83800C5C553 /* ExhibitorDTO.m */; };
+		4CBE199D1EA1E84600C5C553 /* SessionDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE199C1EA1E84600C5C553 /* SessionDAO.m */; };
+		4CBE19A01EA1E85100C5C553 /* SessionDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE199F1EA1E85100C5C553 /* SessionDTO.m */; };
+		4CBE19A31EA1E86A00C5C553 /* SpeakerDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE19A21EA1E86A00C5C553 /* SpeakerDAO.m */; };
+		4CBE19A61EA1E87900C5C553 /* SpeakerDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE19A51EA1E87900C5C553 /* SpeakerDTO.m */; };
+		4CBE19A81EA1EBCB00C5C553 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBE19A71EA1EBCB00C5C553 /* Realm.framework */; };
+		4CBE19A91EA1EBCB00C5C553 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBE19A71EA1EBCB00C5C553 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4CBEEB901E99F11B006F848F /* ServiceURLs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */; };
 		4CC5466C1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5466B1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m */; };
 		4CEF75991E99694500AA3E07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF75981E99694500AA3E07 /* main.m */; };
@@ -112,24 +118,24 @@
 		EC3AC7F7B5922D3846D3E198 /* libPods-MDW-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D11EF6796886A51818D1FAE /* libPods-MDW-iOS.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4CBE19AA1EA1EBCB00C5C553 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4CBE19A91EA1EBCB00C5C553 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		313D000E55E67A5144795EC9 /* Pods-MDW-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDW-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MDW-iOS/Pods-MDW-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		3204402F86974672082D0EB9 /* Pods-MDW-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDW-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MDW-iOS/Pods-MDW-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		3D11EF6796886A51818D1FAE /* libPods-MDW-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MDW-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C81C10B1E9F874A0076D2F4 /* SpeakerDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeakerDAO.h; path = "Database Classes/SpeakerDAO.h"; sourceTree = "<group>"; };
-		4C81C10C1E9F874A0076D2F4 /* SpeakerDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeakerDAO.m; path = "Database Classes/SpeakerDAO.m"; sourceTree = "<group>"; };
-		4C81C1111E9F877A0076D2F4 /* SessionDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SessionDAO.h; path = "Database Classes/SessionDAO.h"; sourceTree = "<group>"; };
-		4C81C1121E9F877A0076D2F4 /* SessionDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SessionDAO.m; path = "Database Classes/SessionDAO.m"; sourceTree = "<group>"; };
-		4C81C1141E9F87ED0076D2F4 /* ExhibitorDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExhibitorDTO.h; path = "Database Classes/ExhibitorDTO.h"; sourceTree = "<group>"; };
-		4C81C1151E9F87ED0076D2F4 /* ExhibitorDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExhibitorDTO.m; path = "Database Classes/ExhibitorDTO.m"; sourceTree = "<group>"; };
-		4C81C1161E9F87ED0076D2F4 /* SessionDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SessionDTO.h; path = "Database Classes/SessionDTO.h"; sourceTree = "<group>"; };
-		4C81C1171E9F87ED0076D2F4 /* SessionDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SessionDTO.m; path = "Database Classes/SessionDTO.m"; sourceTree = "<group>"; };
-		4C81C1181E9F87ED0076D2F4 /* SpeakerDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeakerDTO.h; path = "Database Classes/SpeakerDTO.h"; sourceTree = "<group>"; };
-		4C81C1191E9F87ED0076D2F4 /* SpeakerDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeakerDTO.m; path = "Database Classes/SpeakerDTO.m"; sourceTree = "<group>"; };
-		4C81C11D1E9F88030076D2F4 /* ExhibitorDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExhibitorDAO.h; path = "Database Classes/ExhibitorDAO.h"; sourceTree = "<group>"; };
-		4C81C11E1E9F88030076D2F4 /* ExhibitorDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExhibitorDAO.m; path = "Database Classes/ExhibitorDAO.m"; sourceTree = "<group>"; };
-		4C81C1201E9F880B0076D2F4 /* Attendee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Attendee.h; path = "Database Classes/Attendee.h"; sourceTree = "<group>"; };
-		4C81C1211E9F880B0076D2F4 /* Attendee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Attendee.m; path = "Database Classes/Attendee.m"; sourceTree = "<group>"; };
 		4C81C12D1E9FB71D0076D2F4 /* fields_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fields_background.png; path = "MDW UI/fields_background.png"; sourceTree = "<group>"; };
 		4C81C12F1E9FB7580076D2F4 /* loginHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loginHeader.png; path = "MDW UI/loginHeader.png"; sourceTree = "<group>"; };
 		4C81C1311E9FB7680076D2F4 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = "MDW UI/background.png"; sourceTree = "<group>"; };
@@ -138,6 +144,30 @@
 		4C81C1361E9FBC810076D2F4 /* fields_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fields_background.png; path = "MDW UI/fields_background.png"; sourceTree = "<group>"; };
 		4C81C1381E9FDE7D0076D2F4 /* WebServiceDataFetching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceDataFetching.h; sourceTree = "<group>"; };
 		4C81C1391E9FDE7D0076D2F4 /* WebServiceDataFetching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceDataFetching.m; sourceTree = "<group>"; };
+		4CBE19841EA1E51800C5C553 /* Statuses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Statuses.h; sourceTree = "<group>"; };
+		4CBE19861EA1E63A00C5C553 /* AgendaDays.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AgendaDays.h; path = "Type Definitions/AgendaDays.h"; sourceTree = "<group>"; };
+		4CBE19871EA1E63A00C5C553 /* AgendaDays.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AgendaDays.m; path = "Type Definitions/AgendaDays.m"; sourceTree = "<group>"; };
+		4CBE19881EA1E63A00C5C553 /* SessionTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SessionTypes.h; path = "Type Definitions/SessionTypes.h"; sourceTree = "<group>"; };
+		4CBE19891EA1E63A00C5C553 /* SessionTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SessionTypes.m; path = "Type Definitions/SessionTypes.m"; sourceTree = "<group>"; };
+		4CBE198C1EA1E7EF00C5C553 /* ImageDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDAO.h; sourceTree = "<group>"; };
+		4CBE198D1EA1E7EF00C5C553 /* ImageDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDAO.m; sourceTree = "<group>"; };
+		4CBE198F1EA1E7FE00C5C553 /* ImageDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDTO.h; sourceTree = "<group>"; };
+		4CBE19901EA1E7FE00C5C553 /* ImageDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDTO.m; sourceTree = "<group>"; };
+		4CBE19921EA1E81900C5C553 /* Attendee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attendee.h; sourceTree = "<group>"; };
+		4CBE19931EA1E81900C5C553 /* Attendee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attendee.m; sourceTree = "<group>"; };
+		4CBE19951EA1E82700C5C553 /* ExhibitorDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitorDAO.h; sourceTree = "<group>"; };
+		4CBE19961EA1E82700C5C553 /* ExhibitorDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitorDAO.m; sourceTree = "<group>"; };
+		4CBE19981EA1E83800C5C553 /* ExhibitorDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitorDTO.h; sourceTree = "<group>"; };
+		4CBE19991EA1E83800C5C553 /* ExhibitorDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitorDTO.m; sourceTree = "<group>"; };
+		4CBE199B1EA1E84600C5C553 /* SessionDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionDAO.h; sourceTree = "<group>"; };
+		4CBE199C1EA1E84600C5C553 /* SessionDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDAO.m; sourceTree = "<group>"; };
+		4CBE199E1EA1E85100C5C553 /* SessionDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionDTO.h; sourceTree = "<group>"; };
+		4CBE199F1EA1E85100C5C553 /* SessionDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDTO.m; sourceTree = "<group>"; };
+		4CBE19A11EA1E86A00C5C553 /* SpeakerDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerDAO.h; sourceTree = "<group>"; };
+		4CBE19A21EA1E86A00C5C553 /* SpeakerDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerDAO.m; sourceTree = "<group>"; };
+		4CBE19A41EA1E87900C5C553 /* SpeakerDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerDTO.h; sourceTree = "<group>"; };
+		4CBE19A51EA1E87900C5C553 /* SpeakerDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerDTO.m; sourceTree = "<group>"; };
+		4CBE19A71EA1EBCB00C5C553 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		4CBEEB8E1E99F11B006F848F /* ServiceURLs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceURLs.h; path = "utility Classes/ServiceURLs.h"; sourceTree = "<group>"; };
 		4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceURLs.m; path = "utility Classes/ServiceURLs.m"; sourceTree = "<group>"; };
 		4CC5466A1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+UIImageView_CashingWebImage.h"; sourceTree = "<group>"; };
@@ -252,6 +282,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CBE19A81EA1EBCB00C5C553 /* Realm.framework in Frameworks */,
 				EC3AC7F7B5922D3846D3E198 /* libPods-MDW-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,8 +293,8 @@
 		4C81C0FB1E9F86430076D2F4 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
-				4C81C1201E9F880B0076D2F4 /* Attendee.h */,
-				4C81C1211E9F880B0076D2F4 /* Attendee.m */,
+				4CBE19921EA1E81900C5C553 /* Attendee.h */,
+				4CBE19931EA1E81900C5C553 /* Attendee.m */,
 				4C81C0FD1E9F86730076D2F4 /* DAOs */,
 				4C81C0FC1E9F86630076D2F4 /* DTOs */,
 			);
@@ -273,12 +304,14 @@
 		4C81C0FC1E9F86630076D2F4 /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
-				4C81C1141E9F87ED0076D2F4 /* ExhibitorDTO.h */,
-				4C81C1151E9F87ED0076D2F4 /* ExhibitorDTO.m */,
-				4C81C1161E9F87ED0076D2F4 /* SessionDTO.h */,
-				4C81C1171E9F87ED0076D2F4 /* SessionDTO.m */,
-				4C81C1181E9F87ED0076D2F4 /* SpeakerDTO.h */,
-				4C81C1191E9F87ED0076D2F4 /* SpeakerDTO.m */,
+				4CBE19981EA1E83800C5C553 /* ExhibitorDTO.h */,
+				4CBE19991EA1E83800C5C553 /* ExhibitorDTO.m */,
+				4CBE199E1EA1E85100C5C553 /* SessionDTO.h */,
+				4CBE199F1EA1E85100C5C553 /* SessionDTO.m */,
+				4CBE198F1EA1E7FE00C5C553 /* ImageDTO.h */,
+				4CBE19901EA1E7FE00C5C553 /* ImageDTO.m */,
+				4CBE19A41EA1E87900C5C553 /* SpeakerDTO.h */,
+				4CBE19A51EA1E87900C5C553 /* SpeakerDTO.m */,
 			);
 			name = DTOs;
 			sourceTree = "<group>";
@@ -286,12 +319,14 @@
 		4C81C0FD1E9F86730076D2F4 /* DAOs */ = {
 			isa = PBXGroup;
 			children = (
-				4C81C11D1E9F88030076D2F4 /* ExhibitorDAO.h */,
-				4C81C11E1E9F88030076D2F4 /* ExhibitorDAO.m */,
-				4C81C10B1E9F874A0076D2F4 /* SpeakerDAO.h */,
-				4C81C10C1E9F874A0076D2F4 /* SpeakerDAO.m */,
-				4C81C1111E9F877A0076D2F4 /* SessionDAO.h */,
-				4C81C1121E9F877A0076D2F4 /* SessionDAO.m */,
+				4CBE198C1EA1E7EF00C5C553 /* ImageDAO.h */,
+				4CBE198D1EA1E7EF00C5C553 /* ImageDAO.m */,
+				4CBE19951EA1E82700C5C553 /* ExhibitorDAO.h */,
+				4CBE19961EA1E82700C5C553 /* ExhibitorDAO.m */,
+				4CBE199B1EA1E84600C5C553 /* SessionDAO.h */,
+				4CBE199C1EA1E84600C5C553 /* SessionDAO.m */,
+				4CBE19A11EA1E86A00C5C553 /* SpeakerDAO.h */,
+				4CBE19A21EA1E86A00C5C553 /* SpeakerDAO.m */,
 			);
 			name = DAOs;
 			sourceTree = "<group>";
@@ -348,6 +383,17 @@
 			name = signInView;
 			sourceTree = "<group>";
 		};
+		4CBE19851EA1E62A00C5C553 /* typeDefinitions */ = {
+			isa = PBXGroup;
+			children = (
+				4CBE19861EA1E63A00C5C553 /* AgendaDays.h */,
+				4CBE19871EA1E63A00C5C553 /* AgendaDays.m */,
+				4CBE19881EA1E63A00C5C553 /* SessionTypes.h */,
+				4CBE19891EA1E63A00C5C553 /* SessionTypes.m */,
+			);
+			name = typeDefinitions;
+			sourceTree = "<group>";
+		};
 		4CBEEB8D1E99F0A5006F848F /* Utility Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +410,7 @@
 		4CEF758B1E99694500AA3E07 = {
 			isa = PBXGroup;
 			children = (
+				4CBE19A71EA1EBCB00C5C553 /* Realm.framework */,
 				4CEF75961E99694500AA3E07 /* MDW-iOS */,
 				4CEF75951E99694500AA3E07 /* Products */,
 				9324549A60E9F58A7CD8F33A /* Pods */,
@@ -382,16 +429,18 @@
 		4CEF75961E99694500AA3E07 /* MDW-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				4CBE19841EA1E51800C5C553 /* Statuses.h */,
+				4CBE19851EA1E62A00C5C553 /* typeDefinitions */,
 				4C81C1271E9FB67C0076D2F4 /* images */,
-				4C81C1261E9FB3590076D2F4 /* ViewControllers */,
 				4C81C0FB1E9F86430076D2F4 /* DataBase */,
+				4CBEEB8D1E99F0A5006F848F /* Utility Classes */,
+				4C81C1261E9FB3590076D2F4 /* ViewControllers */,
 				4CEF759A1E99694500AA3E07 /* AppDelegate.h */,
 				4CEF759B1E99694500AA3E07 /* AppDelegate.m */,
 				4CEF75A01E99694500AA3E07 /* Main.storyboard */,
 				4CEF75A31E99694500AA3E07 /* Assets.xcassets */,
 				4CEF75A51E99694500AA3E07 /* LaunchScreen.storyboard */,
 				4CEF75A81E99694500AA3E07 /* Info.plist */,
-				4CBEEB8D1E99F0A5006F848F /* Utility Classes */,
 				4CEF75971E99694500AA3E07 /* Supporting Files */,
 			);
 			path = "MDW-iOS";
@@ -514,6 +563,7 @@
 				4CEF75921E99694500AA3E07 /* Resources */,
 				1F08FD0F893F77581CC44276 /* [CP] Embed Pods Frameworks */,
 				BD12C64536DC5DFF2A056894 /* [CP] Copy Pods Resources */,
+				4CBE19AA1EA1EBCB00C5C553 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -697,19 +747,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CC5466C1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m in Sources */,
-				4C81C11A1E9F87ED0076D2F4 /* ExhibitorDTO.m in Sources */,
-				4C81C1221E9F880B0076D2F4 /* Attendee.m in Sources */,
+				4CBE19941EA1E81900C5C553 /* Attendee.m in Sources */,
+				4CBE198B1EA1E63A00C5C553 /* SessionTypes.m in Sources */,
 				CC1150561EA130F800692A6E /* ThirdDaySessionsAgenda.m in Sources */,
-				4C81C11C1E9F87ED0076D2F4 /* SpeakerDTO.m in Sources */,
+				4CBE198A1EA1E63A00C5C553 /* AgendaDays.m in Sources */,
+				4CBE19A31EA1E86A00C5C553 /* SpeakerDAO.m in Sources */,
+				4CBE19A01EA1E85100C5C553 /* SessionDTO.m in Sources */,
 				4C81C13A1E9FDE7D0076D2F4 /* WebServiceDataFetching.m in Sources */,
-				4C81C10D1E9F874A0076D2F4 /* SpeakerDAO.m in Sources */,
 				4CEF759F1E99694500AA3E07 /* ViewController.m in Sources */,
-				4C81C1131E9F877A0076D2F4 /* SessionDAO.m in Sources */,
 				CC5352481E9F64DB00F18F37 /* MyAgendaBarController.m in Sources */,
 				4CEF759C1E99694500AA3E07 /* AppDelegate.m in Sources */,
+				4CBE199A1EA1E83800C5C553 /* ExhibitorDTO.m in Sources */,
 				4C81C1351E9FB9F20076D2F4 /* SignInViewController.m in Sources */,
 				CC1150531EA12CEA00692A6E /* SecondDaySessionsAgenda.m in Sources */,
-				4C81C11B1E9F87ED0076D2F4 /* SessionDTO.m in Sources */,
+				4CBE198E1EA1E7EF00C5C553 /* ImageDAO.m in Sources */,
+				4CBE19971EA1E82700C5C553 /* ExhibitorDAO.m in Sources */,
+				4CBE199D1EA1E84600C5C553 /* SessionDAO.m in Sources */,
 				CC5352451E9F3D1A00F18F37 /* SideBarListViewController.m in Sources */,
 				CC53528A1EA11B5900F18F37 /* AllSessionsAgenda.m in Sources */,
 				CC11505C1EA142BF00692A6E /* FirstDaySessionsMyAgenda.m in Sources */,
@@ -718,7 +771,8 @@
 				4CEF75991E99694500AA3E07 /* main.m in Sources */,
 				CC11505F1EA1447300692A6E /* SecondDaySessionsMyAgenda.m in Sources */,
 				CC1150501EA12A5800692A6E /* FirstDaySessionsAgenda.m in Sources */,
-				4C81C11F1E9F88030076D2F4 /* ExhibitorDAO.m in Sources */,
+				4CBE19A61EA1E87900C5C553 /* SpeakerDTO.m in Sources */,
+				4CBE19911EA1E7FE00C5C553 /* ImageDTO.m in Sources */,
 				CC1150621EA147B600692A6E /* ThirdDaySessionsMyAgenda.m in Sources */,
 				4CBEEB901E99F11B006F848F /* ServiceURLs.m in Sources */,
 				CC5352421E9F3C0800F18F37 /* HomeViewController.m in Sources */,
@@ -842,6 +896,10 @@
 			baseConfigurationReference = 3204402F86974672082D0EB9 /* Pods-MDW-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "MDW-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -855,6 +913,10 @@
 			baseConfigurationReference = 313D000E55E67A5144795EC9 /* Pods-MDW-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "MDW-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
