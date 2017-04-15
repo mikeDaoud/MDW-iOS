@@ -8,7 +8,7 @@ DerivedData/
 
 ## realm files
 .DS_Store
-Realm.framework
+Realm.framework/
 
 ## Various settings
 *.pbxuser
