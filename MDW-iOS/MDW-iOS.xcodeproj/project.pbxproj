@@ -24,8 +24,8 @@
 		4CBE19A01EA1E85100C5C553 /* SessionDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE199F1EA1E85100C5C553 /* SessionDTO.m */; };
 		4CBE19A31EA1E86A00C5C553 /* SpeakerDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE19A21EA1E86A00C5C553 /* SpeakerDAO.m */; };
 		4CBE19A61EA1E87900C5C553 /* SpeakerDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE19A51EA1E87900C5C553 /* SpeakerDTO.m */; };
-		4CBE19A81EA1EBCB00C5C553 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBE19A71EA1EBCB00C5C553 /* Realm.framework */; };
-		4CBE19A91EA1EBCB00C5C553 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBE19A71EA1EBCB00C5C553 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4CBE19AB1EA22B7900C5C553 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBE19A71EA1EBCB00C5C553 /* Realm.framework */; };
+		4CBE19AC1EA22B7900C5C553 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBE19A71EA1EBCB00C5C553 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4CBEEB901E99F11B006F848F /* ServiceURLs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */; };
 		4CC5466C1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5466B1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m */; };
 		4CEF75991E99694500AA3E07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF75981E99694500AA3E07 /* main.m */; };
@@ -119,13 +119,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4CBE19AA1EA1EBCB00C5C553 /* Embed Frameworks */ = {
+		4CBE19AD1EA22B7900C5C553 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4CBE19A91EA1EBCB00C5C553 /* Realm.framework in Embed Frameworks */,
+				4CBE19AC1EA22B7900C5C553 /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,7 +282,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CBE19A81EA1EBCB00C5C553 /* Realm.framework in Frameworks */,
+				4CBE19AB1EA22B7900C5C553 /* Realm.framework in Frameworks */,
 				EC3AC7F7B5922D3846D3E198 /* libPods-MDW-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,7 +563,7 @@
 				4CEF75921E99694500AA3E07 /* Resources */,
 				1F08FD0F893F77581CC44276 /* [CP] Embed Pods Frameworks */,
 				BD12C64536DC5DFF2A056894 /* [CP] Copy Pods Resources */,
-				4CBE19AA1EA1EBCB00C5C553 /* Embed Frameworks */,
+				4CBE19AD1EA22B7900C5C553 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
