@@ -181,6 +181,8 @@ static AFHTTPSessionManager *sessionManager;
     
     [sessionManager GET:imageURL parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         
+        NSLog(@"Image data: %@", responseObject);
+        
         UIImage* img = (UIImage*) responseObject;
         
         //Caching the image in the database

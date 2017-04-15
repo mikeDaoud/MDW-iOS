@@ -26,6 +26,7 @@
 		4CBE19A61EA1E87900C5C553 /* SpeakerDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE19A51EA1E87900C5C553 /* SpeakerDTO.m */; };
 		4CBE19AB1EA22B7900C5C553 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBE19A71EA1EBCB00C5C553 /* Realm.framework */; };
 		4CBE19AC1EA22B7900C5C553 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBE19A71EA1EBCB00C5C553 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4CBE19B01EA2432900C5C553 /* DateConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE19AF1EA2432900C5C553 /* DateConverter.m */; };
 		4CBEEB901E99F11B006F848F /* ServiceURLs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */; };
 		4CC5466C1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5466B1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m */; };
 		4CEF75991E99694500AA3E07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF75981E99694500AA3E07 /* main.m */; };
@@ -168,6 +169,8 @@
 		4CBE19A41EA1E87900C5C553 /* SpeakerDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerDTO.h; sourceTree = "<group>"; };
 		4CBE19A51EA1E87900C5C553 /* SpeakerDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerDTO.m; sourceTree = "<group>"; };
 		4CBE19A71EA1EBCB00C5C553 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		4CBE19AE1EA2432900C5C553 /* DateConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateConverter.h; sourceTree = "<group>"; };
+		4CBE19AF1EA2432900C5C553 /* DateConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateConverter.m; sourceTree = "<group>"; };
 		4CBEEB8E1E99F11B006F848F /* ServiceURLs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceURLs.h; path = "utility Classes/ServiceURLs.h"; sourceTree = "<group>"; };
 		4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceURLs.m; path = "utility Classes/ServiceURLs.m"; sourceTree = "<group>"; };
 		4CC5466A1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+UIImageView_CashingWebImage.h"; sourceTree = "<group>"; };
@@ -403,6 +406,8 @@
 				4C81C1391E9FDE7D0076D2F4 /* WebServiceDataFetching.m */,
 				4CC5466A1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.h */,
 				4CC5466B1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m */,
+				4CBE19AE1EA2432900C5C553 /* DateConverter.h */,
+				4CBE19AF1EA2432900C5C553 /* DateConverter.m */,
 			);
 			name = "Utility Classes";
 			sourceTree = "<group>";
@@ -748,6 +753,7 @@
 			files = (
 				4CC5466C1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m in Sources */,
 				4CBE19941EA1E81900C5C553 /* Attendee.m in Sources */,
+				4CBE19B01EA2432900C5C553 /* DateConverter.m in Sources */,
 				4CBE198B1EA1E63A00C5C553 /* SessionTypes.m in Sources */,
 				CC1150561EA130F800692A6E /* ThirdDaySessionsAgenda.m in Sources */,
 				4CBE198A1EA1E63A00C5C553 /* AgendaDays.m in Sources */,

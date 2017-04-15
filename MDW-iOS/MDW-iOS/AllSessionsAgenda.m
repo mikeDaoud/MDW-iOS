@@ -10,10 +10,15 @@
 #import "UIImageView+UIImageView_CashingWebImage.h"
 #import "ImageDTO.h"
 #import "ImageDAO.h"
+#import "UIImageView+UIImageView_CashingWebImage.h"
+#import "SessionDAO.h"
+#import "SessionDTO.h"
+#import "DateConverter.h"
+
 
 @interface AllSessionsAgenda ()
 {
-    NSMutableArray *sessions;
+    NSArray *sessions;
     UIRefreshControl *refreshControl;
 }
 
@@ -23,13 +28,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    sessions=[[NSMutableArray alloc] init];
+    
+    NSArray * dbSessions =  (NSArray *) [[SessionDAO new] getAllSessions];
+    if (dbSessions) {
+        sessions = dbSessions;
+    }else{
+        sessions=[[NSArray alloc] init];
+    }
+    
      refreshControl=[[UIRefreshControl alloc] init];
     //set background
         self.tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
     //refresh table
         [refreshControl addTarget:self action:@selector(refreshMytableView) forControlEvents:UIControlEventValueChanged];
 }
+
 // reload the dataa
 -(void) refreshMytableView
 {
@@ -37,9 +50,9 @@
     [refreshControl endRefreshing];
     
 }
+
+
 //html label
-
-
 -(NSAttributedString*) renderHTML:(NSString*) htmlString{
     
     NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
@@ -56,14 +69,12 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    //return [sessions count];
-    return 1;
+
+    return [sessions count];
 }
 
 
@@ -73,20 +84,28 @@
     // Configure the cell...
      [cell setBackgroundColor: [UIColor clearColor]];
     
-    //Try
-    ImageDTO *imgData = [[ImageDAO new] getImage:@"http://www.mobiledeveloperweekend.net/service/speakerImage?id=20624"];
-    UIImage * imgt = [UIImage imageWithData:imgData.image];
-
+    //getting session object
+    SessionDTO * session = sessions[indexPath.row];
     
-    UIImageView *img =[cell  viewWithTag:1] ;
-//    [img setImage:[UIImage imageNamed:@"firstDay.png"]];
-    [img setImage:imgt];
+    //Getting refrences to the cell components
+    UIImageView *img =[cell  viewWithTag:1];
     UILabel * name = [cell viewWithTag:2];
-    name.attributedText = [self renderHTML:@"<b>Name</b>"];
     UILabel *t2=[cell viewWithTag:3];
-    [t2 setText:@"byee"];
     UILabel *t3=[cell viewWithTag:4];
-    [t3 setText:@"Hii"];
+    
+    //Setting the data
+    name.attributedText = [self renderHTML:session.name];
+    [t2 setText:session.location];
+    NSString * date = [NSString stringWithFormat:@"%@ - %@",
+                       [DateConverter stringFromDate:session.startDate],
+                       [DateConverter stringFromDate:session.endDate]];
+    [t3 setText:date];
+    
+    
+//    [img setImage:[UIImage imageNamed:@"firstDay.png"]];
+    [img SetwithImageInURL:@"http://www.mobiledeveloperweekend.net/service/speakerImage?id=20605" andPlaceholder:@"firstDay.png"];
+    
+    
     
     
     return cell;
