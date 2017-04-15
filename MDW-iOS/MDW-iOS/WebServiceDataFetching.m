@@ -7,6 +7,12 @@
 //
 
 #import "WebServiceDataFetching.h"
+#import "AgendaDays.h"
+#import "SessionTypes.h"
+#import "ExhibitorDAO.h"
+#import "SessionDAO.h"
+#import "SpeakerDAO.h"
+#import "ImageDAO.h"
 
 @implementation WebServiceDataFetching
 
@@ -22,16 +28,17 @@ static AFHTTPSessionManager *sessionManager;
             NSDictionary * result = [responseObject objectForKey:@"result"];
             NSArray * agendas = [result objectForKey:@"agendas"];
             
-            NSLog(@"---------------- no.of days in resulsts is %lu", (unsigned long)[agendas count]);
+//            NSLog(@"---------------- no.of days in resulsts is %lu", (unsigned long)[agendas count]);
             for (NSDictionary *day in agendas) {
                 NSNumber * date = [day objectForKey:@"date"];
+                NSLog(@"DAte is ------------------- %@", date);
                 NSArray * daySessions = [day objectForKey:@"sessions"];
-                NSLog(@"---------------- no.of sessions in the day are is %lu", (unsigned long)[daySessions count]);
+//                NSLog(@"---------------- no.of sessions in the day are is %lu", (unsigned long)[daySessions count]);
                 //Getting list of sessions
                 for (NSDictionary * session in daySessions) {
                     
                     //getting session speakers
-                    NSMutableArray * sessionSpearkers;
+                    NSMutableArray * sessionSpearkers = [NSMutableArray new];
                     NSArray * speakersList = [session objectForKey:@"speakers"];
                     if (![speakersList isKindOfClass:[NSNull class]]) {
                         for (NSDictionary * speaker in speakersList) {
@@ -53,27 +60,38 @@ static AFHTTPSessionManager *sessionManager;
                     NSNumber * startDate = [session valueForKey:@"startDate"];
                     NSNumber * endDate = [session valueForKey:@"endDate"];
                     NSNumber * status = [session valueForKey:@"status"];
+                    NSNumber * sessionID = [session valueForKey:@"id"];
                     
-                    SessionDTO * sessiondto = [[SessionDTO alloc]
-                                               initWithDate:[date longValue]
-                                               name:[session objectForKey:@"name"]
-                                               location:[session objectForKey:@"location"]
-                                               startDate: [startDate longValue]
-                                               endDate: [endDate longValue]
-                                               sessionType:[session objectForKey:@"sessionType"]
-                                               status: [status intValue]
-                                               sessionDescription:[session objectForKey:@"description"]
-                                               liked:[session valueForKey:@"liked"]
-                                               speakers:sessionSpearkers];
-//                    [sessiondto printOject];
+                     SessionDTO * sessiondto = [[SessionDTO alloc]
+                                    initWithSessionId:[sessionID integerValue]
+                                    agendaDay:[AgendaDays dateToAgendaDay:[date longValue]]
+                                    name:[session objectForKey:@"name"]
+                                    location:[session objectForKey:@"location"]
+                                    startDate:[startDate longValue]
+                                    endDate:[endDate longValue]
+                                    sessionType:[SessionTypes stringToSessionType:[session objectForKey:@"sessionType"]]
+                                    status: [status intValue]
+                                    sessionDescription:[session objectForKey:@"description"]
+                                    speakers:sessionSpearkers
+                                                ];
+                    NSLog(@"Extracted date is: +++++++ %ld", [date longValue]);
+                    NSLog(@"Session DAte is: +++++++ %ld", sessiondto.date );
+                    NSLog(@"Session Speakers count: +++++++ %ld", [[sessiondto speakers] count]);
+                    NSLog(@"Original Speakers count: +++++++ %ld", [sessionSpearkers count]);
                     
                     [sessions addObject:sessiondto];
-                    NSLog(@"---------------- no.ofsessions inside is %lu", (unsigned long)[sessions count]);
+//                    NSLog(@"---------------- no.ofsessions inside is %lu", (unsigned long)[sessions count]);
                     
                 }
+                
+                
             }
             
-            NSLog(@"---------------- no.ofsessions is %lu", (unsigned long)[sessions count]);
+//            NSLog(@"---------------- no.ofsessions is %lu", (unsigned long)[sessions count]);
+            
+            //Cashing data to DB
+            [[SessionDAO new] addSessions:sessions];
+            
 //            for (SessionDTO * ses in sessions) {
 //                [ses printOject];
 //            }
@@ -108,9 +126,12 @@ static AFHTTPSessionManager *sessionManager;
                 [speakersList addObject:speakerdto];
             }
             for (SpeakerDTO * s in speakersList) {
-                [s printObjectData];
+//                [s printObjectData];
             }
-            NSLog(@"---------------- no.of Speakers is %lu", (unsigned long)[speakersList count]);
+//            NSLog(@"---------------- no.of Speakers is %lu", (unsigned long)[speakersList count]);
+            
+            //Caching data in DB
+            [[SpeakerDAO new] addSpeakers:speakersList];
         
         }
         
@@ -129,21 +150,19 @@ static AFHTTPSessionManager *sessionManager;
             NSMutableArray * exhibitorsList = [[NSMutableArray alloc] init];
             NSArray * exhibitors = [responseObject objectForKey:@"result"];
             for (NSDictionary * exhibitor in exhibitors) {
-                NSNumber * eID = [exhibitor objectForKey:@"id"];
                 
                 ExhibitorDTO * exhibitordto = [[ExhibitorDTO alloc]
-            initWithExhibitorId:[eID intValue]
-            companyName:[exhibitor objectForKey:@"companyName"]
-            companyUrl:[exhibitor objectForKey:@"companyUrl"]
-            imageURL:[exhibitor objectForKey:@"imageURL"]
-                ];
-             
+                                               initWithCompanyName:[exhibitor objectForKey:@"companyName"]
+                                               companyUrl:[exhibitor objectForKey:@"companyUrl"]
+                                               imageURL:[exhibitor objectForKey:@"imageURL"]];
+
                 [exhibitorsList addObject:exhibitordto];
             }
             
+//            NSLog(@"---------------- no.of Exhibitors is %lu", (unsigned long)[exhibitorsList count]);
             
-            NSLog(@"---------------- no.of Exhibitors is %lu", (unsigned long)[exhibitorsList count]);
-        
+            //Caching data in DB
+            [[ExhibitorDAO new] addExhibitors:exhibitorsList];
         }
         
     }];
@@ -162,10 +181,12 @@ static AFHTTPSessionManager *sessionManager;
     
     [sessionManager GET:imageURL parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         
-        NSLog(@"JSON: %@", responseObject);
+        NSLog(@"Image data: %@", responseObject);
+        
         UIImage* img = (UIImage*) responseObject;
-        NSData * data = UIImagePNGRepresentation(img);
-        //TODO: Store the data in the database with the url
+        
+        //Caching the image in the database
+        [[ImageDAO new] addImage:[[ImageDTO alloc] initWithImageURL:imageURL image:UIImagePNGRepresentation(img)]];
         [imageView setImage:img];
         
     } failure:^(NSURLSessionTask *operation, NSError *error) {

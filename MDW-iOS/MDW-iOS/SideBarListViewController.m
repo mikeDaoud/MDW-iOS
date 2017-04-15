@@ -23,8 +23,6 @@
     
     menue=@[@"Agenda",@"My Agenda",@"Speakers",@"Exhibitors",@"Profile",@"Log Out"];
     self.tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
-
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -101,8 +99,6 @@
     // Pass the selected object to the new view controller.
     if([segue isKindOfClass:[SWRevealViewControllerSegueSetController class]])
     {
-        
-        
         UIViewController *dvc = [segue destinationViewController];
         
         UINavigationController *navCtrl = (UINavigationController *) self.revealViewController.frontViewController;

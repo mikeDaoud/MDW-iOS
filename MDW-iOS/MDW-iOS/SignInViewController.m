@@ -104,6 +104,7 @@
                 [WebServiceDataFetching fetchSessionsFromWebServicewithSessionManager:_mgr];
                 [WebServiceDataFetching fetchSpeakersFromWebServicewithSessionManager:_mgr];
                 [WebServiceDataFetching fetchExhibitorsFromWebServicewithSessionManager:_mgr];
+                [WebServiceDataFetching fetchImageWithURL:@"http://www.mobiledeveloperweekend.net/service/speakerImage?id=20624" andRefreshImageView:nil];
                 
                 
             }
