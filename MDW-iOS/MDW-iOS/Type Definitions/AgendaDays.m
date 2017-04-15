@@ -17,12 +17,17 @@
     }
     
     +(AgendaDay)dateToAgendaDay:(long)date{
-        NSDictionary<NSNumber*, NSNumber*> *agendaDays = @{
-                                                           agendaDayValues[0] : @(DAY_ONE),
-                                                           agendaDayValues[1] : @(DAY_TWO),
-                                                           agendaDayValues[2] : @(DAY_THREE)
-                                                           };
-        return (AgendaDay)[agendaDays objectForKey:[NSNumber numberWithLong:date]];
+        AgendaDay agendaDay = -1;
+        if (date == [agendaDayValues[0] longValue]) {
+            agendaDay = DAY_ONE;
+        }
+        else if (date == [agendaDayValues[1] longValue]) {
+            agendaDay = DAY_TWO;
+        }
+        else if (date == [agendaDayValues[2] longValue]) {
+            agendaDay = DAY_THREE;
+        }
+        return agendaDay;
     }
     
     +(long)agendaDayToDate:(AgendaDay)agendaDay{
@@ -34,4 +39,4 @@
         return [[agendaDays objectForKey:@(agendaDay)] longValue];
     }
     
-    @end
+@end
