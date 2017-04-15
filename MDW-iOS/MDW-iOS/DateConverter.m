@@ -21,5 +21,17 @@
    return [formatter stringFromDate:date];
 }
 
++(NSString *)dayStringFromDate: (NSTimeInterval) timeInterval{
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInterval/1000];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterNoStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:@"dd"];
+    
+    return [formatter stringFromDate:date];
+    
+}
+
+
 @end
 

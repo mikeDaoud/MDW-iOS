@@ -14,6 +14,8 @@
 #import "SessionDAO.h"
 #import "SessionDTO.h"
 #import "DateConverter.h"
+#import "AgendaDays.h"
+#import "SessionTypes.h"
 
 
 @interface AllSessionsAgenda ()
@@ -29,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    NSArray * dbSessions =  (NSArray *) [[SessionDAO new] getSessionsByDate:[AgendaDays dateToAgendaDay:DAY_ONE]];
     NSArray * dbSessions =  (NSArray *) [[SessionDAO new] getAllSessions];
     if (dbSessions) {
         sessions = dbSessions;
@@ -105,6 +108,20 @@
 //    [img setImage:[UIImage imageNamed:@"firstDay.png"]];
     [img SetwithImageInURL:@"http://www.mobiledeveloperweekend.net/service/speakerImage?id=20605" andPlaceholder:@"firstDay.png"];
     
+    NSLog(@"================================%@", session.sessionType);
+    
+    if ([session.sessionType isEqualToString:@"Session"]) {
+        [img setImage:[UIImage imageNamed:@"session.png"]];
+        // ADD the date to the label on the image [DateConverter dayStringFromDate:session.date];
+    }else if ([session.sessionType isEqualToString:@"Workshop"]){
+        [img setImage:[UIImage imageNamed:@"workshop.png"]];
+        // ADD the date to the label on the image
+    }else if ([session.sessionType isEqualToString:@"Break"]){
+        [img setImage:[UIImage imageNamed:@"breakicon.png"]];
+    }else if ([session.sessionType isEqualToString:@"Hackathon"]){
+        [img setImage:[UIImage imageNamed:@"hacathon.png"]];
+        // ADD the date to the label on the image
+    }
     
     
     

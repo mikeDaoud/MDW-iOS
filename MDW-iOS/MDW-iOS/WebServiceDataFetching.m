@@ -90,11 +90,13 @@ static AFHTTPSessionManager *sessionManager;
 //            NSLog(@"---------------- no.ofsessions is %lu", (unsigned long)[sessions count]);
             
             //Cashing data to DB
+            for (SessionDTO * ses in sessions) {
+                NSLog(@"Session Type ++=++====+=====++==== %@", ses.sessionType);
+            }
+            
             [[SessionDAO new] addSessions:sessions];
             
-//            for (SessionDTO * ses in sessions) {
-//                [ses printOject];
-//            }
+            
             
         }
     }];
