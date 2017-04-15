@@ -10,6 +10,7 @@
 #import "UIImageView+UIImageView_CashingWebImage.h"
 #import "ImageDTO.h"
 #import "ImageDAO.h"
+#import "UIImageView+UIImageView_CashingWebImage.h"
 
 @interface AllSessionsAgenda ()
 {
@@ -74,13 +75,15 @@
      [cell setBackgroundColor: [UIColor clearColor]];
     
     //Try
-    ImageDTO *imgData = [[ImageDAO new] getImage:@"http://www.mobiledeveloperweekend.net/service/speakerImage?id=20624"];
-    UIImage * imgt = [UIImage imageWithData:imgData.image];
+//    ImageDTO *imgData = [[ImageDAO new] getImage:@"http://www.mobiledeveloperweekend.net/service/speakerImage?id=20624"];
+//    UIImage * imgt = [UIImage imageWithData:imgData.image];
 
+    
     
     UIImageView *img =[cell  viewWithTag:1] ;
 //    [img setImage:[UIImage imageNamed:@"firstDay.png"]];
-    [img setImage:imgt];
+//    [img setImage:imgt];
+    [img SetwithImageInURL:@"http://www.mobiledeveloperweekend.net/service/speakerImage?id=20605" andPlaceholder:@"firstDay.png"];
     UILabel * name = [cell viewWithTag:2];
     name.attributedText = [self renderHTML:@"<b>Name</b>"];
     UILabel *t2=[cell viewWithTag:3];

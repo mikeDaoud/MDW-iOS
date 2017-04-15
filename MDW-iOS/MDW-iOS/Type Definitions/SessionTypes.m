@@ -17,13 +17,20 @@
     }
     
     +(SessionType)stringToSessionType:(NSString *)stringValue{
-        NSDictionary<NSString*, NSNumber*> *sessionTypes = @{
-                                                             sessionTypeValues[0] : @(BREAK),
-                                                             sessionTypeValues[1] : @(HACKATHON),
-                                                             sessionTypeValues[2] : @(SESSION),
-                                                             sessionTypeValues[3] : @(WORKSHOP)
-                                                             };
-        return (SessionType)[sessionTypes objectForKey:stringValue];
+        SessionType sessionType = -1;
+        if ([stringValue isEqualToString:sessionTypeValues[0]]) {
+            sessionType = BREAK;
+        }
+        else if ([stringValue isEqualToString:sessionTypeValues[1]]) {
+            sessionType = HACKATHON;
+        }
+        else if ([stringValue isEqualToString:sessionTypeValues[2]]) {
+            sessionType = SESSION;
+        }
+        else if ([stringValue isEqualToString:sessionTypeValues[3]]) {
+            sessionType = WORKSHOP;
+        }
+        return sessionType;
     }
     
     +(NSString *)sessionTypeToString:(SessionType)SessionTypeValue{
@@ -36,4 +43,4 @@
         return [sessionTypes objectForKey:@(SessionTypeValue)];
     }
     
-    @end
+@end
