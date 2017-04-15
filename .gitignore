@@ -6,6 +6,10 @@
 build/
 DerivedData/
 
+## realm files
+.DS_Store
+Realm.framework/
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
