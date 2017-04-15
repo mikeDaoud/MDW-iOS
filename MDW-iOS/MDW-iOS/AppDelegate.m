@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //TODO: remove the following line that resets NSuserdefaults for testing purposes
-//       [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"signedIn"];
+       [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"signedIn"];
     
     //getting the ViewController using Storyboard ID
     UIStoryboard* main = [UIStoryboard storyboardWithName:@"Main"

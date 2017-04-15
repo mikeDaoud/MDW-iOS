@@ -28,6 +28,10 @@
 		4CBE19B01EA2432900C5C553 /* DateConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE19AF1EA2432900C5C553 /* DateConverter.m */; };
 		4CBEEB901E99F11B006F848F /* ServiceURLs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */; };
 		4CC5466C1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5466B1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m */; };
+		4CC7D4131EA26377000B7E70 /* breakicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC7D4121EA26377000B7E70 /* breakicon.png */; };
+		4CC7D4151EA2638D000B7E70 /* session.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC7D4141EA2638D000B7E70 /* session.png */; };
+		4CC7D4171EA26397000B7E70 /* hacathon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC7D4161EA26397000B7E70 /* hacathon.png */; };
+		4CC7D4191EA263B0000B7E70 /* workshop.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC7D4181EA263B0000B7E70 /* workshop.png */; };
 		4CEF75991E99694500AA3E07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF75981E99694500AA3E07 /* main.m */; };
 		4CEF759C1E99694500AA3E07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF759B1E99694500AA3E07 /* AppDelegate.m */; };
 		4CEF759F1E99694500AA3E07 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF759E1E99694500AA3E07 /* ViewController.m */; };
@@ -173,6 +177,10 @@
 		4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceURLs.m; path = "utility Classes/ServiceURLs.m"; sourceTree = "<group>"; };
 		4CC5466A1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+UIImageView_CashingWebImage.h"; sourceTree = "<group>"; };
 		4CC5466B1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+UIImageView_CashingWebImage.m"; sourceTree = "<group>"; };
+		4CC7D4121EA26377000B7E70 /* breakicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = breakicon.png; path = "MDW UI/breakicon.png"; sourceTree = "<group>"; };
+		4CC7D4141EA2638D000B7E70 /* session.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = session.png; path = "MDW UI/session.png"; sourceTree = "<group>"; };
+		4CC7D4161EA26397000B7E70 /* hacathon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hacathon.png; path = "MDW UI/hacathon.png"; sourceTree = "<group>"; };
+		4CC7D4181EA263B0000B7E70 /* workshop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = workshop.png; path = "MDW UI/workshop.png"; sourceTree = "<group>"; };
 		4CEF75941E99694500AA3E07 /* MDW-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MDW-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CEF75981E99694500AA3E07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CEF759A1E99694500AA3E07 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -368,6 +376,7 @@
 		4C81C1271E9FB67C0076D2F4 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				4CC7D40D1EA262AC000B7E70 /* agenda_icons */,
 				4C81C1281E9FB6890076D2F4 /* signInView */,
 			);
 			name = images;
@@ -407,6 +416,17 @@
 				4CBE19AF1EA2432900C5C553 /* DateConverter.m */,
 			);
 			name = "Utility Classes";
+			sourceTree = "<group>";
+		};
+		4CC7D40D1EA262AC000B7E70 /* agenda_icons */ = {
+			isa = PBXGroup;
+			children = (
+				4CC7D4121EA26377000B7E70 /* breakicon.png */,
+				4CC7D4141EA2638D000B7E70 /* session.png */,
+				4CC7D4161EA26397000B7E70 /* hacathon.png */,
+				4CC7D4181EA263B0000B7E70 /* workshop.png */,
+			);
+			name = agenda_icons;
 			sourceTree = "<group>";
 		};
 		4CEF758B1E99694500AA3E07 = {
@@ -648,6 +668,7 @@
 				4C81C1321E9FB7680076D2F4 /* background.png in Resources */,
 				CC64AA351E9F1DB90058EB6A /* jetsmoblab.PNG in Resources */,
 				CC64AA1A1E9F1DB90058EB6A /* hacathon.png in Resources */,
+				4CC7D4131EA26377000B7E70 /* breakicon.png in Resources */,
 				CC64AA2B1E9F1DB90058EB6A /* Icon-76@2x.png in Resources */,
 				CC64AA101E9F1DB90058EB6A /* agenda.png in Resources */,
 				4CEF75A41E99694500AA3E07 /* Assets.xcassets in Resources */,
@@ -656,7 +677,9 @@
 				CC64AA291E9F1DB90058EB6A /* Icon-76.png in Resources */,
 				CC64AA201E9F1DB90058EB6A /* Icon-40@2x.png in Resources */,
 				CC64AA521E9F1DB90058EB6A /* thirdDay.png in Resources */,
+				4CC7D4171EA26397000B7E70 /* hacathon.png in Resources */,
 				CC64AA4C1E9F1DB90058EB6A /* sideMenuBackGround.png in Resources */,
+				4CC7D4191EA263B0000B7E70 /* workshop.png in Resources */,
 				CC64AA3D1E9F1DB90058EB6A /* logo1.png in Resources */,
 				4CEF75A21E99694500AA3E07 /* Main.storyboard in Resources */,
 				CC64AA421E9F1DB90058EB6A /* myTicketBackground.png in Resources */,
@@ -665,6 +688,7 @@
 				CC64AA461E9F1DB90058EB6A /* reveal-icon.png in Resources */,
 				CC64AA2E1E9F1DB90058EB6A /* Icon-Small 2.png in Resources */,
 				CC64AA411E9F1DB90058EB6A /* myContactBackground.png in Resources */,
+				4CC7D4151EA2638D000B7E70 /* session.png in Resources */,
 				CC64AA161E9F1DB90058EB6A /* emailIcon.png in Resources */,
 				CC64AA4D1E9F1DB90058EB6A /* speaker.png in Resources */,
 				CC64AA141E9F1DB90058EB6A /* calender.png in Resources */,

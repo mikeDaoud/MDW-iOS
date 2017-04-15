@@ -11,5 +11,6 @@
 @interface DateConverter : NSObject
 
 +(NSString *)stringFromDate: (NSTimeInterval) timeInterval;
++(NSString *)dayStringFromDate: (NSTimeInterval) timeInterval;
 
 @end
