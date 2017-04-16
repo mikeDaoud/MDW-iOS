@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThirdDaySessionsMyAgenda : UITableViewController
+@interface ThirdDaySessionsMyAgenda : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *mytableview;
 
 @end

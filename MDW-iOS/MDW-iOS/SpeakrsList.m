@@ -1,14 +1,15 @@
 //
-//  SecondDaySessionsAgenda.m
+//  SpeakrsList.m
 //  MDW-iOS
 //
-//  Created by JETS on 4/14/17.
+//  Created by JETS on 4/16/17.
 //  Copyright © 2017 MAD. All rights reserved.
 //
 
-#import "SecondDaySessionsAgenda.h"
+#import "SpeakrsList.h"
+#import "SWRevealViewController.h"
 
-@interface SecondDaySessionsAgenda ()
+@interface SpeakrsList ()
 {
     
     
@@ -16,19 +17,27 @@
     UIRefreshControl *refreshControl;
 }
 
+
 @end
 
-@implementation SecondDaySessionsAgenda
+@implementation SpeakrsList
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.mytableview.delegate=self;
-    self.mytableview.dataSource=self;
+    // Do any additional setup after loading the view.
+    self.MYTABLEVIEW.delegate=self;
+    self.MYTABLEVIEW.dataSource=self;
+    _barButton.target=self.revealViewController;
+    _barButton.action=@selector(revealToggle:);
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor orangeColor]}];
+    [self setTitle:@"MDW"];
+   
     
     sessions=[[NSMutableArray alloc] init];
     refreshControl=[[UIRefreshControl alloc] init];
     //set background
-    self.mytableview.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
+    self.MYTABLEVIEW.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
     //refresh table
     [refreshControl addTarget:self action:@selector(refreshMytableView) forControlEvents:UIControlEventValueChanged];
 }
@@ -38,7 +47,7 @@
 // reload the dataa
 -(void) refreshMytableView
 {
-    [self.mytableview reloadData];
+    [self.MYTABLEVIEW reloadData];
     [refreshControl endRefreshing];
     
 }
@@ -53,12 +62,12 @@
     return attrStr;
 }
 
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 #pragma mark - Table view data source
 
@@ -73,60 +82,22 @@
     return 1;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"forIndexPath:indexPath];
     
     // Configure the cell...
-    
     [cell setBackgroundColor: [UIColor clearColor]];
     
     UIImageView *img =[cell  viewWithTag:1] ;
-    [img setImage:[UIImage imageNamed:@"secondDay.png"]];
+    [img setImage:[UIImage imageNamed:@"speaker.png"]];
     UILabel * name = [cell viewWithTag:2];
     name.attributedText = [self renderHTML:@"<b>Name</b>"];
     UILabel *t2=[cell viewWithTag:3];
     [t2 setText:@"byee"];
-    UILabel *t3=[cell viewWithTag:4];
-   [t3 setText:@"Hii"];
-    
     return cell;
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 /*
 #pragma mark - Navigation

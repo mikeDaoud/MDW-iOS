@@ -118,6 +118,8 @@
 		CC64AA521E9F1DB90058EB6A /* thirdDay.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64AA0D1E9F1DB90058EB6A /* thirdDay.png */; };
 		CC64AA531E9F1DB90058EB6A /* ticket.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64AA0E1E9F1DB90058EB6A /* ticket.png */; };
 		CC64AA541E9F1DB90058EB6A /* workshop.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64AA0F1E9F1DB90058EB6A /* workshop.png */; };
+		CC74FAB51EA36A210067C73A /* SpeakrsList.m in Sources */ = {isa = PBXBuildFile; fileRef = CC74FAB41EA36A210067C73A /* SpeakrsList.m */; };
+		CC74FAB81EA36E3F0067C73A /* SpeakersNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC74FAB71EA36E3F0067C73A /* SpeakersNavigationController.m */; };
 		CC7E39491E9E6349002EE671 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E39481E9E6349002EE671 /* SWRevealViewController.m */; };
 		EC3AC7F7B5922D3846D3E198 /* libPods-MDW-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D11EF6796886A51818D1FAE /* libPods-MDW-iOS.a */; };
 /* End PBXBuildFile section */
@@ -282,6 +284,10 @@
 		CC64AA0D1E9F1DB90058EB6A /* thirdDay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thirdDay.png; sourceTree = "<group>"; };
 		CC64AA0E1E9F1DB90058EB6A /* ticket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ticket.png; sourceTree = "<group>"; };
 		CC64AA0F1E9F1DB90058EB6A /* workshop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workshop.png; sourceTree = "<group>"; };
+		CC74FAB31EA36A210067C73A /* SpeakrsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakrsList.h; sourceTree = "<group>"; };
+		CC74FAB41EA36A210067C73A /* SpeakrsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakrsList.m; sourceTree = "<group>"; };
+		CC74FAB61EA36E3F0067C73A /* SpeakersNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakersNavigationController.h; sourceTree = "<group>"; };
+		CC74FAB71EA36E3F0067C73A /* SpeakersNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakersNavigationController.m; sourceTree = "<group>"; };
 		CC7E39471E9E6349002EE671 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		CC7E39481E9E6349002EE671 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -369,6 +375,10 @@
 				CC11505E1EA1447300692A6E /* SecondDaySessionsMyAgenda.m */,
 				CC1150601EA147B600692A6E /* ThirdDaySessionsMyAgenda.h */,
 				CC1150611EA147B600692A6E /* ThirdDaySessionsMyAgenda.m */,
+				CC74FAB31EA36A210067C73A /* SpeakrsList.h */,
+				CC74FAB41EA36A210067C73A /* SpeakrsList.m */,
+				CC74FAB61EA36E3F0067C73A /* SpeakersNavigationController.h */,
+				CC74FAB71EA36E3F0067C73A /* SpeakersNavigationController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -786,6 +796,7 @@
 				4CBE199A1EA1E83800C5C553 /* ExhibitorDTO.m in Sources */,
 				4C81C1351E9FB9F20076D2F4 /* SignInViewController.m in Sources */,
 				CC1150531EA12CEA00692A6E /* SecondDaySessionsAgenda.m in Sources */,
+				CC74FAB81EA36E3F0067C73A /* SpeakersNavigationController.m in Sources */,
 				4CBE198E1EA1E7EF00C5C553 /* ImageDAO.m in Sources */,
 				4CBE19971EA1E82700C5C553 /* ExhibitorDAO.m in Sources */,
 				4CBE199D1EA1E84600C5C553 /* SessionDAO.m in Sources */,
@@ -800,6 +811,7 @@
 				4CBE19A61EA1E87900C5C553 /* SpeakerDTO.m in Sources */,
 				4CBE19911EA1E7FE00C5C553 /* ImageDTO.m in Sources */,
 				CC1150621EA147B600692A6E /* ThirdDaySessionsMyAgenda.m in Sources */,
+				CC74FAB51EA36A210067C73A /* SpeakrsList.m in Sources */,
 				4CBEEB901E99F11B006F848F /* ServiceURLs.m in Sources */,
 				CC5352421E9F3C0800F18F37 /* HomeViewController.m in Sources */,
 			);

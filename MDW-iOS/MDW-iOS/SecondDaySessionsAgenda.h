@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondDaySessionsAgenda : UITableViewController
+@interface SecondDaySessionsAgenda : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *mytableview;
 
 @end

@@ -1,19 +1,19 @@
 //
-//  MyAgendaBarController.m
+//  SpeakersNavigationController.m
 //  MDW-iOS
 //
-//  Created by JETS on 4/13/17.
+//  Created by JETS on 4/16/17.
 //  Copyright © 2017 MAD. All rights reserved.
 //
 
-#import "MyAgendaBarController.h"
+#import "SpeakersNavigationController.h"
 #import "SWRevealViewController.h"
 
-@interface MyAgendaBarController ()
+@interface SpeakersNavigationController ()
 
 @end
 
-@implementation MyAgendaBarController
+@implementation SpeakersNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
