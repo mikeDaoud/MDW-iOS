@@ -65,9 +65,9 @@ static NSString * signedInUserEmail;
 
 //return a URL request to register to a certain session
 
-+(NSURLRequest *)requestRegisterToSessionWithID: (int) sessionID{
++(NSURLRequest *)requestRegisterToSessionWithID: (NSInteger) sessionID{
     
-    NSURL * url = [[NSURL alloc]initWithString:[NSString stringWithFormat:@"http://www.mobiledeveloperweekend.net/MDW/service/registerSession?userName=%@&sessionId=%d&enforce=false&status=0", signedInUserEmail, sessionID]];
+    NSURL * url = [[NSURL alloc]initWithString:[NSString stringWithFormat:@"http://www.mobiledeveloperweekend.net/MDW/service/registerSession?userName=%@&sessionId=%ld&enforce=false&status=0", signedInUserEmail, (long)sessionID]];
     return [[NSURLRequest alloc]initWithURL:url];
 }
 

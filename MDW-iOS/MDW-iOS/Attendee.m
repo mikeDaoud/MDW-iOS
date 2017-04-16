@@ -51,16 +51,6 @@
         return self;
     }
     
-    -(NSString *)fullName{
-        if (_middleName != nil) {
-            _middleName = [_middleName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-            if (![_middleName isEqualToString:@""]){
-                return [NSString stringWithFormat:@"%@ %@ %@", _firstName, _middleName, _lastName];
-            }
-        }
-        return [NSString stringWithFormat:@"%@ %@", _firstName, _lastName];
-    }
-    
     -(void) printObjectData{
         NSLog(@"--------- code %@",_code);
         NSLog(@"--------- email %@",_email);

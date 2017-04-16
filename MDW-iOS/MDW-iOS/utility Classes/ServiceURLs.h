@@ -16,6 +16,6 @@
 +(NSURLRequest *)userProfileRequest;
 +(NSURLRequest *)profileImageRequest;
 +(NSURLRequest *)exhibitorsDataRequest;
-+(NSURLRequest *)requestRegisterToSessionWithID: (int) sessionID;
++(NSURLRequest *)requestRegisterToSessionWithID: (NSInteger) sessionID;
 
 @end

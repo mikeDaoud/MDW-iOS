@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		031558191EA240C200C6EB14 /* fields_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 031558181EA240C200C6EB14 /* fields_background.png */; };
+		0365A98E1EA39AE500A6B6A3 /* SessionDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0365A98D1EA39AE500A6B6A3 /* SessionDetailsViewController.m */; };
+		0365A9911EA401EE00A6B6A3 /* NameFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0365A9901EA401EE00A6B6A3 /* NameFormatter.m */; };
 		4C81C1301E9FB7580076D2F4 /* loginHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C81C12F1E9FB7580076D2F4 /* loginHeader.png */; };
 		4C81C1321E9FB7680076D2F4 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C81C1311E9FB7680076D2F4 /* background.png */; };
 		4C81C1351E9FB9F20076D2F4 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1341E9FB9F20076D2F4 /* SignInViewController.m */; };
@@ -140,6 +142,10 @@
 
 /* Begin PBXFileReference section */
 		031558181EA240C200C6EB14 /* fields_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fields_background.png; path = "MDW UI/fields_background.png"; sourceTree = "<group>"; };
+		0365A98C1EA39AE500A6B6A3 /* SessionDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionDetailsViewController.h; sourceTree = "<group>"; };
+		0365A98D1EA39AE500A6B6A3 /* SessionDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDetailsViewController.m; sourceTree = "<group>"; };
+		0365A98F1EA401EE00A6B6A3 /* NameFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NameFormatter.h; path = "utility Classes/NameFormatter.h"; sourceTree = "<group>"; };
+		0365A9901EA401EE00A6B6A3 /* NameFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NameFormatter.m; path = "utility Classes/NameFormatter.m"; sourceTree = "<group>"; };
 		313D000E55E67A5144795EC9 /* Pods-MDW-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDW-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MDW-iOS/Pods-MDW-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		3204402F86974672082D0EB9 /* Pods-MDW-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDW-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MDW-iOS/Pods-MDW-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		3D11EF6796886A51818D1FAE /* libPods-MDW-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MDW-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -379,6 +385,8 @@
 				CC74FAB41EA36A210067C73A /* SpeakrsList.m */,
 				CC74FAB61EA36E3F0067C73A /* SpeakersNavigationController.h */,
 				CC74FAB71EA36E3F0067C73A /* SpeakersNavigationController.m */,
+				0365A98C1EA39AE500A6B6A3 /* SessionDetailsViewController.h */,
+				0365A98D1EA39AE500A6B6A3 /* SessionDetailsViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -424,6 +432,8 @@
 				4CC5466B1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m */,
 				4CBE19AE1EA2432900C5C553 /* DateConverter.h */,
 				4CBE19AF1EA2432900C5C553 /* DateConverter.m */,
+				0365A98F1EA401EE00A6B6A3 /* NameFormatter.h */,
+				0365A9901EA401EE00A6B6A3 /* NameFormatter.m */,
 			);
 			name = "Utility Classes";
 			sourceTree = "<group>";
@@ -781,6 +791,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0365A98E1EA39AE500A6B6A3 /* SessionDetailsViewController.m in Sources */,
 				4CC5466C1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m in Sources */,
 				4CBE19941EA1E81900C5C553 /* Attendee.m in Sources */,
 				4CBE19B01EA2432900C5C553 /* DateConverter.m in Sources */,
@@ -812,6 +823,7 @@
 				4CBE19911EA1E7FE00C5C553 /* ImageDTO.m in Sources */,
 				CC1150621EA147B600692A6E /* ThirdDaySessionsMyAgenda.m in Sources */,
 				CC74FAB51EA36A210067C73A /* SpeakrsList.m in Sources */,
+				0365A9911EA401EE00A6B6A3 /* NameFormatter.m in Sources */,
 				4CBEEB901E99F11B006F848F /* ServiceURLs.m in Sources */,
 				CC5352421E9F3C0800F18F37 /* HomeViewController.m in Sources */,
 			);

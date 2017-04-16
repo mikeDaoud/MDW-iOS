@@ -16,6 +16,7 @@
 #import "DateConverter.h"
 #import "AgendaDays.h"
 #import "SessionTypes.h"
+#import "SessionDetailsViewController.h"
 
 @interface FirstDaySessionsAgenda ()
 {
@@ -75,12 +76,10 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     NSLog(@"%lu",(unsigned long)[sessions count]);
     return [sessions count];
 }
@@ -140,6 +139,11 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    SessionDetailsViewController *sessionDetailsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"sessionDetails"];
+    sessionDetailsViewController.session = sessions[indexPath.row];
+    [self presentViewController:sessionDetailsViewController animated:YES completion:nil];
+}
 
 /*
 // Override to support conditional editing of the table view.

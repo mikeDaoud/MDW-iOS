@@ -196,4 +196,19 @@ static AFHTTPSessionManager *sessionManager;
     }];
 }
 
++(NSDictionary *)registerSessionWithID:(NSInteger)sessionId{
+    __block NSDictionary *result;
+    NSURLSessionDataTask * dataTask = [sessionManager dataTaskWithRequest:[ServiceURLs requestRegisterToSessionWithID:sessionId] completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        
+        if (error) {
+            NSLog(@"Error: %@", error);
+        } else {
+            result = [[responseObject objectForKey:@"result"] objectAtIndex:0];
+        }
+        
+    }];
+    [dataTask resume];
+    return result;
+}
+
 @end

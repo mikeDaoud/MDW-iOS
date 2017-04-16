@@ -12,5 +12,6 @@
 
 +(NSString *)stringFromDate: (NSTimeInterval) timeInterval;
 +(NSString *)dayStringFromDate: (NSTimeInterval) timeInterval;
++(NSString *)dateStringFromDate: (NSTimeInterval) timeInterval;
 
 @end
