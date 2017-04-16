@@ -20,9 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.mytableview.delegate=self;
+    self.mytableview.dataSource=self;
     
-    menue=@[@"Agenda",@"My Agenda",@"Speakers",@"Exhibitors",@"Profile",@"Log Out"];
-    self.tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
+    menue=@[@"Agenda",@"My Agenda",@"Speakers",@"Exhibitors",@"Profile",@"Log Out",@"fotter"];
+    self.mytableview.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"leftSideMenuBackground.png"]];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SideBarListViewController : UITableViewController
+@interface SideBarListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *mytableview;
 
 @end

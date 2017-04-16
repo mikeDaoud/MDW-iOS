@@ -20,6 +20,8 @@
     _barButton.target=self.revealViewController;
     _barButton.action=@selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor orangeColor]}];
+    [self setTitle:@"MDW"];
 
     
     

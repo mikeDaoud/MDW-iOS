@@ -30,6 +30,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.mytableview.delegate=self;
+    self.mytableview.dataSource=self;
+    
     
 //    NSArray * dbSessions =  (NSArray *) [[SessionDAO new] getSessionsByDate:[AgendaDays dateToAgendaDay:DAY_ONE]];
     NSArray * dbSessions =  (NSArray *) [[SessionDAO new] getAllSessions];
@@ -41,7 +44,7 @@
     
      refreshControl=[[UIRefreshControl alloc] init];
     //set background
-        self.tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
+        self.mytableview.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
     //refresh table
         [refreshControl addTarget:self action:@selector(refreshMytableView) forControlEvents:UIControlEventValueChanged];
 }
@@ -49,7 +52,7 @@
 // reload the dataa
 -(void) refreshMytableView
 {
-    [self.tableView reloadData];
+    [self.mytableview reloadData];
     [refreshControl endRefreshing];
     
 }
@@ -95,6 +98,7 @@
     UILabel * name = [cell viewWithTag:2];
     UILabel *t2=[cell viewWithTag:3];
     UILabel *t3=[cell viewWithTag:4];
+    UILabel *t4=[cell viewWithTag:5];
     
     //Setting the data
     name.attributedText = [self renderHTML:session.name];
@@ -106,21 +110,25 @@
     
     
 //    [img setImage:[UIImage imageNamed:@"firstDay.png"]];
-    [img SetwithImageInURL:@"http://www.mobiledeveloperweekend.net/service/speakerImage?id=20605" andPlaceholder:@"firstDay.png"];
+   // [img SetwithImageInURL:@"http://www.mobiledeveloperweekend.net/service/speakerImage?id=20605" andPlaceholder:@"firstDay.png"];
     
     NSLog(@"================================%@", session.sessionType);
     
     if ([session.sessionType isEqualToString:@"Session"]) {
         [img setImage:[UIImage imageNamed:@"session.png"]];
+        [t4 setText:[DateConverter dayStringFromDate:session.date]];
         // ADD the date to the label on the image [DateConverter dayStringFromDate:session.date];
     }else if ([session.sessionType isEqualToString:@"Workshop"]){
         [img setImage:[UIImage imageNamed:@"workshop.png"]];
         // ADD the date to the label on the image
+           [t4 setText:[DateConverter dayStringFromDate:session.date]];
     }else if ([session.sessionType isEqualToString:@"Break"]){
         [img setImage:[UIImage imageNamed:@"breakicon.png"]];
+        [t4 setText:@" "];
     }else if ([session.sessionType isEqualToString:@"Hackathon"]){
         [img setImage:[UIImage imageNamed:@"hacathon.png"]];
         // ADD the date to the label on the image
+           [t4 setText:[DateConverter dayStringFromDate:session.date]];
     }
     
     
