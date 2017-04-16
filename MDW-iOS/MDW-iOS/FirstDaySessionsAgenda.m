@@ -33,7 +33,7 @@
     self.mytableview.delegate=self;
     self.mytableview.dataSource=self;
     
-     NSArray * dbSessions =  (NSArray *) [[SessionDAO new] getSessionsByDate:[AgendaDays dateToAgendaDay:DAY_ONE]];
+     NSArray * dbSessions =  (NSArray *) [[SessionDAO new] getSessionsByDate:DAY_ONE];
     
     if (dbSessions) {
         sessions = dbSessions;

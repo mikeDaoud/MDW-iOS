@@ -58,12 +58,12 @@
     //=================================================================================//
     
     -(id<NSFastEnumeration>)getAllUserSessions{
-        RLMResults<SessionDTO *> *sessions = [SessionDTO objectsWhere:@"status = 2"];
+        RLMResults<SessionDTO *> *sessions = [SessionDTO objectsWhere:@"status = %d OR status = %d", PENDING, APPROVED];
         return sessions;
     }
     
     -(id<NSFastEnumeration>)getUserSessionsByDate:(AgendaDay)agendaDay{
-        RLMResults<SessionDTO *> *sessions = [SessionDTO objectsWhere:@"date = %ld AND status = 2", [AgendaDays agendaDayToDate:agendaDay]];
+        RLMResults<SessionDTO *> *sessions = [SessionDTO objectsWhere:@"date = %ld AND (status = %d OR status = %d)", [AgendaDays agendaDayToDate:agendaDay], PENDING, APPROVED];
         return sessions;
     }
     
