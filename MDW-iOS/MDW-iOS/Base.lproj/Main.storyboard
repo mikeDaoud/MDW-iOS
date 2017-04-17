@@ -1085,18 +1085,32 @@
         <!--ticket-->
         <scene sceneID="rbP-1Y-fRu">
             <objects>
-                <viewController id="T1U-ER-sVx" sceneMemberID="viewController">
+                <viewController id="T1U-ER-sVx" customClass="Tickets" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tWT-36-LK0"/>
-                        <viewControllerLayoutGuide type="bottom" id="IYW-d9-dpK"/>
+                        <viewControllerLayoutGuide type="top" id="McA-j4-6Fq"/>
+                        <viewControllerLayoutGuide type="bottom" id="wpg-cV-gc7"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Nas-rm-deH">
+                    <view key="view" contentMode="scaleToFill" id="sNN-Qn-7HE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="nrS-0G-5x2">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="myTicketBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="TXK-MH-e8Y">
+                                <rect key="frame" x="20" y="80" width="286" height="423"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eOI-Fq-Ome">
+                                <rect key="frame" x="66" y="142" width="195" height="128"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="ticket" image="ticket.png" id="IFI-2H-Fa0"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="img" destination="eOI-Fq-Ome" id="OVY-ox-obl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ccd-jr-Top" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1332,6 +1346,7 @@
         <image name="leftSideMenuHeader.png" width="518" height="194"/>
         <image name="loginHeader.png" width="372" height="125"/>
         <image name="logout.png" width="65" height="65"/>
+        <image name="myTicketBackground.png" width="331" height="607"/>
         <image name="myagenda.png" width="65" height="65"/>
         <image name="profile.png" width="65" height="65"/>
         <image name="secondDay.png" width="30" height="30"/>

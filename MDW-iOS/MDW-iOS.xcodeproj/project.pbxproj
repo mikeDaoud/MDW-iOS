@@ -50,6 +50,7 @@
 		CC237F461EA5067B00499446 /* Exhibitors.m in Sources */ = {isa = PBXBuildFile; fileRef = CC237F451EA5067B00499446 /* Exhibitors.m */; };
 		CC237F491EA510FE00499446 /* ProfileBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC237F481EA510FE00499446 /* ProfileBarViewController.m */; };
 		CC237F4C1EA5157300499446 /* InfoProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC237F4B1EA5157300499446 /* InfoProfileViewController.m */; };
+		CC237F4F1EA5279800499446 /* Tickets.m in Sources */ = {isa = PBXBuildFile; fileRef = CC237F4E1EA5279800499446 /* Tickets.m */; };
 		CC5352421E9F3C0800F18F37 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5352411E9F3C0800F18F37 /* HomeViewController.m */; };
 		CC5352451E9F3D1A00F18F37 /* SideBarListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5352441E9F3D1A00F18F37 /* SideBarListViewController.m */; };
 		CC5352481E9F64DB00F18F37 /* MyAgendaBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5352471E9F64DB00F18F37 /* MyAgendaBarController.m */; };
@@ -221,6 +222,8 @@
 		CC237F481EA510FE00499446 /* ProfileBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileBarViewController.m; sourceTree = "<group>"; };
 		CC237F4A1EA5157300499446 /* InfoProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoProfileViewController.h; sourceTree = "<group>"; };
 		CC237F4B1EA5157300499446 /* InfoProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoProfileViewController.m; sourceTree = "<group>"; };
+		CC237F4D1EA5279800499446 /* Tickets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tickets.h; sourceTree = "<group>"; };
+		CC237F4E1EA5279800499446 /* Tickets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tickets.m; sourceTree = "<group>"; };
 		CC5352401E9F3C0800F18F37 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		CC5352411E9F3C0800F18F37 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		CC5352431E9F3D1A00F18F37 /* SideBarListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideBarListViewController.h; sourceTree = "<group>"; };
@@ -397,6 +400,8 @@
 				CC237F481EA510FE00499446 /* ProfileBarViewController.m */,
 				CC237F4A1EA5157300499446 /* InfoProfileViewController.h */,
 				CC237F4B1EA5157300499446 /* InfoProfileViewController.m */,
+				CC237F4D1EA5279800499446 /* Tickets.h */,
+				CC237F4E1EA5279800499446 /* Tickets.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -812,6 +817,7 @@
 				4CBE19A01EA1E85100C5C553 /* SessionDTO.m in Sources */,
 				4C81C13A1E9FDE7D0076D2F4 /* WebServiceDataFetching.m in Sources */,
 				4CEF759F1E99694500AA3E07 /* ViewController.m in Sources */,
+				CC237F4F1EA5279800499446 /* Tickets.m in Sources */,
 				CC5352481E9F64DB00F18F37 /* MyAgendaBarController.m in Sources */,
 				4CEF759C1E99694500AA3E07 /* AppDelegate.m in Sources */,
 				4CBE199A1EA1E83800C5C553 /* ExhibitorDTO.m in Sources */,
