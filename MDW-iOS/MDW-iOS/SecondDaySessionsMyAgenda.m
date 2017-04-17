@@ -7,12 +7,21 @@
 //
 
 #import "SecondDaySessionsMyAgenda.h"
+#import "UIImageView+UIImageView_CashingWebImage.h"
+#import "ImageDTO.h"
+#import "ImageDAO.h"
+#import "UIImageView+UIImageView_CashingWebImage.h"
+#import "SessionDAO.h"
+#import "SessionDTO.h"
+#import "DateConverter.h"
+#import "AgendaDays.h"
+#import "SessionTypes.h"
 
 @interface SecondDaySessionsMyAgenda ()
 {
     
     
-    NSMutableArray *sessions;
+    NSArray *sessions;
     UIRefreshControl *refreshControl;
 }
 
@@ -24,8 +33,14 @@
     [super viewDidLoad];
     self.mytableview.delegate=self;
     self.mytableview.dataSource=self;
-  
-    sessions=[[NSMutableArray alloc] init];
+    NSArray * dbSessions =  (NSArray *) [[SessionDAO new] getUserSessionsByDate:DAY_TWO];
+    if (dbSessions) {
+        sessions = dbSessions;
+    }else{
+        sessions=[[NSArray alloc] init];
+    }
+    
+    
     refreshControl=[[UIRefreshControl alloc] init];
     //set background
     self.mytableview.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
@@ -65,8 +80,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    //return [sessions count];
-    return 1;
+    return [sessions count];
+   
 }
 
 
@@ -77,15 +92,51 @@
     
     [cell setBackgroundColor: [UIColor clearColor]];
     
-    UIImageView *img =[cell  viewWithTag:1] ;
-    [img setImage:[UIImage imageNamed:@"secondDay.png"]];
-    UILabel * name = [cell viewWithTag:2];
-    name.attributedText = [self renderHTML:@"<b>Name</b>"];
-    UILabel *t2=[cell viewWithTag:3];
-    [t2 setText:@"byee"];
-    UILabel *t3=[cell viewWithTag:4];
-    [t3 setText:@"Hii"];
     
+    
+    //getting session object
+    SessionDTO * session = sessions[indexPath.row];
+    
+    //Getting refrences to the cell components
+    UIImageView *img =[cell  viewWithTag:1];
+    UILabel * name = [cell viewWithTag:2];
+    UILabel *t2=[cell viewWithTag:3];
+    UILabel *t3=[cell viewWithTag:4];
+    UILabel *t4=[cell viewWithTag:5];
+    
+    //Setting the data
+    name.attributedText = [self renderHTML:session.name];
+    [t2 setText:session.location];
+    NSString * date = [NSString stringWithFormat:@"%@ - %@",
+                       [DateConverter stringFromDate:session.startDate],
+                       [DateConverter stringFromDate:session.endDate]];
+    [t3 setText:date];
+    
+    
+    
+    
+    NSLog(@"================================%@", session.sessionType);
+    
+    if ([session.sessionType isEqualToString:@"Session"]) {
+        [img setImage:[UIImage imageNamed:@"session.png"]];
+        [t4 setText:[DateConverter dayStringFromDate:session.date]];
+        // ADD the date to the label on the image [DateConverter dayStringFromDate:session.date];
+    }else if ([session.sessionType isEqualToString:@"Workshop"]){
+        [img setImage:[UIImage imageNamed:@"workshop.png"]];
+        // ADD the date to the label on the image
+        [t4 setText:[DateConverter dayStringFromDate:session.date]];
+    }else if ([session.sessionType isEqualToString:@"Break"]){
+        [img setImage:[UIImage imageNamed:@"breakicon.png"]];
+        [t4 setText:@" "];
+    }else if ([session.sessionType isEqualToString:@"Hackathon"]){
+        [img setImage:[UIImage imageNamed:@"hacathon.png"]];
+        // ADD the date to the label on the image
+        [t4 setText:[DateConverter dayStringFromDate:session.date]];
+    }
+    
+
+    
+  
     return cell;
 }
 
