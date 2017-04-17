@@ -8,12 +8,21 @@
 
 #import "SpeakrsList.h"
 #import "SWRevealViewController.h"
+#import "UIImageView+UIImageView_CashingWebImage.h"
+#import "ImageDTO.h"
+#import "ImageDAO.h"
+#import "UIImageView+UIImageView_CashingWebImage.h"
+#import "SpeakerDTO.h"
+#import "SpeakerDAO.h"
+
+
+
 
 @interface SpeakrsList ()
 {
     
     
-    NSMutableArray *sessions;
+    NSArray *speakers;
     UIRefreshControl *refreshControl;
 }
 
@@ -24,7 +33,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     self.MYTABLEVIEW.delegate=self;
     self.MYTABLEVIEW.dataSource=self;
     _barButton.target=self.revealViewController;
@@ -33,8 +41,13 @@
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor orangeColor]}];
     [self setTitle:@"MDW"];
    
+    NSArray * dbSpeakers =  (NSArray *) [[SpeakerDAO new] getSpeakers];
+    if (dbSpeakers) {
+        speakers = dbSpeakers;
+    }else{
+        speakers=[[NSArray alloc] init];
+    }
     
-    sessions=[[NSMutableArray alloc] init];
     refreshControl=[[UIRefreshControl alloc] init];
     //set background
     self.MYTABLEVIEW.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
@@ -78,8 +91,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    //return [sessions count];
-    return 1;
+    return [speakers count];
+   
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -88,12 +101,27 @@
     // Configure the cell...
     [cell setBackgroundColor: [UIColor clearColor]];
     
-    UIImageView *img =[cell  viewWithTag:1] ;
-    [img setImage:[UIImage imageNamed:@"speaker.png"]];
+   
+    //getting session object
+    SpeakerDTO * speaker = speakers[indexPath.row];
+    
+    //Getting refrences to the cell components
+    UIImageView *img =[cell  viewWithTag:1];
     UILabel * name = [cell viewWithTag:2];
-    name.attributedText = [self renderHTML:@"<b>Name</b>"];
-    UILabel *t2=[cell viewWithTag:3];
-    [t2 setText:@"byee"];
+    UILabel *description=[cell viewWithTag:3];
+    
+    
+    //Setting the data
+   NSString *fullName = [NSString stringWithFormat:@"%@ %@ %@",speaker.firstName,speaker.middleName,speaker.lastName];
+    [name setText: fullName];
+    [description setText:speaker.companyName];
+    
+    
+    [img SetwithImageInURL:speaker.imageURL andPlaceholder:@"speaker.png"];
+    
+    
+    
+   
     return cell;
 }
 
