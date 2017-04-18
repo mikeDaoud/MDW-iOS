@@ -10,6 +10,9 @@
 
 @protocol TableReloadDelegate <NSObject>
 
--(void)reloadTableView;
+-(void)reloadTableViewWithArray: (NSArray *) newData;
+
+//1. add the newData into the array holding the session or speakers or exhibitors
+//2. reload table data
 
 @end

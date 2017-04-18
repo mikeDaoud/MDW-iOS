@@ -205,7 +205,7 @@
     [self fetchSpeakersFromWebService];
     [self fetchExhibitorsFromWebService];
     
-    [tableView reloadTableView];
+//    [tableView reloadTableView];
 }
 
 @end
