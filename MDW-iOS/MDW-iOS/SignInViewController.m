@@ -12,11 +12,10 @@
 #import "SWRevealViewController.h"
 #import "Attendee.h"
 #import "WebServiceDataFetching.h"
+#import "SharedObjects.h"
 
 @interface SignInViewController ()
 
-@property NSURLSessionConfiguration * config;
-@property AFURLSessionManager * mgr;
 
 @end
 
@@ -25,8 +24,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Instantiation configuration and session objects.
-    _config = [NSURLSessionConfiguration defaultSessionConfiguration];
-    _mgr = [[AFURLSessionManager alloc]initWithSessionConfiguration:_config];
+    
+    NSString * useremail = [[NSUserDefaults standardUserDefaults]objectForKey:@"userEmail"];
+    
+    if (useremail) {
+        _userEmail.text = useremail;
+    }
     
 }
 
@@ -63,7 +66,7 @@
     NSString * password = _userPassword.text;
     
         //Starting the login request
-        NSURLSessionDataTask *dataTask = [_mgr dataTaskWithRequest:[ServiceURLs loginRequestWithUserEmail:email andPassword:password] completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        NSURLSessionDataTask *dataTask = [[SharedObjects sharedSessionManager] dataTaskWithRequest:[ServiceURLs loginRequestWithUserEmail:email andPassword:password] completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
             if (error) {
                 NSLog(@"Error: %@", error);
                 
@@ -72,6 +75,8 @@
     
             } else { //Login Success
                 NSLog(@"%@ ----  %@", response, responseObject);
+                _userPassword.text = @"";
+                
                 
                 //Storing user data in NSUserDefaults
                 NSDictionary * result = [responseObject objectForKey:@"result"];
@@ -101,9 +106,9 @@
                 }];
                 
                 //Getting Sessions, speakers and exhibitors data and adding it to database
-                [WebServiceDataFetching fetchSessionsFromWebServicewithSessionManager:_mgr];
-                [WebServiceDataFetching fetchSpeakersFromWebServicewithSessionManager:_mgr];
-                [WebServiceDataFetching fetchExhibitorsFromWebServicewithSessionManager:_mgr];
+                [WebServiceDataFetching fetchSessionsFromWebService];
+                [WebServiceDataFetching fetchSpeakersFromWebService];
+                [WebServiceDataFetching fetchExhibitorsFromWebService];
                 [WebServiceDataFetching fetchImageWithURL:@"http://www.mobiledeveloperweekend.net/service/speakerImage?id=20624" andRefreshImageView:nil];
                 
                 

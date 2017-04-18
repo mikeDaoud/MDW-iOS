@@ -16,6 +16,7 @@
 #import "DateConverter.h"
 #import "AgendaDays.h"
 #import "SessionTypes.h"
+#import "WebServiceDataFetching.h"
 
 
 @interface AllSessionsAgenda ()
@@ -52,7 +53,9 @@
 // reload the dataa
 -(void) refreshMytableView
 {
-    [self.mytableview reloadData];
+    [WebServiceDataFetching updateDataAndRefreshDelegate:self];
+    
+    //TODO: Move this method into the implementation of the protocol method
     [refreshControl endRefreshing];
     
 }

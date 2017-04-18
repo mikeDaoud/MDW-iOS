@@ -16,9 +16,8 @@ static NSString * signedInUserEmail;
 +(NSURLRequest *)loginRequestWithUserEmail: (NSString *)userEmail andPassword: (NSString *)password{
     
     signedInUserEmail = userEmail;
-    
 
-    NSURL * url = [[NSURL alloc]initWithString:[NSString stringWithFormat:@"http://www.mobiledeveloperweekend.net/MDW/service/login?userName=%@&password=%@", userEmail, password]];
+    NSURL * url = [[NSURL alloc]initWithString:[NSString stringWithFormat:@"http://mobiledeveloperweekend.net/service/login?userName=%@&password=%@", userEmail, password]];
     return [[NSURLRequest alloc]initWithURL:url];
 }
 
@@ -26,7 +25,11 @@ static NSString * signedInUserEmail;
 //Return a request to get all the sessions data
 +(NSURLRequest *)allSessionsRequest{
 
-    NSURL * url = [[NSURL alloc]initWithString:[NSString stringWithFormat:@"http://www.mobiledeveloperweekend.net/MDW/service/getSessions?userName=%@", signedInUserEmail]];
+    if (signedInUserEmail == nil) {
+        signedInUserEmail = [[NSUserDefaults standardUserDefaults]objectForKey:@"userEmail"];
+    }
+    
+    NSURL * url = [[NSURL alloc]initWithString:[NSString stringWithFormat:@"http://mobiledeveloperweekend.net/service/getSessions?userName=%@", signedInUserEmail]];
     return [[NSURLRequest alloc]initWithURL:url];
 
 }
@@ -34,7 +37,11 @@ static NSString * signedInUserEmail;
 //Return a URL request to get all speakers Data
 +(NSURLRequest *)speakersRequest{
 
-    NSURL * url = [[NSURL alloc]initWithString:[NSString stringWithFormat:@"http://www.mobiledeveloperweekend.net/MDW/service/getSpeakers?userName=%@", signedInUserEmail]];
+    if (signedInUserEmail == nil) {
+        signedInUserEmail = [[NSUserDefaults standardUserDefaults]objectForKey:@"userEmail"];
+    }
+    
+    NSURL * url = [[NSURL alloc]initWithString:[NSString stringWithFormat:@"http://mobiledeveloperweekend.net/service/getSpeakers?userName=%@", signedInUserEmail]];
     return [[NSURLRequest alloc]initWithURL:url];
 
 }
@@ -42,16 +49,24 @@ static NSString * signedInUserEmail;
 
 //Return a URL request to get user profile data
 +(NSURLRequest *)userProfileRequest{
+    
+    if (signedInUserEmail == nil) {
+        signedInUserEmail = [[NSUserDefaults standardUserDefaults]objectForKey:@"userEmail"];
+    }
 
-    NSURL * url = [[NSURL alloc]initWithString:[NSString stringWithFormat:@"http://www.mobiledeveloperweekend.net/MDW/service/getAttendeeProfile?userName=%@", signedInUserEmail]];
+    NSURL * url = [[NSURL alloc]initWithString:[NSString stringWithFormat:@"http://mobiledeveloperweekend.net/service/getAttendeeProfile?userName=%@", signedInUserEmail]];
     return [[NSURLRequest alloc]initWithURL:url];
 
 }
 
 //return a URL request to get user Profile image
 +(NSURLRequest *)profileImageRequest{
+    
+    if (signedInUserEmail == nil) {
+        signedInUserEmail = [[NSUserDefaults standardUserDefaults]objectForKey:@"userEmail"];
+    }
 
-    NSURL * url = [[NSURL alloc]initWithString:[NSString stringWithFormat:@"http://www.mobiledeveloperweekend.net/MDW/service/profileImage?userName=%@", signedInUserEmail]];
+    NSURL * url = [[NSURL alloc]initWithString:[NSString stringWithFormat:@"http://mobiledeveloperweekend.net/service/profileImage?userName=%@", signedInUserEmail]];
     return [[NSURLRequest alloc]initWithURL:url];
 
 }
@@ -59,7 +74,11 @@ static NSString * signedInUserEmail;
 //return a URL request to get all Exhibitors data
 +(NSURLRequest *)exhibitorsDataRequest{
     
-    NSURL * url = [[NSURL alloc]initWithString:[NSString stringWithFormat:@"http://www.mobiledeveloperweekend.net/MDW/service/getExhibitors?userName=%@", signedInUserEmail]];
+    if (signedInUserEmail == nil) {
+        signedInUserEmail = [[NSUserDefaults standardUserDefaults]objectForKey:@"userEmail"];
+    }
+    
+    NSURL * url = [[NSURL alloc]initWithString:[NSString stringWithFormat:@"http://mobiledeveloperweekend.net/service/getExhibitors?userName=%@", signedInUserEmail]];
     return [[NSURLRequest alloc]initWithURL:url];
 }
 
@@ -67,7 +86,11 @@ static NSString * signedInUserEmail;
 
 +(NSURLRequest *)requestRegisterToSessionWithID: (NSInteger) sessionID{
     
-    NSURL * url = [[NSURL alloc]initWithString:[NSString stringWithFormat:@"http://www.mobiledeveloperweekend.net/MDW/service/registerSession?userName=%@&sessionId=%ld&enforce=false&status=0", signedInUserEmail, (long)sessionID]];
+    if (signedInUserEmail == nil) {
+        signedInUserEmail = [[NSUserDefaults standardUserDefaults]objectForKey:@"userEmail"];
+    }
+    
+    NSURL * url = [[NSURL alloc]initWithString:[NSString stringWithFormat:@"http://mobiledeveloperweekend.net/service/registerSession?userName=%@&sessionId=%ld&enforce=false&status=0", signedInUserEmail, (long)sessionID]];
     return [[NSURLRequest alloc]initWithURL:url];
 }
 

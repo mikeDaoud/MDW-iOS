@@ -29,6 +29,7 @@
 		4CBE19AC1EA22B7900C5C553 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBE19A71EA1EBCB00C5C553 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4CBE19B01EA2432900C5C553 /* DateConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE19AF1EA2432900C5C553 /* DateConverter.m */; };
 		4CBEEB901E99F11B006F848F /* ServiceURLs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */; };
+		4CC3F83C1EA5DB060041F84E /* SharedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC3F83B1EA5DB060041F84E /* SharedObjects.m */; };
 		4CC5466C1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5466B1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m */; };
 		4CC7D4131EA26377000B7E70 /* breakicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC7D4121EA26377000B7E70 /* breakicon.png */; };
 		4CC7D4151EA2638D000B7E70 /* session.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC7D4141EA2638D000B7E70 /* session.png */; };
@@ -187,6 +188,9 @@
 		4CBE19AF1EA2432900C5C553 /* DateConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateConverter.m; sourceTree = "<group>"; };
 		4CBEEB8E1E99F11B006F848F /* ServiceURLs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceURLs.h; path = "utility Classes/ServiceURLs.h"; sourceTree = "<group>"; };
 		4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceURLs.m; path = "utility Classes/ServiceURLs.m"; sourceTree = "<group>"; };
+		4CC3F83A1EA5DB060041F84E /* SharedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedObjects.h; sourceTree = "<group>"; };
+		4CC3F83B1EA5DB060041F84E /* SharedObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedObjects.m; sourceTree = "<group>"; };
+		4CC3F83E1EA5ED5D0041F84E /* TableReloadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableReloadDelegate.h; sourceTree = "<group>"; };
 		4CC5466A1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+UIImageView_CashingWebImage.h"; sourceTree = "<group>"; };
 		4CC5466B1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+UIImageView_CashingWebImage.m"; sourceTree = "<group>"; };
 		4CC7D4121EA26377000B7E70 /* breakicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = breakicon.png; path = "MDW UI/breakicon.png"; sourceTree = "<group>"; };
@@ -444,6 +448,8 @@
 		4CBEEB8D1E99F0A5006F848F /* Utility Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4CC3F83A1EA5DB060041F84E /* SharedObjects.h */,
+				4CC3F83B1EA5DB060041F84E /* SharedObjects.m */,
 				4CBEEB8E1E99F11B006F848F /* ServiceURLs.h */,
 				4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */,
 				4C81C1381E9FDE7D0076D2F4 /* WebServiceDataFetching.h */,
@@ -454,6 +460,7 @@
 				4CBE19AF1EA2432900C5C553 /* DateConverter.m */,
 				0365A98F1EA401EE00A6B6A3 /* NameFormatter.h */,
 				0365A9901EA401EE00A6B6A3 /* NameFormatter.m */,
+				4CC3F83E1EA5ED5D0041F84E /* TableReloadDelegate.h */,
 			);
 			name = "Utility Classes";
 			sourceTree = "<group>";
@@ -822,6 +829,7 @@
 				4CBE19A01EA1E85100C5C553 /* SessionDTO.m in Sources */,
 				4C81C13A1E9FDE7D0076D2F4 /* WebServiceDataFetching.m in Sources */,
 				4CEF759F1E99694500AA3E07 /* ViewController.m in Sources */,
+				4CC3F83C1EA5DB060041F84E /* SharedObjects.m in Sources */,
 				CC237F521EA53A4A00499446 /* MyContatct.m in Sources */,
 				CC237F4F1EA5279800499446 /* Tickets.m in Sources */,
 				CC5352481E9F64DB00F18F37 /* MyAgendaBarController.m in Sources */,

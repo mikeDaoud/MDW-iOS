@@ -36,13 +36,10 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    
     return [menue count] ;
 }
 
@@ -57,6 +54,37 @@
     return cell;
 }
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    if (indexPath.row == 5) {
+        
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Log Out" message:@"Are you sure you want to logout?" preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            [[[UIApplication sharedApplication] keyWindow].rootViewController dismissViewControllerAnimated:YES completion:nil];
+            
+            NSLog(@"Logged Out");
+            
+            //TODO: Clear the database
+            
+            NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+            [defaults removeObjectForKey:@"userData"];
+            [defaults setObject:@"no" forKey:@"signedIn"];
+            [defaults synchronize];
+            
+        }]];
+        
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+        //TODO: Show confirmation message to user and transfer the code below into the OK button Action
+        
+        
+
+    }
+}
 
 /*
 // Override to support conditional editing of the table view.

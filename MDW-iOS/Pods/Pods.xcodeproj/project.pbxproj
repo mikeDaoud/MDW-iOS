@@ -11,7 +11,6 @@
 		006D428061BF8241DFF0492DFC0DCDF0 /* ZXQRCodeBitMatrixParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 0484558871E433ED598E7F97F0CB24A9 /* ZXQRCodeBitMatrixParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0155ED6689282A169DDE3046E0B88D70 /* ZXModulusGF.h in Headers */ = {isa = PBXBuildFile; fileRef = CC4BA9A5ABEA0F1B6787B41FED22C306 /* ZXModulusGF.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		01E2E2C15D5C08152D95452CF99759A8 /* ZXOneDReader.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4D4951D850C1BCD3C10D6874F2A0DB /* ZXOneDReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0214246CCB1FF7182F7222B9CCDF8FCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD53F8E6A009A8743314DDB6AE7FD65 /* Foundation.framework */; };
 		03C6C6CFCFD4A748343C39E23B25CD42 /* ZXImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B6CF3F2643E07B015BA7245EB8277A /* ZXImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		040C6A64D11E9EFA68948FB4A073D596 /* ZXRSSExpandedDecodedInformation.h in Headers */ = {isa = PBXBuildFile; fileRef = E4B5425D10A7A4964892293CC2C0624E /* ZXRSSExpandedDecodedInformation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04749973DA24151D9C4F3EB6BDC0E49E /* Pods-MDW-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E6B21D5C05A91005E7F9E8ACEA7D26 /* Pods-MDW-iOS-dummy.m */; };
@@ -24,10 +23,11 @@
 		088D16B88DD39810AED9A874813D06C8 /* ZXQRCodeFormatInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6FA509DEE85424D1BF730B4FCEF16C /* ZXQRCodeFormatInformation.m */; };
 		0A91BA38BEBB4F9A1C9FC6E1FEA81D69 /* ZXQRCodeFinderPatternFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D903AE5AC436873AA347003CF1F6937 /* ZXQRCodeFinderPatternFinder.m */; };
 		0AF14150DAC8BBA6210E99FCD50CE886 /* ZXRSSExpandedPair.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B4E5566AB486E50A7638624499D96C3 /* ZXRSSExpandedPair.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C37C788A30E06DD22EFA02E33B71630 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A689A253B8E3AFA61F06410AFBE15819 /* QuartzCore.framework */; };
 		0CDFDE5B382FFBD90E8D228445121FAF /* ZXIntArray.m in Sources */ = {isa = PBXBuildFile; fileRef = B06F1F4485747EBC43906C2041A77D59 /* ZXIntArray.m */; };
+		0D073E67356B7933A0969C04037065FD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC02065C5FEA929A891C7EAD5FA639FD /* CoreGraphics.framework */; };
 		0D3C88D194B384637FBB17B8F04AAD3F /* ZXPDF417Common.h in Headers */ = {isa = PBXBuildFile; fileRef = FA36E69CAB2C6E899EF2ED33DC266FAC /* ZXPDF417Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0DB1DF6C7735928500C9062A897276D1 /* ZXDataMatrixHighLevelEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 687D82CE2FE120E8C2030C3946968AB4 /* ZXDataMatrixHighLevelEncoder.m */; };
+		0DEDDC3DCFA2C69A64865F1D61A7D7CD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068782446F096E1CF92561B0FBD058FB /* QuartzCore.framework */; };
 		0E0C63B348AB4B51947E55C209143661 /* ZXUPCEANExtension2Support.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6C33006864184AE7197306EB317599 /* ZXUPCEANExtension2Support.m */; };
 		1051534DB78D87F9CC06F15856755023 /* ZXITFReader.h in Headers */ = {isa = PBXBuildFile; fileRef = E96D3E98DCE106A5B0D924C3406E20BA /* ZXITFReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10DED40A96C7F7F07EA71E13BBA2A55B /* ZXRSSDataCharacter.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F398036790EBBC28752145E8DEC1F1 /* ZXRSSDataCharacter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,13 +45,12 @@
 		17E6409B3F3E626363F4223BAD1629C9 /* ZXDefaultGridSampler.h in Headers */ = {isa = PBXBuildFile; fileRef = FEBD39A71F4E9F0CD07BAF391007757E /* ZXDefaultGridSampler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17E9A77BEFC37CAA210F1E93B8FF260F /* ZXResultParser.h in Headers */ = {isa = PBXBuildFile; fileRef = B3FAE85C6B00E45AD9C58BEAE9C7E57C /* ZXResultParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17F219E4E5B0B8831D74F37C8908B026 /* ZXByteMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDD3B4506076EAD619E553FCDB4398B /* ZXByteMatrix.m */; };
+		18003E85FA5B874053C0E0A25B5715A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13459BDDBED9542135FAD3003024DE36 /* Foundation.framework */; };
 		19673BDD63D9A7BF3608B01033F4DD1B /* ZXDataMatrixBitMatrixParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2474274CFA8AAD78CC9FBE1AD5B57F06 /* ZXDataMatrixBitMatrixParser.m */; };
 		198B893DCBDD3399C9D3D704937F6362 /* ZXVEventResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CBBF8B10C0843D240650FA8E148397 /* ZXVEventResultParser.m */; };
 		199FE92F5E0BB4F6A60E07BE3A7DB3BE /* ZXUPCEANReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B743BD3EBA515F202189B19074FB2ED /* ZXUPCEANReader.m */; };
 		19EC6CA25395CE01991AF0B960EFE212 /* ZXDimension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C80079C5D29066CA3DBFDE9D9661379 /* ZXDimension.m */; };
-		1A060A905F3B4708F61844CC34E5E19C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FF46ACBDC1DF00637036337DF0C813 /* ImageIO.framework */; };
 		1A2120DA5FB0B0352C2C500B093A0784 /* ZXInvertedLuminanceSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC8F83B23AA1370EEE34674780C4DD4 /* ZXInvertedLuminanceSource.m */; };
-		1A72CAB8D172C470C3294DB832B19D6A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4DC9C055C6EBA38373CEFF456BEBF1 /* CoreMedia.framework */; };
 		1B05434D8E761C6D524558FEC270CA01 /* ZXOneDimensionalCodeWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = EF23157A11C0FE3EEDAB7062FB5FC332 /* ZXOneDimensionalCodeWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B329EB42CF9F9389F3147E8863D6C01 /* ZXRSSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F0E309D517C7A00E30175FB5029897 /* ZXRSSUtils.m */; };
 		1B722ABCE88ED1CD7A5E2624803918F9 /* ZXPDF417Dimensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B254FADB675ED316D91F72E33D7C724 /* ZXPDF417Dimensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -76,6 +75,7 @@
 		265D874A918AAE0EF8E896EEB3F1D749 /* ZXMultiFormatReader.h in Headers */ = {isa = PBXBuildFile; fileRef = CAF3CE7BA4F5C6211F93D3353D4BCE85 /* ZXMultiFormatReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		276BC9AAF922D5F28492386E499DD216 /* ZXQRCodeMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5573F4925654C341CB23D8B761F3B84F /* ZXQRCodeMode.m */; };
 		278285E17ADE1FDE9BF1BA926654E387 /* ZXRSSExpandedDecodedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AD5E1845149B0F2A2018A5F181837C /* ZXRSSExpandedDecodedObject.m */; };
+		2843898C40D365BC1361BF1CD832E9B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC02065C5FEA929A891C7EAD5FA639FD /* CoreGraphics.framework */; };
 		28A8EEE1F5168E38BDCFDA7C698D7020 /* ZXPDF417BarcodeMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 851005A14C9BEB7796A5BE1459A6B88A /* ZXPDF417BarcodeMetadata.m */; };
 		291505CE3A3DA3B328F47255E5CCC6AC /* ZXBitArrayBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = E40574FB45384818E77E74887DDBF7F2 /* ZXBitArrayBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29454A82932A717A21D039CF3E32D904 /* ZXAnyAIDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = ED1B32C14A8F05A4161292A8E11AEC68 /* ZXAnyAIDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -145,7 +145,6 @@
 		475A534D4F23D46CD31838D0D194666E /* ZXPDF417ECErrorCorrection.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CE15DC91510E26D4F0A273AD76DB0D /* ZXPDF417ECErrorCorrection.m */; };
 		47B38C85274E3012706FBDE0239B2CE0 /* ZXAztecSimpleToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 212AF2EB1F7B6684F19BF75F663C0172 /* ZXAztecSimpleToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47B716F0BC6F94BFA4CA6D83E4BF68F9 /* ZXErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 6779AE7523190408AC6E3A2184E5D1C0 /* ZXErrors.m */; };
-		47E69416906919C0985B4CE640E01B49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD53F8E6A009A8743314DDB6AE7FD65 /* Foundation.framework */; };
 		48240F01BDAE7FAC7DD0CD0D7CB819BD /* ZXParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2F8A62AE892172645FB25746975FD7 /* ZXParsedResult.m */; };
 		48AF8FF6CC28B9C91631E5299E9064E8 /* ZXUPCEANWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84182E025949D3EFEF25F2BFC89D2069 /* ZXUPCEANWriter.m */; };
 		49DEE5EB48CC10AFD14A58B4A308C804 /* ZXWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D64579AED87B23EC11CD7C1811A7910 /* ZXWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -179,7 +178,6 @@
 		55AB952C4223A9B95A57A9A269AD308C /* ZXPDF417BoundingBox.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EDE987987AE5AAA6A29F3F8BF5E6C8 /* ZXPDF417BoundingBox.m */; };
 		55AC0135B237351D7EF062F4E92B500B /* ZXURIResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF75CB838B85A9A4640B5475E1B2F01 /* ZXURIResultParser.m */; };
 		55DB73C24AB47BBEE2F53BC667ED3D1F /* ZXResultPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = A1F875B9C256F132D337401BBA3F7083 /* ZXResultPoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56B70606A8C42F040DAA9C3A8FD13FDD /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36EB7F0F59D56CCE1E79935BE8371F9 /* CoreVideo.framework */; };
 		5719F06B809080CDEF7E6BC75DEA1A3C /* UIKit+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 56953AA55CB2644AEFB09DD7C45AAD00 /* UIKit+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		57E9A7F4B447C557B24C075AA4584D83 /* ZXImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFABC6CC11CFE9057C5182BAC69DCEB /* ZXImage.m */; };
 		58181E5F53732BA859EDAD7EE1AC58D6 /* ZXTelParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 579387B8DBA876D74AAAFAE654CBF9FF /* ZXTelParsedResult.m */; };
@@ -200,10 +198,12 @@
 		5DBA4E2C0CB73C3F19C31F9F57EA454C /* ZXQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F83C94722AA97BA03B36341F70C39 /* ZXQRCode.m */; };
 		5FA520BB3D6EAF9A74CFC2478A608509 /* ZXMultiFormatWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1815BEAF34D5843C943134E86E0DFBFA /* ZXMultiFormatWriter.m */; };
 		601B2B3D422CF62264C3C31654D014C2 /* ZXCodaBarReader.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3419BC330B143721FBFD9804EBC9BC /* ZXCodaBarReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6047EBD707A7D71EA88288DB28BCBF8E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EA76F3F80DF652F0EFF3EEBA90E93B /* AVFoundation.framework */; };
 		60BEBA60990497968D1DBFCE0474A386 /* ZXResultPointCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = C0865D63F05702F7787BF4AC8271A869 /* ZXResultPointCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		632AC910B1242B72F93A26D398334B8A /* ZXAI01320xDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = BED57C592054541377C02E6C2BE84052 /* ZXAI01320xDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		636545B97267CD6010244A0F3C95186A /* ZXAI013x0x1xDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F5398075B3BD204580BF2DB8DD8440C /* ZXAI013x0x1xDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6471C60CF02621AB5A0F88037D649CE5 /* ZXDataMatrixDecodedBitStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAB2F40518776E93ADA31407B3D35EF /* ZXDataMatrixDecodedBitStreamParser.m */; };
+		65D9E1B03296E4B7E60E13C56858AC2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13459BDDBED9542135FAD3003024DE36 /* Foundation.framework */; };
 		66635EAAE52FF5571DBCDC626FB8CA86 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C5EC3BC38A4ACD055A49A22D9B32E1F /* AFURLResponseSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		666754FA028B9458C7F282146966F87C /* ZXDimension.h in Headers */ = {isa = PBXBuildFile; fileRef = C305DFF6AAEA71F6C1790FAFE120F8B5 /* ZXDimension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66E1040543AF7BA3DC3731FE17C85F5B /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 743F78A7BA94B2890A66A64710DF18D5 /* AFSecurityPolicy.m */; };
@@ -223,7 +223,6 @@
 		6C8798397B8504E0E961E708287AC314 /* ZXBitArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BB57B3BA8B9063D16B65FAB127119F8 /* ZXBitArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6CB90AC1C0A0DD24C2465158E1E02709 /* ZXAI01392xDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FB0C015DE86F0B54A10EE1D461ECAA /* ZXAI01392xDecoder.m */; };
 		6DB5492D9A8DFD3EE9382F2D41900A4B /* ZXQRCodeErrorCorrectionLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E022B817C1723828A46BC36647E20C /* ZXQRCodeErrorCorrectionLevel.m */; };
-		6DBE2DC7AF690F53C1FC926081767E7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD53F8E6A009A8743314DDB6AE7FD65 /* Foundation.framework */; };
 		6E233C10CCC937665231E957E293EAAC /* ZXPDF417Reader.h in Headers */ = {isa = PBXBuildFile; fileRef = 20A845A0CB876F222BA57E7A101B4B2F /* ZXPDF417Reader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FA6F736D842FCBEAD609609A96929FE /* ZXQRCodeDataBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD60469991E29A870B9BAB763258D9 /* ZXQRCodeDataBlock.m */; };
 		701E353A11C2E176F691381C91F75FEB /* ZXPDF417BarcodeRow.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD60FA7B262C4B10ED8FA53D034547 /* ZXPDF417BarcodeRow.m */; };
@@ -239,6 +238,7 @@
 		72A80CA46F722C322FDE2532F0C62652 /* ZXAI013103decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = BE632B61E696C8507B4551F1CE392223 /* ZXAI013103decoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7304FAA0EA2B0EC3654CAA2A92B8ED6E /* ZXSMSMMSResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DBB228B5756D958821547EC7D3669C /* ZXSMSMMSResultParser.m */; };
 		73811DA312BCB537D44D62EC6AD15766 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22823D6109CBF2827C8A58578DFDE3E8 /* AFHTTPSessionManager.m */; };
+		73897BEB7BF50193F62BEE9FDAF5B016 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3887C04058C0610E6C5FC5EADCDA987F /* CoreMedia.framework */; };
 		74F3C0B6DA995341D9850B37A5751D40 /* ZXDetectorResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E8914C632665C6C1C47DA37D204E7C /* ZXDetectorResult.m */; };
 		76A055FE298B131A0A30973B964F9574 /* ZXVINParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 2175E8C2E894663F5C3F4E930A4FB8F9 /* ZXVINParsedResult.m */; };
 		76CC0A6543120CC31C0DCC241E80E26E /* ZXWhiteRectangleDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 092433153A4B15022A80325981AC2976 /* ZXWhiteRectangleDetector.m */; };
@@ -295,15 +295,14 @@
 		898CB4AD12AE12810104D61458718BFD /* ZXExpandedProductParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0970DDD70BDC73EA993751E6B30FC9D9 /* ZXExpandedProductParsedResult.m */; };
 		8A074D91212C07C78C5146B3844EBA28 /* ZXDataMatrixWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF5AB61F073A7908D30FB8950B442EF /* ZXDataMatrixWriter.m */; };
 		8AE3D2AB3C3AF2710E4FFFA2A4098CA5 /* ZXUPCAReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 13651B6D62AB4CDF92296A6016741CEE /* ZXUPCAReader.m */; };
+		8B1E1A45E0B423395CE2A513BB1B1010 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F136C34AF0B170C81660F9747CC1730 /* MobileCoreServices.framework */; };
 		8B3643162AD5CAF08BD7DD3ECEF6CF30 /* ZXUPCEANWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E25C2AEF9429F4D2D3D247BDFBF1A7A /* ZXUPCEANWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B722701D482FFA2B3E513ABA09572BE /* ZXRSS14Reader.m in Sources */ = {isa = PBXBuildFile; fileRef = C477EE3F35D85CB82038A91CDD437C38 /* ZXRSS14Reader.m */; };
 		8BDC01E91C23EE4497E0127591908890 /* ZXAI01decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = AB3BC6BF88A2C58BD88E209969490BEC /* ZXAI01decoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D1B938440E28FD5809104BDAD7C8A6B /* ZXTelResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EE40125F1FC3CD4664ED2BFB0024CE0D /* ZXTelResultParser.m */; };
-		8D214690F4C5B54EA58509C59B57FA69 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CFCBACE64B434E9F9025467A71428F /* CoreGraphics.framework */; };
 		8D817CCFF51EFE4D662E5EB33128BBA8 /* ZXProductResultParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 222FFC15F267B666E84CBDC3EB05A085 /* ZXProductResultParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8E17B65105ED5A820099CA1CA851304E /* ZXEmailAddressParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D907E992922F520D0DD7C482340AA6AF /* ZXEmailAddressParsedResult.m */; };
 		8FC6948DED559B0B008DB9BD421DB9EC /* ZXCode39Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F6515416662EA7A56E8B3D26B746B1 /* ZXCode39Writer.m */; };
-		903158692A045396106CA22C0DD13BA6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB36EB5D04ED7F0CADF57E9AF585AD3 /* SystemConfiguration.framework */; };
 		90442B89A92FF0975D0CEF65C1F72243 /* ZXPDF417DetectionResultColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = 4511010D47C005F9C94687F9FA01E02E /* ZXPDF417DetectionResultColumn.m */; };
 		913A9467E1D0F68139621CE52866BCF6 /* ZXMultipleBarcodeReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C50591FB4031BEFB3DB00CAE821FFDF /* ZXMultipleBarcodeReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		919FFFE10C3BBE0D7FE3F6D3504BAF9A /* ZXCode128Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = A92A81402291F6FA86976A6AF77167CD /* ZXCode128Writer.m */; };
@@ -359,6 +358,7 @@
 		AA00B5F0AFCF3296CA80951CC3226795 /* ZXIntArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 84593A81D08355203347352550D0D2FC /* ZXIntArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAB09E39B8753595BA48D8A7FCA5CD2A /* ZXModulusGF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB749A0E58950A5A9B8BDF9778F4375 /* ZXModulusGF.m */; };
 		AF3274A9B86F4E2CF709D3A7BB432B15 /* ZXPDF417Dimensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A97DB6BF954A6A605809FC3CFD4F5839 /* ZXPDF417Dimensions.m */; };
+		AFD0634B4D580C7C585C242BE0008A0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13459BDDBED9542135FAD3003024DE36 /* Foundation.framework */; };
 		B053BDEF2E691A052227F033E8FDCCC7 /* ZXRSSExpandedFieldParser.h in Headers */ = {isa = PBXBuildFile; fileRef = EBAE3B5E6F2C1A37528F58888FEB525E /* ZXRSSExpandedFieldParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B081AD6306AAFE617E915B66389749DB /* ZXMultiFormatOneDReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CD9632581B200E90E415B9C1F957A73 /* ZXMultiFormatOneDReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B08E829D359AFE58E652C86F9846DBE9 /* ZXEANManufacturerOrgSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A7F64973112215E9942A7A020B56EF /* ZXEANManufacturerOrgSupport.m */; };
@@ -391,6 +391,7 @@
 		BBE23E865B4443BEEE87EB506E454165 /* ZXDataMatrixDataBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CF2A77010270F7486C9DDC2F94B9C39 /* ZXDataMatrixDataBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BC22E885E2269CD9D2CA1F76E19F6A88 /* ZXPDF417DetectionResultColumn.h in Headers */ = {isa = PBXBuildFile; fileRef = D976283E53542230CA0972E7EA3FCBD7 /* ZXPDF417DetectionResultColumn.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BC82B3678E2DE171A99C1AC6D908EA85 /* ZXByteArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 094CD01A62B6E9A01B4AE0BAF4A251B9 /* ZXByteArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDE564F2B2BCA7C0AED7ACF42CCD2107 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB88D22DD1075BB6D4B8AAAC15CEA0F0 /* CoreVideo.framework */; };
 		BE45E0B69BC92B6C097D4CA736416DA8 /* ZXGenericGFPoly.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB6775C505A2930D063762295AC926 /* ZXGenericGFPoly.m */; };
 		BF57DF8099DF216EC84E09AA5D1BD815 /* ZXAztecState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB40D1AF94248A45A4AED7EFECFB4ED /* ZXAztecState.m */; };
 		BFC44C225B74237D8BFC7173391D2E65 /* ZXDataMatrixSymbolInfo144.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB30A2A8D0636D93A751B992C4F9D18 /* ZXDataMatrixSymbolInfo144.m */; };
@@ -408,13 +409,11 @@
 		C6B3F7122D7E4880AC2582FC3A69C823 /* ZXAI013x0x1xDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB3E366FF2A05DD9385E652626D993F /* ZXAI013x0x1xDecoder.m */; };
 		C71F11E2E09508429A49994F999BBFBF /* ZXDetectorResult.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1C46229E0A905BDA101FBC729E5A82 /* ZXDetectorResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7EA5DE2F69D1B544B5A20F5E3CA1C39 /* ZXDataMatrixErrorCorrection.h in Headers */ = {isa = PBXBuildFile; fileRef = 899968E063CBCE625F4D13A8E656BB67 /* ZXDataMatrixErrorCorrection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C8104D3DBDA3FBE37F2C0FDB33580AED /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 552806132B640D6FA194A41197F7602D /* AVFoundation.framework */; };
 		C8A8192A40CBD1381E09A623B1F72128 /* ZXLuminanceSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DA12E3F9AD86FA92DA9BDB83D98990DF /* ZXLuminanceSource.m */; };
 		CA141C6997A6B67327E8D632FC238E53 /* ZXPDF417Detector.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC01A543BFA4BF761857F242B023BB5 /* ZXPDF417Detector.m */; };
 		CA993E12AC981C1E09D93566E8530D06 /* ZXRSSExpandedCurrentParsingState.m in Sources */ = {isa = PBXBuildFile; fileRef = 78041C4879AB1C59F386421763869C18 /* ZXRSSExpandedCurrentParsingState.m */; };
 		CACAF7476A3FEF6576231BD1D6A7BC75 /* ZXURIParsedResult.h in Headers */ = {isa = PBXBuildFile; fileRef = A6932956971332E81A7D5F48245707CC /* ZXURIParsedResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB396596CD41F50EE08962472852FBAF /* ZXAztecEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0589824AC94C00C4BC06E41662CDB5C3 /* ZXAztecEncoder.m */; };
-		CBCCEAD402645565401CA93924736979 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CFCBACE64B434E9F9025467A71428F /* CoreGraphics.framework */; };
 		D050A9555E0A4903E05E5838FCFEF54B /* ZXByQuadrantReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD394D7D050CD6D4501F76B2A83F904 /* ZXByQuadrantReader.m */; };
 		D0558663BD0CE00EF5B26573B687F545 /* ZXQRCodeEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A7A03D1658116F9B557498AFB62ABF /* ZXQRCodeEncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D10CC46035F7A0C868C0955664A34609 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5071B30DDC1F9BA67E9954F4F04C8D7B /* UIButton+AFNetworking.m */; };
@@ -428,6 +427,7 @@
 		D5B3641F5F4366DB98BB0CCE19222A5D /* ZXDataMatrixEncoderContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 250B2935FAF6CE3BB192811B79ED7D21 /* ZXDataMatrixEncoderContext.m */; };
 		D5CB999FB5FC80FC126A38AB4DF12227 /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 229EB1AB706AB79C2140AFB1B3B75156 /* UIImageView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D64ED40475BE1307178111793B876ADE /* ZXExpandedProductParsedResult.h in Headers */ = {isa = PBXBuildFile; fileRef = A23FE78E7FFDAE63BC155A39A28C1754 /* ZXExpandedProductParsedResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6661D944DA4B5402DA6B57914542DF9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A36EEC58338CE188B61CA74FCE91E76 /* Security.framework */; };
 		D6F90CE8CE1C048EFC2096F5B14CEB6B /* ZXPerspectiveTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 035C7BB04FC8A3D8526E99D54F609A9A /* ZXPerspectiveTransform.m */; };
 		D720565562A729F75B875B0C12522CE7 /* ZXQRCodeMultiReader.h in Headers */ = {isa = PBXBuildFile; fileRef = C9742734DB9307CE5F8669E0B0CF9A7E /* ZXQRCodeMultiReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D74394BA9E68D04FB7274B04B7F71D95 /* ZXProductResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7672A70EB3F5EB6D4FC9AC418B208D57 /* ZXProductResultParser.m */; };
@@ -449,7 +449,6 @@
 		DDC8D27275FC1F2DFCEB5062B1E12F03 /* ZXByteMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 57BDD961BB9A7C061DDBB932169473AC /* ZXByteMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE190DE18C1CD969386D2958D82F33F6 /* ZXQRCodeWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C549EFF8469FC42CB2CA93333D4A86 /* ZXQRCodeWriter.m */; };
 		DE31BBF6A7963C5871A19655EF5532BE /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F696B2AF35E1EFB3A054639701C9F83B /* AFNetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DE825B8F32AB823F4BE5492CAC6FCB4B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E0761B592836770AE929FCA6BFDBEA /* Security.framework */; };
 		DF37B62B84479AA108E15BCEEABBE959 /* ZXCalendarParsedResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F55CC8DB62BD5FD2153689BA4668DC8 /* ZXCalendarParsedResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DFB44B87936D7B60A644231ABD86E9C2 /* ZXQRCodeDecodedBitStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2486A8B510029C28D8E162EB7DE647 /* ZXQRCodeDecodedBitStreamParser.m */; };
 		DFEC374FD3DF84AE9AA9F98BC06A45BE /* ZXEncodeHints.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D85969DA0A5808E72A957A3595BC47 /* ZXEncodeHints.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -469,10 +468,12 @@
 		E4E6ECC4938E2E226796185375C91441 /* ZXGenericGF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2B209816C0B11C0C431827E2A4307A /* ZXGenericGF.m */; };
 		E517613548A3278C2A88FCD86AC61FEB /* ZXQRCodeFinderPatternFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 09779EE7CB0DC4AA869F208C9724110E /* ZXQRCodeFinderPatternFinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E636E25E506EF020FF396F4F67665DFB /* ZXRSSExpandedDecodedInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = CADE0CBFC0D17C414D02AB0EA11CAFE7 /* ZXRSSExpandedDecodedInformation.m */; };
+		E738C16AF8020F2D6948D867AA7109EF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9743B15454C3AE86FAFAD59D8A36838C /* SystemConfiguration.framework */; };
 		E7B0270BEDCBE116DDD853F76E27B0BA /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AE70A7855B7329C372DE064A67DBA578 /* AFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA861B55C34B4F5381A8EFF3755DE6AF /* ZXPDF417DetectionResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 47E07121885CD5851B5D55EEE3FB3CBA /* ZXPDF417DetectionResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA9A329F463D8403814D8106416B872F /* ZXPDF417BarcodeValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DB09BA540C890021BA40BF12F45C004 /* ZXPDF417BarcodeValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB0CE39EFBF7BF7E81CCD1647DBF26E1 /* ZXISBNParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1FDC31DFF5F33F9B9E907858D8C4C6 /* ZXISBNParsedResult.m */; };
+		EC88925FEDB08B40FFA5FD7443C5CEB6 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5EBA8ED66204EF44C1CD9D64238D1B9 /* ImageIO.framework */; };
 		ECB6B58DDB9427971CF69C7AA608012B /* ZXMonochromeRectangleDetector.h in Headers */ = {isa = PBXBuildFile; fileRef = A8D506B6F18F9E35253D33F9A03A5711 /* ZXMonochromeRectangleDetector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECF3B5E616A14CB2BC750E9F9AB6CA5A /* ZXDataMatrixHighLevelEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D8E2BD3AE1F3CDC38ECB3CCDB15F30A /* ZXDataMatrixHighLevelEncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECFBA99CF337293FAABB396A0690C6A2 /* ZXITFWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCEA42C3BA7E0C3B6CBB3712EF07F4E /* ZXITFWriter.m */; };
@@ -500,7 +501,6 @@
 		F75C9F42B52D83D1C182DE6876BB29C8 /* ZXQRCodeMatrixUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C753689B27475349AB36CB53700BB2 /* ZXQRCodeMatrixUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7F7E234047D2B5CDC25782944A23B35 /* ZXResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D50AED1C7F09879509A7EB93FDA73622 /* ZXResultParser.m */; };
 		F8904F8F04C770F45D8ABB5688F46EF7 /* ZXMathUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D6C82E3ECDF2CBE96C6E8C683F2404B /* ZXMathUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8DCA6C3C05A59B2C95A1B5F1CBD8C99 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CD3BBD9569653000298B47538C4223 /* MobileCoreServices.framework */; };
 		F94F2A9C3C2E86955DE572281EEE61BE /* ZXRSSExpandedDecodedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = B67E8265ED4BFA6C56D784AE77F1349B /* ZXRSSExpandedDecodedObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F961C1C04989D60D2DBF4B4247527028 /* ZXDataMatrixBase256Encoder.h in Headers */ = {isa = PBXBuildFile; fileRef = B96DC21F5817B5E29B2956FC0A2912F4 /* ZXDataMatrixBase256Encoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9D477AE603DD6314067041159478CDC /* ZXAbstractExpandedDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E23E8DB57F899882307CA0497FCC8B8 /* ZXAbstractExpandedDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -548,6 +548,7 @@
 		053D4BF3C3176D641A5E4E2CFA62EDC9 /* ZXAddressBookParsedResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXAddressBookParsedResult.m; path = ZXingObjC/client/result/ZXAddressBookParsedResult.m; sourceTree = "<group>"; };
 		0589824AC94C00C4BC06E41662CDB5C3 /* ZXAztecEncoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXAztecEncoder.m; path = ZXingObjC/aztec/encoder/ZXAztecEncoder.m; sourceTree = "<group>"; };
 		0656EDCC9194B55CEEEA263D97D5CBDC /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		068782446F096E1CF92561B0FBD058FB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		068C55072CB3202251B3A94CE0650659 /* ZXGenericGFPoly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXGenericGFPoly.h; path = ZXingObjC/common/reedsolomon/ZXGenericGFPoly.h; sourceTree = "<group>"; };
 		06B4FDC08CAB31082058305B805CF89B /* ZXDataMatrixDetector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXDataMatrixDetector.h; path = ZXingObjC/datamatrix/detector/ZXDataMatrixDetector.h; sourceTree = "<group>"; };
 		07889E471B53924FB66D9CE592E8198E /* ZXEmailDoCoMoResultParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXEmailDoCoMoResultParser.h; path = ZXingObjC/client/result/ZXEmailDoCoMoResultParser.h; sourceTree = "<group>"; };
@@ -575,6 +576,7 @@
 		11FCC65539542E4A28241FAE6DC6CAE8 /* ZXQRCodeDataMask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXQRCodeDataMask.m; path = ZXingObjC/qrcode/decoder/ZXQRCodeDataMask.m; sourceTree = "<group>"; };
 		122707D218DD44CF1C278F1492FA00E6 /* ZXingObjCAztec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXingObjCAztec.h; path = ZXingObjC/aztec/ZXingObjCAztec.h; sourceTree = "<group>"; };
 		124099374D4AB5312739DA23BCE5FF02 /* ZXUPCEANExtensionSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXUPCEANExtensionSupport.h; path = ZXingObjC/oned/ZXUPCEANExtensionSupport.h; sourceTree = "<group>"; };
+		13459BDDBED9542135FAD3003024DE36 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		1349FEA6902C3330DCCB899D4F74181B /* ZXBitMatrix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXBitMatrix.h; path = ZXingObjC/common/ZXBitMatrix.h; sourceTree = "<group>"; };
 		13651B6D62AB4CDF92296A6016741CEE /* ZXUPCAReader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXUPCAReader.m; path = ZXingObjC/oned/ZXUPCAReader.m; sourceTree = "<group>"; };
 		15528FE4BB75B7EFFE0F7C9B5221B737 /* ZXRSSExpandedBlockParsedResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXRSSExpandedBlockParsedResult.m; path = ZXingObjC/oned/rss/expanded/decoders/ZXRSSExpandedBlockParsedResult.m; sourceTree = "<group>"; };
@@ -648,9 +650,11 @@
 		3825BF708AF9CEF6F8EFF6DAF3B97303 /* ZXQRCodeBitMatrixParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXQRCodeBitMatrixParser.m; path = ZXingObjC/qrcode/decoder/ZXQRCodeBitMatrixParser.m; sourceTree = "<group>"; };
 		38324659DDF27F76C997DBE8DF1D4834 /* ZXEmailAddressResultParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXEmailAddressResultParser.h; path = ZXingObjC/client/result/ZXEmailAddressResultParser.h; sourceTree = "<group>"; };
 		38512027D1EFA21CE45221D09A482499 /* ZXEmailAddressParsedResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXEmailAddressParsedResult.h; path = ZXingObjC/client/result/ZXEmailAddressParsedResult.h; sourceTree = "<group>"; };
+		3887C04058C0610E6C5FC5EADCDA987F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
 		38B6CF3F2643E07B015BA7245EB8277A /* ZXImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXImage.h; path = ZXingObjC/client/ZXImage.h; sourceTree = "<group>"; };
 		394DCC77DC62C1796E6644E4443FDDC6 /* ZXPDF417BarcodeMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXPDF417BarcodeMetadata.h; path = ZXingObjC/pdf417/decoder/ZXPDF417BarcodeMetadata.h; sourceTree = "<group>"; };
 		39A7A03D1658116F9B557498AFB62ABF /* ZXQRCodeEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXQRCodeEncoder.h; path = ZXingObjC/qrcode/encoder/ZXQRCodeEncoder.h; sourceTree = "<group>"; };
+		3A36EEC58338CE188B61CA74FCE91E76 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		3A8F83C94722AA97BA03B36341F70C39 /* ZXQRCode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXQRCode.m; path = ZXingObjC/qrcode/encoder/ZXQRCode.m; sourceTree = "<group>"; };
 		3AD394D7D050CD6D4501F76B2A83F904 /* ZXByQuadrantReader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXByQuadrantReader.m; path = ZXingObjC/multi/ZXByQuadrantReader.m; sourceTree = "<group>"; };
 		3AE933B4006AB31803307135EC674312 /* ZXDataMatrixEdifactEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXDataMatrixEdifactEncoder.h; path = ZXingObjC/datamatrix/encoder/ZXDataMatrixEdifactEncoder.h; sourceTree = "<group>"; };
@@ -690,14 +694,12 @@
 		4E66D366F10FA4D4148CDF564DC11F71 /* ZXBookmarkDoCoMoResultParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXBookmarkDoCoMoResultParser.h; path = ZXingObjC/client/result/ZXBookmarkDoCoMoResultParser.h; sourceTree = "<group>"; };
 		4EE99620E1BF8CFD3CE968D2AC5A1772 /* ZXURLTOResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXURLTOResultParser.m; path = ZXingObjC/client/result/ZXURLTOResultParser.m; sourceTree = "<group>"; };
 		5071B30DDC1F9BA67E9954F4F04C8D7B /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
-		50CFCBACE64B434E9F9025467A71428F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		515031ADEF1CB7CF6B76FE050503D967 /* ZXAztecDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXAztecDecoder.h; path = ZXingObjC/aztec/decoder/ZXAztecDecoder.h; sourceTree = "<group>"; };
 		520388FE3A7A522ADBD6A43AC74CCED2 /* ZXPDF417ScanningDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXPDF417ScanningDecoder.m; path = ZXingObjC/pdf417/decoder/ZXPDF417ScanningDecoder.m; sourceTree = "<group>"; };
 		5222F68C6B9BFD6E7719DB75DE0C04D3 /* ZXQRCodeAlignmentPattern.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXQRCodeAlignmentPattern.h; path = ZXingObjC/qrcode/detector/ZXQRCodeAlignmentPattern.h; sourceTree = "<group>"; };
 		523EC2091CC8E0200ADA4053A595E328 /* ZXQRCodeDataMask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXQRCodeDataMask.h; path = ZXingObjC/qrcode/decoder/ZXQRCodeDataMask.h; sourceTree = "<group>"; };
 		52415A6461CA45F550DCF1082D6DD0E3 /* ZXSMSParsedResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXSMSParsedResult.h; path = ZXingObjC/client/result/ZXSMSParsedResult.h; sourceTree = "<group>"; };
 		542C05752484525C00E7C8749B50587A /* ZXGeoParsedResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXGeoParsedResult.h; path = ZXingObjC/client/result/ZXGeoParsedResult.h; sourceTree = "<group>"; };
-		552806132B640D6FA194A41197F7602D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		5552936E28966DE9734D8DFD9F21F501 /* ZXCGImageLuminanceSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXCGImageLuminanceSource.m; path = ZXingObjC/client/ZXCGImageLuminanceSource.m; sourceTree = "<group>"; };
 		5573F4925654C341CB23D8B761F3B84F /* ZXQRCodeMode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXQRCodeMode.m; path = ZXingObjC/qrcode/decoder/ZXQRCodeMode.m; sourceTree = "<group>"; };
 		5575D6C96B673FC6C28C81BF6FE82708 /* ZXRGBLuminanceSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXRGBLuminanceSource.h; path = ZXingObjC/core/ZXRGBLuminanceSource.h; sourceTree = "<group>"; };
@@ -709,9 +711,9 @@
 		579387B8DBA876D74AAAFAE654CBF9FF /* ZXTelParsedResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXTelParsedResult.m; path = ZXingObjC/client/result/ZXTelParsedResult.m; sourceTree = "<group>"; };
 		57BDD961BB9A7C061DDBB932169473AC /* ZXByteMatrix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXByteMatrix.h; path = ZXingObjC/core/ZXByteMatrix.h; sourceTree = "<group>"; };
 		57E8914C632665C6C1C47DA37D204E7C /* ZXDetectorResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXDetectorResult.m; path = ZXingObjC/common/ZXDetectorResult.m; sourceTree = "<group>"; };
+		57EA76F3F80DF652F0EFF3EEBA90E93B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		5858731B3EE0B92A83C8281435E5A894 /* ZXStringUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXStringUtils.m; path = ZXingObjC/common/ZXStringUtils.m; sourceTree = "<group>"; };
 		5877F232FB40D47FA90CAC3795BC9D1F /* ZXMaxiCodeReader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXMaxiCodeReader.m; path = ZXingObjC/maxicode/ZXMaxiCodeReader.m; sourceTree = "<group>"; };
-		58FF46ACBDC1DF00637036337DF0C813 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
 		5A7030367DA727FBAFAC652CA2E426AA /* ZXMaxiCodeDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXMaxiCodeDecoder.h; path = ZXingObjC/maxicode/decoder/ZXMaxiCodeDecoder.h; sourceTree = "<group>"; };
 		5ADE4A3606746EA505559791893EB667 /* ZXCGImageLuminanceSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXCGImageLuminanceSource.h; path = ZXingObjC/client/ZXCGImageLuminanceSource.h; sourceTree = "<group>"; };
 		5B180FFB7B2660FC5C2A252B817A46F5 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
@@ -752,7 +754,6 @@
 		690014A4FF7029035C9901C1C8DC19A5 /* ZXCalendarParsedResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXCalendarParsedResult.m; path = ZXingObjC/client/result/ZXCalendarParsedResult.m; sourceTree = "<group>"; };
 		69F095D37CE38A94D2A06AA840CA3277 /* ZXCharacterSetECI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXCharacterSetECI.h; path = ZXingObjC/common/ZXCharacterSetECI.h; sourceTree = "<group>"; };
 		6A2A84B9A6EC5391050976DAF78E2E5A /* ZXSMSTOMMSTOResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXSMSTOMMSTOResultParser.m; path = ZXingObjC/client/result/ZXSMSTOMMSTOResultParser.m; sourceTree = "<group>"; };
-		6A4DC9C055C6EBA38373CEFF456BEBF1 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
 		6AB749A0E58950A5A9B8BDF9778F4375 /* ZXModulusGF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXModulusGF.m; path = ZXingObjC/pdf417/decoder/ec/ZXModulusGF.m; sourceTree = "<group>"; };
 		6B74F48D71146A7D829B9802A532DF2C /* ZXDataMatrixDetector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXDataMatrixDetector.m; path = ZXingObjC/datamatrix/detector/ZXDataMatrixDetector.m; sourceTree = "<group>"; };
 		6C95FFDDC381F402EC76133EE515FAA6 /* ZXVINResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXVINResultParser.m; path = ZXingObjC/client/result/ZXVINResultParser.m; sourceTree = "<group>"; };
@@ -829,12 +830,14 @@
 		8E12887FF643D79B0CB99948685DAC5A /* ZXAztecEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXAztecEncoder.h; path = ZXingObjC/aztec/encoder/ZXAztecEncoder.h; sourceTree = "<group>"; };
 		8EF4B2A4E20C7225E01BB62C95E5168A /* ZXRSSExpandedPair.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXRSSExpandedPair.m; path = ZXingObjC/oned/rss/expanded/ZXRSSExpandedPair.m; sourceTree = "<group>"; };
 		8EFEF8A8B2684BA02AB19975C4E4FB92 /* ZXDataMatrixTextEncoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXDataMatrixTextEncoder.m; path = ZXingObjC/datamatrix/encoder/ZXDataMatrixTextEncoder.m; sourceTree = "<group>"; };
+		8F136C34AF0B170C81660F9747CC1730 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		8F1FDC31DFF5F33F9B9E907858D8C4C6 /* ZXISBNParsedResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXISBNParsedResult.m; path = ZXingObjC/client/result/ZXISBNParsedResult.m; sourceTree = "<group>"; };
 		8F50B81E182A023AEABD053CC91EBC39 /* ZXPDF417DetectionResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXPDF417DetectionResult.m; path = ZXingObjC/pdf417/decoder/ZXPDF417DetectionResult.m; sourceTree = "<group>"; };
 		8FA915CBE3F9CB96CE3B1772C8D8BB83 /* ZXCode128Reader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXCode128Reader.h; path = ZXingObjC/oned/ZXCode128Reader.h; sourceTree = "<group>"; };
 		914B38F8283092ABEBD9655EDAE3BC51 /* ZXPDF417DetectionResultRowIndicatorColumn.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXPDF417DetectionResultRowIndicatorColumn.m; path = ZXingObjC/pdf417/decoder/ZXPDF417DetectionResultRowIndicatorColumn.m; sourceTree = "<group>"; };
 		91E022B817C1723828A46BC36647E20C /* ZXQRCodeErrorCorrectionLevel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXQRCodeErrorCorrectionLevel.m; path = ZXingObjC/qrcode/decoder/ZXQRCodeErrorCorrectionLevel.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9743B15454C3AE86FAFAD59D8A36838C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		979587CA8E0CFC7704D8903A7CDCB843 /* ZXCodaBarWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXCodaBarWriter.h; path = ZXingObjC/oned/ZXCodaBarWriter.h; sourceTree = "<group>"; };
 		988081A447447072D6919DD1448D68E2 /* ZXModulusPoly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXModulusPoly.h; path = ZXingObjC/pdf417/decoder/ec/ZXModulusPoly.h; sourceTree = "<group>"; };
 		9A947A614086A2B6D6B0B2D1E641E75F /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
@@ -854,7 +857,6 @@
 		A094F36AB570587B8DD4E66BFF33B598 /* ZXRSSExpandedDecodedChar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXRSSExpandedDecodedChar.h; path = ZXingObjC/oned/rss/expanded/decoders/ZXRSSExpandedDecodedChar.h; sourceTree = "<group>"; };
 		A0BA45C8C07D1EA7F60D9CE7832CAF46 /* ZXAI01weightDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXAI01weightDecoder.h; path = ZXingObjC/oned/rss/expanded/decoders/ZXAI01weightDecoder.h; sourceTree = "<group>"; };
 		A0CBBF8B10C0843D240650FA8E148397 /* ZXVEventResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXVEventResultParser.m; path = ZXingObjC/client/result/ZXVEventResultParser.m; sourceTree = "<group>"; };
-		A0E0761B592836770AE929FCA6BFDBEA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		A1F875B9C256F132D337401BBA3F7083 /* ZXResultPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXResultPoint.h; path = ZXingObjC/core/ZXResultPoint.h; sourceTree = "<group>"; };
 		A23FE78E7FFDAE63BC155A39A28C1754 /* ZXExpandedProductParsedResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXExpandedProductParsedResult.h; path = ZXingObjC/client/result/ZXExpandedProductParsedResult.h; sourceTree = "<group>"; };
 		A25003C086A5E713637C49EA5BAAC2AE /* ZXUPCEANReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXUPCEANReader.h; path = ZXingObjC/oned/ZXUPCEANReader.h; sourceTree = "<group>"; };
@@ -864,7 +866,6 @@
 		A3E2642AE3D04D096B4A83675E185F01 /* ZXCodaBarWriter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXCodaBarWriter.m; path = ZXingObjC/oned/ZXCodaBarWriter.m; sourceTree = "<group>"; };
 		A4EDE987987AE5AAA6A29F3F8BF5E6C8 /* ZXPDF417BoundingBox.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXPDF417BoundingBox.m; path = ZXingObjC/pdf417/decoder/ZXPDF417BoundingBox.m; sourceTree = "<group>"; };
 		A5862B4640B1FEB7F9464F087101903B /* ZXResultPoint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXResultPoint.m; path = ZXingObjC/core/ZXResultPoint.m; sourceTree = "<group>"; };
-		A689A253B8E3AFA61F06410AFBE15819 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		A6932956971332E81A7D5F48245707CC /* ZXURIParsedResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXURIParsedResult.h; path = ZXingObjC/client/result/ZXURIParsedResult.h; sourceTree = "<group>"; };
 		A6DBB228B5756D958821547EC7D3669C /* ZXSMSMMSResultParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXSMSMMSResultParser.m; path = ZXingObjC/client/result/ZXSMSMMSResultParser.m; sourceTree = "<group>"; };
 		A70257D3BE9E2BEF9F12FE46D6CDC283 /* ZXDataMatrixSymbolInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXDataMatrixSymbolInfo.m; path = ZXingObjC/datamatrix/encoder/ZXDataMatrixSymbolInfo.m; sourceTree = "<group>"; };
@@ -899,7 +900,6 @@
 		B2586A2CE05E01AFF4C8931AF21F4DE0 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
 		B31ACAD52E565E48BC37BE9E31339E66 /* ZXDataMatrixDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXDataMatrixDecoder.m; path = ZXingObjC/datamatrix/decoder/ZXDataMatrixDecoder.m; sourceTree = "<group>"; };
 		B35D5E9753E38EDF2A3ADCF85FEEEF86 /* ZXParsedResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXParsedResult.h; path = ZXingObjC/client/result/ZXParsedResult.h; sourceTree = "<group>"; };
-		B36EB7F0F59D56CCE1E79935BE8371F9 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreVideo.framework; sourceTree = DEVELOPER_DIR; };
 		B3FAE85C6B00E45AD9C58BEAE9C7E57C /* ZXResultParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXResultParser.h; path = ZXingObjC/client/result/ZXResultParser.h; sourceTree = "<group>"; };
 		B4CE15DC91510E26D4F0A273AD76DB0D /* ZXPDF417ECErrorCorrection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXPDF417ECErrorCorrection.m; path = ZXingObjC/pdf417/decoder/ec/ZXPDF417ECErrorCorrection.m; sourceTree = "<group>"; };
 		B4EB7FFE290F03AB32B54D606CB479EE /* ZXUPCEANExtension2Support.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXUPCEANExtension2Support.h; path = ZXingObjC/oned/ZXUPCEANExtension2Support.h; sourceTree = "<group>"; };
@@ -910,7 +910,6 @@
 		B6D7E1EDAF6CAEAD96A469C91AB3EA6E /* ZXUPCAWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXUPCAWriter.h; path = ZXingObjC/oned/ZXUPCAWriter.h; sourceTree = "<group>"; };
 		B70432F6C7B50062EA27B76538D6F578 /* ZXExpandedProductResultParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXExpandedProductResultParser.h; path = ZXingObjC/client/result/ZXExpandedProductResultParser.h; sourceTree = "<group>"; };
 		B765EB578B07D175B1AC9617F8488EAB /* ZXDataMatrixBase256Encoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXDataMatrixBase256Encoder.m; path = ZXingObjC/datamatrix/encoder/ZXDataMatrixBase256Encoder.m; sourceTree = "<group>"; };
-		B7CD3BBD9569653000298B47538C4223 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		B7CE2D4F325E1C7D0C72B26C42997E87 /* ZXRSSExpandedDecodedNumeric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXRSSExpandedDecodedNumeric.h; path = ZXingObjC/oned/rss/expanded/decoders/ZXRSSExpandedDecodedNumeric.h; sourceTree = "<group>"; };
 		B88BFABDA9A6F51D54B78E327A47B2B4 /* ZXReedSolomonEncoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXReedSolomonEncoder.m; path = ZXingObjC/common/reedsolomon/ZXReedSolomonEncoder.m; sourceTree = "<group>"; };
 		B9317BBB617ED09F4D3235BD0A68BB5E /* ZXGridSampler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXGridSampler.h; path = ZXingObjC/common/ZXGridSampler.h; sourceTree = "<group>"; };
@@ -920,7 +919,6 @@
 		B9EAA224707C23CEE5649C3198A5CAB4 /* ZXTelParsedResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXTelParsedResult.h; path = ZXingObjC/client/result/ZXTelParsedResult.h; sourceTree = "<group>"; };
 		BAA2F7ED76DEF43D43272FBFE1A60D1A /* ZXRSSExpandedReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXRSSExpandedReader.h; path = ZXingObjC/oned/rss/expanded/ZXRSSExpandedReader.h; sourceTree = "<group>"; };
 		BAC490B274B666867CD2963B4CCC332F /* ZXQRCodeWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXQRCodeWriter.h; path = ZXingObjC/qrcode/ZXQRCodeWriter.h; sourceTree = "<group>"; };
-		BAD53F8E6A009A8743314DDB6AE7FD65 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		BAEFE1995E61545E391CBD991B22CCD3 /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
 		BB0EE11AE93165153A90E0E8199914C0 /* ZXITFWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXITFWriter.h; path = ZXingObjC/oned/ZXITFWriter.h; sourceTree = "<group>"; };
 		BB2486A8B510029C28D8E162EB7DE647 /* ZXQRCodeDecodedBitStreamParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXQRCodeDecodedBitStreamParser.m; path = ZXingObjC/qrcode/decoder/ZXQRCodeDecodedBitStreamParser.m; sourceTree = "<group>"; };
@@ -959,6 +957,7 @@
 		CB200DEC021A6AA5D176E7B3B8EAB94A /* ZXDecoderResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXDecoderResult.m; path = ZXingObjC/common/ZXDecoderResult.m; sourceTree = "<group>"; };
 		CBCBC35F9C89DC392C61E96721814376 /* ZXPDF417BarcodeValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXPDF417BarcodeValue.m; path = ZXingObjC/pdf417/decoder/ZXPDF417BarcodeValue.m; sourceTree = "<group>"; };
 		CBCF9080E0D1DA292CD3CD8E321EC035 /* ZXPDF417BarcodeMatrix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXPDF417BarcodeMatrix.h; path = ZXingObjC/pdf417/encoder/ZXPDF417BarcodeMatrix.h; sourceTree = "<group>"; };
+		CC02065C5FEA929A891C7EAD5FA639FD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		CC0DCF5876CBFA72BFC490595843F669 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		CC4BA9A5ABEA0F1B6787B41FED22C306 /* ZXModulusGF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXModulusGF.h; path = ZXingObjC/pdf417/decoder/ec/ZXModulusGF.h; sourceTree = "<group>"; };
 		CC6FA509DEE85424D1BF730B4FCEF16C /* ZXQRCodeFormatInformation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXQRCodeFormatInformation.m; path = ZXingObjC/qrcode/decoder/ZXQRCodeFormatInformation.m; sourceTree = "<group>"; };
@@ -992,7 +991,6 @@
 		DCB30A2A8D0636D93A751B992C4F9D18 /* ZXDataMatrixSymbolInfo144.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXDataMatrixSymbolInfo144.m; path = ZXingObjC/datamatrix/encoder/ZXDataMatrixSymbolInfo144.m; sourceTree = "<group>"; };
 		DD5DEE931DEEC99E11C91699B16238C4 /* ZXBoolArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXBoolArray.m; path = ZXingObjC/common/ZXBoolArray.m; sourceTree = "<group>"; };
 		DE70F4B22A6C752900AE19E4D5356AE7 /* AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.xcconfig; sourceTree = "<group>"; };
-		DEB36EB5D04ED7F0CADF57E9AF585AD3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		DEFABC6CC11CFE9057C5182BAC69DCEB /* ZXImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXImage.m; path = ZXingObjC/client/ZXImage.m; sourceTree = "<group>"; };
 		DF94572226211009F577FB808EF7924E /* ZXEAN13Reader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXEAN13Reader.m; path = ZXingObjC/oned/ZXEAN13Reader.m; sourceTree = "<group>"; };
 		DFA9C8616CF14C7A9F82AB0FD798F383 /* ZXDataMatrixSymbolInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXDataMatrixSymbolInfo.h; path = ZXingObjC/datamatrix/encoder/ZXDataMatrixSymbolInfo.h; sourceTree = "<group>"; };
@@ -1018,6 +1016,7 @@
 		EA3419BC330B143721FBFD9804EBC9BC /* ZXCodaBarReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXCodaBarReader.h; path = ZXingObjC/oned/ZXCodaBarReader.h; sourceTree = "<group>"; };
 		EA8DFF51B30553C4D14D13B2B99BAAEF /* ZXUPCEANExtension5Support.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXUPCEANExtension5Support.h; path = ZXingObjC/oned/ZXUPCEANExtension5Support.h; sourceTree = "<group>"; };
 		EAF490114B7CB99AB5B3295A2F7CF284 /* ZXBoolArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXBoolArray.h; path = ZXingObjC/common/ZXBoolArray.h; sourceTree = "<group>"; };
+		EB88D22DD1075BB6D4B8AAAC15CEA0F0 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreVideo.framework; sourceTree = DEVELOPER_DIR; };
 		EBAE3B5E6F2C1A37528F58888FEB525E /* ZXRSSExpandedFieldParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXRSSExpandedFieldParser.h; path = ZXingObjC/oned/rss/expanded/decoders/ZXRSSExpandedFieldParser.h; sourceTree = "<group>"; };
 		ED1B32C14A8F05A4161292A8E11AEC68 /* ZXAnyAIDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXAnyAIDecoder.h; path = ZXingObjC/oned/rss/expanded/decoders/ZXAnyAIDecoder.h; sourceTree = "<group>"; };
 		ED5487A4A127CC746D438B57AA919138 /* ZXAztecToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXAztecToken.m; path = ZXingObjC/aztec/encoder/ZXAztecToken.m; sourceTree = "<group>"; };
@@ -1038,6 +1037,7 @@
 		F3693C25FCCA85009D82FF39005106C3 /* ZXQRCodeBlockPair.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXQRCodeBlockPair.h; path = ZXingObjC/qrcode/encoder/ZXQRCodeBlockPair.h; sourceTree = "<group>"; };
 		F447660D68D55260A2338FAF06B24D9B /* ZXSMSMMSResultParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXSMSMMSResultParser.h; path = ZXingObjC/client/result/ZXSMSMMSResultParser.h; sourceTree = "<group>"; };
 		F4ACA9A87A1008530BFE844C3C034B82 /* ZXGenericMultipleBarcodeReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXGenericMultipleBarcodeReader.h; path = ZXingObjC/multi/ZXGenericMultipleBarcodeReader.h; sourceTree = "<group>"; };
+		F5EBA8ED66204EF44C1CD9D64238D1B9 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
 		F664908EA1D9C82E60AD4E2E67A9A3A1 /* ZXRSSFinderPattern.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZXRSSFinderPattern.h; path = ZXingObjC/oned/rss/ZXRSSFinderPattern.h; sourceTree = "<group>"; };
 		F696B2AF35E1EFB3A054639701C9F83B /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		F755B01CBE674E69AF471866175D7395 /* ZXAI013x0xDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZXAI013x0xDecoder.m; path = ZXingObjC/oned/rss/expanded/decoders/ZXAI013x0xDecoder.m; sourceTree = "<group>"; };
@@ -1061,13 +1061,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8104D3DBDA3FBE37F2C0FDB33580AED /* AVFoundation.framework in Frameworks */,
-				8D214690F4C5B54EA58509C59B57FA69 /* CoreGraphics.framework in Frameworks */,
-				1A72CAB8D172C470C3294DB832B19D6A /* CoreMedia.framework in Frameworks */,
-				56B70606A8C42F040DAA9C3A8FD13FDD /* CoreVideo.framework in Frameworks */,
-				47E69416906919C0985B4CE640E01B49 /* Foundation.framework in Frameworks */,
-				1A060A905F3B4708F61844CC34E5E19C /* ImageIO.framework in Frameworks */,
-				0C37C788A30E06DD22EFA02E33B71630 /* QuartzCore.framework in Frameworks */,
+				6047EBD707A7D71EA88288DB28BCBF8E /* AVFoundation.framework in Frameworks */,
+				0D073E67356B7933A0969C04037065FD /* CoreGraphics.framework in Frameworks */,
+				73897BEB7BF50193F62BEE9FDAF5B016 /* CoreMedia.framework in Frameworks */,
+				BDE564F2B2BCA7C0AED7ACF42CCD2107 /* CoreVideo.framework in Frameworks */,
+				18003E85FA5B874053C0E0A25B5715A3 /* Foundation.framework in Frameworks */,
+				EC88925FEDB08B40FFA5FD7443C5CEB6 /* ImageIO.framework in Frameworks */,
+				0DEDDC3DCFA2C69A64865F1D61A7D7CD /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1075,7 +1075,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DBE2DC7AF690F53C1FC926081767E7C /* Foundation.framework in Frameworks */,
+				65D9E1B03296E4B7E60E13C56858AC2F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1083,11 +1083,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBCCEAD402645565401CA93924736979 /* CoreGraphics.framework in Frameworks */,
-				0214246CCB1FF7182F7222B9CCDF8FCB /* Foundation.framework in Frameworks */,
-				F8DCA6C3C05A59B2C95A1B5F1CBD8C99 /* MobileCoreServices.framework in Frameworks */,
-				DE825B8F32AB823F4BE5492CAC6FCB4B /* Security.framework in Frameworks */,
-				903158692A045396106CA22C0DD13BA6 /* SystemConfiguration.framework in Frameworks */,
+				2843898C40D365BC1361BF1CD832E9B2 /* CoreGraphics.framework in Frameworks */,
+				AFD0634B4D580C7C585C242BE0008A0E /* Foundation.framework in Frameworks */,
+				8B1E1A45E0B423395CE2A513BB1B1010 /* MobileCoreServices.framework in Frameworks */,
+				D6661D944DA4B5402DA6B57914542DF9 /* Security.framework in Frameworks */,
+				E738C16AF8020F2D6948D867AA7109EF /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1175,7 +1175,7 @@
 		876F80F8AFD1240ED0B7B9EA9C5BFAD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A07AA6BA83AD28B331ECD0BE1FE440A0 /* iOS */,
+				E2AA69F600A2498F80C319811B15AE74 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1682,23 +1682,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A07AA6BA83AD28B331ECD0BE1FE440A0 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				552806132B640D6FA194A41197F7602D /* AVFoundation.framework */,
-				50CFCBACE64B434E9F9025467A71428F /* CoreGraphics.framework */,
-				6A4DC9C055C6EBA38373CEFF456BEBF1 /* CoreMedia.framework */,
-				B36EB7F0F59D56CCE1E79935BE8371F9 /* CoreVideo.framework */,
-				BAD53F8E6A009A8743314DDB6AE7FD65 /* Foundation.framework */,
-				58FF46ACBDC1DF00637036337DF0C813 /* ImageIO.framework */,
-				B7CD3BBD9569653000298B47538C4223 /* MobileCoreServices.framework */,
-				A689A253B8E3AFA61F06410AFBE15819 /* QuartzCore.framework */,
-				A0E0761B592836770AE929FCA6BFDBEA /* Security.framework */,
-				DEB36EB5D04ED7F0CADF57E9AF585AD3 /* SystemConfiguration.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		A2D7A0D5A49E26C4C39A38C4121964AB /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1714,6 +1697,23 @@
 				74D2FDCA744BD6C7BFCC84F27FD676A1 /* ZXingObjC */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E2AA69F600A2498F80C319811B15AE74 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				57EA76F3F80DF652F0EFF3EEBA90E93B /* AVFoundation.framework */,
+				CC02065C5FEA929A891C7EAD5FA639FD /* CoreGraphics.framework */,
+				3887C04058C0610E6C5FC5EADCDA987F /* CoreMedia.framework */,
+				EB88D22DD1075BB6D4B8AAAC15CEA0F0 /* CoreVideo.framework */,
+				13459BDDBED9542135FAD3003024DE36 /* Foundation.framework */,
+				F5EBA8ED66204EF44C1CD9D64238D1B9 /* ImageIO.framework */,
+				8F136C34AF0B170C81660F9747CC1730 /* MobileCoreServices.framework */,
+				068782446F096E1CF92561B0FBD058FB /* QuartzCore.framework */,
+				3A36EEC58338CE188B61CA74FCE91E76 /* Security.framework */,
+				9743B15454C3AE86FAFAD59D8A36838C /* SystemConfiguration.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		E468C30A53F373676DB9E560A8035870 /* Reachability */ = {
@@ -2086,7 +2086,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -2410,12 +2410,11 @@
 			};
 			name = Release;
 		};
-		4E487F173E6C9664F4E9E26B9635D23C /* Debug */ = {
+		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -2423,13 +2422,10 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
@@ -2504,12 +2500,11 @@
 			};
 			name = Release;
 		};
-		BDD0139D6EB93FA375F887ABD62DAB2E /* Release */ = {
+		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -2517,13 +2512,10 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
@@ -2623,8 +2615,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E487F173E6C9664F4E9E26B9635D23C /* Debug */,
-				BDD0139D6EB93FA375F887ABD62DAB2E /* Release */,
+				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
+				B7324857C38B065FEB1EEE3105C2367A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -70,14 +70,13 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
+    
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return [exhibitors count];
     
+    return [exhibitors count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -87,30 +86,22 @@
     [cell setBackgroundColor: [UIColor clearColor]];
     
     
-    //getting session object
+    //getting Exhibitor object
     ExhibitorDTO * exhibitor = exhibitors[indexPath.row];
     
     //Getting refrences to the cell components
     UIImageView *img =[cell  viewWithTag:1];
     UILabel * name = [cell viewWithTag:2];
-   
-    
     
     //Setting the data
   //  NSString *fullName = [NSString stringWithFormat:@"%@ %@ %@",speaker.firstName,speaker.middleName,speaker.lastName];
     [name setText: exhibitor.companyName];
 
     
-    
     [img SetwithImageInURL:exhibitor.imageURL andPlaceholder:@"speaker.png"];
-    
-    
-    
     
     return cell;
 }
-
-
 
 
 /*

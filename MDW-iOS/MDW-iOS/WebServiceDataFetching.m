@@ -13,13 +13,12 @@
 #import "SessionDAO.h"
 #import "SpeakerDAO.h"
 #import "ImageDAO.h"
+#import "SharedObjects.h"
 
 @implementation WebServiceDataFetching
 
-static AFHTTPSessionManager *sessionManager;
-
-+(void)fetchSessionsFromWebServicewithSessionManager: (AFURLSessionManager *) mgr{
-    NSURLSessionDataTask *dataTask = [mgr dataTaskWithRequest:[ServiceURLs allSessionsRequest] completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
++(void)fetchSessionsFromWebService{
+    NSURLSessionDataTask *dataTask = [[SharedObjects sharedSessionManager] dataTaskWithRequest:[ServiceURLs allSessionsRequest] completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         if (error) {
             NSLog(@"Error: %@", error);
         } else {
@@ -90,10 +89,6 @@ static AFHTTPSessionManager *sessionManager;
 //            NSLog(@"---------------- no.ofsessions is %lu", (unsigned long)[sessions count]);
             
             //Cashing data to DB
-            for (SessionDTO * ses in sessions) {
-                NSLog(@"Session Type ++=++====+=====++==== %@", ses.sessionType);
-            }
-            
             [[SessionDAO new] addSessions:sessions];
             
             
@@ -103,9 +98,9 @@ static AFHTTPSessionManager *sessionManager;
     [dataTask resume];
 }
 
-+(void)fetchSpeakersFromWebServicewithSessionManager: (AFURLSessionManager *) mgr{
++(void)fetchSpeakersFromWebService{
     
-    NSURLSessionDataTask * dataTask = [mgr dataTaskWithRequest:[ServiceURLs speakersRequest] completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+    NSURLSessionDataTask * dataTask = [[SharedObjects sharedSessionManager] dataTaskWithRequest:[ServiceURLs speakersRequest] completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         
         if (error) {
             NSLog(@"Error: %@", error);
@@ -142,9 +137,9 @@ static AFHTTPSessionManager *sessionManager;
 
 }
 
-+(void)fetchExhibitorsFromWebServicewithSessionManager: (AFURLSessionManager *) mgr{
++(void)fetchExhibitorsFromWebService{
 
-    NSURLSessionDataTask * dataTask = [mgr dataTaskWithRequest:[ServiceURLs exhibitorsDataRequest] completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+    NSURLSessionDataTask * dataTask = [[SharedObjects sharedSessionManager] dataTaskWithRequest:[ServiceURLs exhibitorsDataRequest] completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         
         if (error) {
             NSLog(@"Error: %@", error);
@@ -173,15 +168,8 @@ static AFHTTPSessionManager *sessionManager;
 }
 
 +(void)fetchImageWithURL: (NSString *) imageURL andRefreshImageView: (UIImageView *) imageView{
- 
     
-    if (sessionManager == NULL) {
-        sessionManager = [AFHTTPSessionManager manager];
-        sessionManager.responseSerializer  = [[AFImageResponseSerializer alloc] init];
-    }
-    
-    
-    [sessionManager GET:imageURL parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+    [[SharedObjects sharedHTTPSessionManager] GET:imageURL parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         
         NSLog(@"Image data: %@", responseObject);
         
@@ -198,7 +186,7 @@ static AFHTTPSessionManager *sessionManager;
 
 +(NSDictionary *)registerSessionWithID:(NSInteger)sessionId{
     __block NSDictionary *result;
-    NSURLSessionDataTask * dataTask = [sessionManager dataTaskWithRequest:[ServiceURLs requestRegisterToSessionWithID:sessionId] completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+    NSURLSessionDataTask * dataTask = [[SharedObjects sharedSessionManager] dataTaskWithRequest:[ServiceURLs requestRegisterToSessionWithID:sessionId] completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         
         if (error) {
             NSLog(@"Error: %@", error);
@@ -209,6 +197,15 @@ static AFHTTPSessionManager *sessionManager;
     }];
     [dataTask resume];
     return result;
+}
+
++(void)updateDataAndRefreshDelegate: ( id<TableReloadDelegate>) tableView{
+    
+    [self fetchSessionsFromWebService];
+    [self fetchSpeakersFromWebService];
+    [self fetchExhibitorsFromWebService];
+    
+    [tableView reloadTableView];
 }
 
 @end

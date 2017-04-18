@@ -15,19 +15,21 @@
 #import "SpeakerDTO.h"
 #import "ExhibitorDTO.h"
 #import "ImageDTO.h"
+#import "TableReloadDelegate.h"
 
 
 @interface WebServiceDataFetching : NSObject
 
++(void)fetchSessionsFromWebService;
 
-+(void)fetchSessionsFromWebServicewithSessionManager: (AFURLSessionManager *) mgr;
++(void)fetchSpeakersFromWebService;
 
-+(void)fetchSpeakersFromWebServicewithSessionManager: (AFURLSessionManager *) mgr;
-
-+(void)fetchExhibitorsFromWebServicewithSessionManager: (AFURLSessionManager *) mgr;
++(void)fetchExhibitorsFromWebService;
 
 +(void)fetchImageWithURL: (NSString *) imageURL andRefreshImageView: (UIImageView *) imageView;
 
 +(NSDictionary *)registerSessionWithID:(NSInteger)sessionId;
+
++(void)updateDataAndRefreshDelegate: ( id<TableReloadDelegate> ) tableView;
 
 @end
