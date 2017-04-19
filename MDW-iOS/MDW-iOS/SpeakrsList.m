@@ -14,6 +14,7 @@
 #import "UIImageView+UIImageView_CashingWebImage.h"
 #import "SpeakerDTO.h"
 #import "SpeakerDAO.h"
+#import "NameFormatter.h"
 
 
 
@@ -112,7 +113,7 @@
     
     
     //Setting the data
-   NSString *fullName = [NSString stringWithFormat:@"%@ %@ %@",speaker.firstName,speaker.middleName,speaker.lastName];
+   NSString *fullName = [[[NameFormatter alloc] initWithFirstName:speaker.firstName middleName:speaker.middleName lastName:speaker.lastName] fullName];
     [name setText: fullName];
     [description setText:speaker.companyName];
     

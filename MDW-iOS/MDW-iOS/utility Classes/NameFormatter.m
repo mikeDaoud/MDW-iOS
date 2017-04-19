@@ -23,6 +23,8 @@
     -(NSString *)fullName{
         if (_middleName != nil) {
             _middleName = [_middleName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+            _firstName = [_firstName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+            _lastName = [_lastName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
             if (![_middleName isEqualToString:@""]){
                 return [NSString stringWithFormat:@"%@ %@ %@", _firstName, _middleName, _lastName];
             }

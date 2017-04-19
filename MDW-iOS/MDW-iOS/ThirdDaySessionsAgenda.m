@@ -147,6 +147,11 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    SessionDetailsViewController *sessionDetailsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"sessionDetails"];
+    sessionDetailsViewController.session = sessions[indexPath.row];
+    [self.navigationController pushViewController:sessionDetailsViewController animated:YES];
+}
 
 /*
 // Override to support conditional editing of the table view.

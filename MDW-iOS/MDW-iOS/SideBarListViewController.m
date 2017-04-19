@@ -8,6 +8,10 @@
 
 #import "SideBarListViewController.h"
 #import "SWRevealViewController.h"
+#import "ImageDAO.h"
+#import "ExhibitorDAO.h"
+#import "SpeakerDAO.h"
+#import "SessionDAO.h"
 
 @interface SideBarListViewController ()
 
@@ -66,7 +70,10 @@
             
             NSLog(@"Logged Out");
             
-            //TODO: Clear the database
+            [[ImageDAO new] deleteImages];
+            [[ExhibitorDAO new] deleteExhibitors];
+            [[SpeakerDAO new] deleteSpeakers];
+            [[SessionDAO new] deleteSessions];
             
             NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
             [defaults removeObjectForKey:@"userData"];

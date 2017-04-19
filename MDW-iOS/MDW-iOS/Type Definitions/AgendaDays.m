@@ -13,7 +13,7 @@
     static NSArray *agendaDayValues;
     
     +(void)initialize{
-        agendaDayValues = @[[NSNumber numberWithLong:1460584800000], [NSNumber numberWithLong:1460671200000], [NSNumber numberWithLong:1460757600000]];
+        agendaDayValues = @[[NSNumber numberWithLong:1492639200000], [NSNumber numberWithLong:1492725600000], [NSNumber numberWithLong:1492812000000]];
     }
     
     +(AgendaDay)dateToAgendaDay:(long)date{

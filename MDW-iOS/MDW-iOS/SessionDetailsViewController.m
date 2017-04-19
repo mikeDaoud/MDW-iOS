@@ -10,10 +10,14 @@
 #import "DateConverter.h"
 #import "UIImageView+UIImageView_CashingWebImage.h"
 #import "NameFormatter.h"
-#import "WebServiceDataFetching.h"
+#import "SharedObjects.h"
+#import "ServiceURLs.h"
 #import "SessionDAO.h"
 
-@interface SessionDetailsViewController ()
+@interface SessionDetailsViewController () {
+    
+    NSDictionary<NSNumber*, NSString*> *sessionStatusImage;
+}
 
 @end
 
@@ -22,8 +26,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    sessionStatusImage = @{
+                           [NSNumber numberWithInt:0] : @"sessionnotadded.png",
+                           [NSNumber numberWithInt:1] : @"sessionpending.png",
+                           [NSNumber numberWithInt:2] : @"sessionapproved.png"
+                           };
+    
     self.scrollView.bounces = NO;
-
+    
     _sessionDescriptionWebView.scrollView.scrollEnabled = NO;
     _sessionDescriptionWebView.scrollView.bounces = NO;
     _sessionDescriptionWebView.delegate = self;
@@ -44,12 +54,21 @@
     _sessionDate.text = [DateConverter dateStringFromDate:_session.date];
     _sessionTime.text = [NSString stringWithFormat:@"%@ - %@", [DateConverter stringFromDate:_session.startDate], [DateConverter stringFromDate:_session.endDate]];
     _sessionLocation.text = _session.location;
+    _sessionStatusImageView.image = [UIImage imageNamed:[sessionStatusImage objectForKey:[NSNumber numberWithInt:_session.status]]];
     [_sessionDescriptionWebView loadHTMLString:_session.sessionDescription baseURL:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+    if (navigationType == UIWebViewNavigationTypeLinkClicked) {
+        [[UIApplication sharedApplication] openURL:[request URL] options:@{} completionHandler:nil];
+        return NO;
+    }
+    return YES;
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView{
@@ -102,34 +121,43 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)onStatusImageViewTapAction:(id)sender {
     if (_session.status != NOT_ADDED) {
-        _sessionStatusImageView.image = [UIImage imageNamed:@"sessionnotadded.png"];
+        _sessionStatusImageView.image = [UIImage imageNamed:[sessionStatusImage objectForKey:[NSNumber numberWithInteger:NOT_ADDED]]];
     }
     else {
-        NSDictionary *result = [WebServiceDataFetching registerSessionWithID:_session.sessionId];
-        if ([result objectForKey:@"oldSessionId"] == 0) {
-            _session.status = [[result objectForKey:@"status"] intValue];
-            [[SessionDAO new] updateSessionUserStatus:_session];
-            if (_session.status == PENDING) {
-                _sessionStatusImageView.image = [UIImage imageNamed:@"sessionpending.png"];
+        NSURLSessionDataTask * dataTask = [[SharedObjects sharedHTTPSessionManager] dataTaskWithRequest:[ServiceURLs requestRegisterToSessionWithID:_session.sessionId] completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+            
+            if (error) {
+                NSLog(@"Error : %@", error);
+            } else {
+                NSDictionary *result = [[responseObject objectForKey:@"result"] objectAtIndex:0];
+                if ([result objectForKey:@"oldSessionId"] == 0) {
+                    _session.status = [[result objectForKey:@"status"] intValue];
+                    [[SessionDAO new] updateSessionUserStatus:_session];
+                    if (_session.status == PENDING) {
+                        _sessionStatusImageView.image = [UIImage imageNamed:[sessionStatusImage objectForKey:[NSNumber numberWithInteger:PENDING]]];
+                    }
+                    else {
+                        _sessionStatusImageView.image = [UIImage imageNamed:[sessionStatusImage objectForKey:[NSNumber numberWithInteger:APPROVED]]];
+                    }
+                }
+                else {
+                    // Show Alert...
+                }
             }
-            else {
-                _sessionStatusImageView.image = [UIImage imageNamed:@"sessionapproved.png"];
-            }
-        }
-        else {
-            // Show Alert...
-        }
+            
+        }];
+        [dataTask resume];
     }
 }
 

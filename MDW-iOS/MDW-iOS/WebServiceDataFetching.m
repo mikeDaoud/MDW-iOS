@@ -169,34 +169,22 @@
 
 +(void)fetchImageWithURL: (NSString *) imageURL andRefreshImageView: (UIImageView *) imageView{
     
-    [[SharedObjects sharedHTTPSessionManager] GET:imageURL parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+    NSString * cutURL = [imageURL stringByReplacingOccurrencesOfString:@"www." withString:@""];
+    
+    [[SharedObjects sharedHTTPSessionManager] GET:cutURL parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         
-        NSLog(@"Image data: %@", responseObject);
+//        NSLog(@"Image data: %@", responseObject);
         
         UIImage* img = (UIImage*) responseObject;
+        NSLog(@"Data Length ++==+=+=+====+=+=+==+=+=+=+= %lu", [UIImagePNGRepresentation(img) length]);
         
         //Caching the image in the database
-        [[ImageDAO new] addImage:[[ImageDTO alloc] initWithImageURL:imageURL image:UIImagePNGRepresentation(img)]];
+        [[ImageDAO new] addImage:[[ImageDTO alloc] initWithImageURL:imageURL image:UIImageJPEGRepresentation(img, 0.7)]];
         [imageView setImage:img];
         
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
-}
-
-+(NSDictionary *)registerSessionWithID:(NSInteger)sessionId{
-    __block NSDictionary *result;
-    NSURLSessionDataTask * dataTask = [[SharedObjects sharedSessionManager] dataTaskWithRequest:[ServiceURLs requestRegisterToSessionWithID:sessionId] completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-        
-        if (error) {
-            NSLog(@"Error: %@", error);
-        } else {
-            result = [[responseObject objectForKey:@"result"] objectAtIndex:0];
-        }
-        
-    }];
-    [dataTask resume];
-    return result;
 }
 
 +(void)updateDataAndRefreshDelegate: ( id<TableReloadDelegate>) tableView{

@@ -142,7 +142,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     SessionDetailsViewController *sessionDetailsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"sessionDetails"];
     sessionDetailsViewController.session = sessions[indexPath.row];
-    [self presentViewController:sessionDetailsViewController animated:YES completion:nil];
+    [self.navigationController pushViewController:sessionDetailsViewController animated:YES];
 }
 
 /*

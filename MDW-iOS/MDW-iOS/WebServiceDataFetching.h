@@ -28,8 +28,6 @@
 
 +(void)fetchImageWithURL: (NSString *) imageURL andRefreshImageView: (UIImageView *) imageView;
 
-+(NSDictionary *)registerSessionWithID:(NSInteger)sessionId;
-
 +(void)updateDataAndRefreshDelegate: ( id<TableReloadDelegate> ) tableView;
 
 @end
