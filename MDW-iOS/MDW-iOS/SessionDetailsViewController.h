@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UITextView *sessionName;
+
+@property (strong, nonatomic) IBOutlet UIView *viewHolder;
 @property (strong, nonatomic) IBOutlet UILabel *sessionDate;
 @property (strong, nonatomic) IBOutlet UILabel *sessionTime;
 

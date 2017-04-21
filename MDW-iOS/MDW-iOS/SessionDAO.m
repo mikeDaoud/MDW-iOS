@@ -67,10 +67,10 @@
         return sessions;
     }
     
-    -(void)updateSessionUserStatus: (SessionDTO *)session{
+    -(void)updateSessionUserStatus: (SessionDTO *)session status:(int)status{
         NSError *error;
         [realm beginWriteTransaction];
-        [realm addOrUpdateObject:session];
+        session.status = status;
         [realm commitWriteTransaction:&error];
         if (error != nil) {
             NSLog(@"%@", [error description]);

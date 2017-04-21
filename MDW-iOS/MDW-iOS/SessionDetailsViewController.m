@@ -51,6 +51,13 @@
     }];
     _sessionName.attributedText = newString;
     
+    // Make session name text view fits its content
+    [self resizeTextView:_sessionName];
+    
+    CGRect frame = _viewHolder.frame;
+    frame.origin.y = _sessionName.frame.origin.y + _sessionName.frame.size.height + 3;
+    _viewHolder.frame = frame;
+    
     _sessionDate.text = [DateConverter dateStringFromDate:_session.date];
     _sessionTime.text = [NSString stringWithFormat:@"%@ - %@", [DateConverter stringFromDate:_session.startDate], [DateConverter stringFromDate:_session.endDate]];
     _sessionLocation.text = _session.location;
@@ -88,36 +95,60 @@
         frame.size.height = frame.size.height + 8;
         UILabel *speakersLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, frame.origin.y + frame.size.height, 71, 21)];
         speakersLabel.text = @"Speakers";
-        [_scrollView addSubview:speakersLabel];
+        [_viewHolder addSubview:speakersLabel];
         
         for (SpeakerDTO *speaker in _session.speakers) {
             // Add Speaker UIImageView to scroll view
             frame.size.height = frame.size.height + 35;
             UIImageView *speakerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, frame.origin.y + frame.size.height, 40, 40)];
             [speakerImageView SetwithImageInURL:speaker.imageURL andPlaceholder:@"speaker.png"];
-            [_scrollView addSubview:speakerImageView];
+            [_viewHolder addSubview:speakerImageView];
             
             // Add Speaker's name UILabel to scroll view
             UILabel *speakerNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(85, frame.origin.y + frame.size.height, 203, 21)];
             speakerNameLabel.text = [[[NameFormatter alloc] initWithFirstName:speaker.firstName middleName:speaker.middleName lastName:speaker.lastName] fullName];
-            [_scrollView addSubview:speakerNameLabel];
+            [_viewHolder addSubview:speakerNameLabel];
             
             // Add Speaker company name UILabel to scroll view
             frame.size.height = frame.size.height + 20;
-            UILabel *speakerCompanyName = [[UILabel alloc] initWithFrame:CGRectMake(85, frame.origin.y + frame.size.height, 203, 21)];
+            UITextView *speakerCompanyName = [[UITextView alloc] initWithFrame:CGRectMake(81, frame.origin.y + frame.size.height, 203, 21)];
             speakerCompanyName.text = speaker.companyName;
             speakerCompanyName.textColor = [UIColor lightGrayColor];
             speakerCompanyName.font = [UIFont systemFontOfSize:13];
-            [_scrollView addSubview:speakerCompanyName];
+            speakerCompanyName.editable = NO;
+            speakerCompanyName.scrollEnabled = NO;
+            speakerCompanyName.backgroundColor = [UIColor clearColor];
+            // Make speaker's company name text view fits its content
+            [self resizeTextView:speakerCompanyName];
+            [_viewHolder addSubview:speakerCompanyName];
         }
     }
     
-    // Make scroll View fits its content
+    // Make view holder fits its content
     CGRect contentRect = CGRectZero;
+    for (UIView *view in self.viewHolder.subviews) {
+        contentRect = CGRectUnion(contentRect, view.frame);
+    }
+    frame = _viewHolder.frame;
+    frame.size.height = contentRect.size.height;
+    _viewHolder.frame = frame;
+    
+    // Make scroll View fits its content
+    contentRect = CGRectZero;
     for (UIView *view in self.scrollView.subviews) {
         contentRect = CGRectUnion(contentRect, view.frame);
     }
     [self.scrollView setContentSize:CGSizeMake(288, contentRect.size.height)];
+}
+
+-(void)resizeTextView:(UITextView *)textView{
+    // Make text view fits its content
+    CGRect frame = textView.frame;
+    frame.size.height = 1;
+    textView.frame = frame;
+    CGSize fittingSize = [textView sizeThatFits:frame.size];
+    frame.size.height = fittingSize.height;
+    textView.frame = frame;
 }
 
 /*
@@ -131,34 +162,48 @@
  */
 
 - (IBAction)onStatusImageViewTapAction:(id)sender {
-    if (_session.status != NOT_ADDED) {
-        _sessionStatusImageView.image = [UIImage imageNamed:[sessionStatusImage objectForKey:[NSNumber numberWithInteger:NOT_ADDED]]];
-    }
-    else {
-        NSURLSessionDataTask * dataTask = [[SharedObjects sharedHTTPSessionManager] dataTaskWithRequest:[ServiceURLs requestRegisterToSessionWithID:_session.sessionId] completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+    NSURLSessionDataTask * dataTask = [[SharedObjects sharedSessionManager] dataTaskWithRequest:[ServiceURLs requestRegisterToSessionWithID:_session.sessionId enforce:@"false" status:_session.status] completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        
+        if (error) {
+            NSLog(@"Error : %@", error);
+        } else {
+            NSDictionary *result = [responseObject objectForKey:@"result"];
             
-            if (error) {
-                NSLog(@"Error : %@", error);
-            } else {
-                NSDictionary *result = [[responseObject objectForKey:@"result"] objectAtIndex:0];
-                if ([result objectForKey:@"oldSessionId"] == 0) {
-                    _session.status = [[result objectForKey:@"status"] intValue];
-                    [[SessionDAO new] updateSessionUserStatus:_session];
-                    if (_session.status == PENDING) {
-                        _sessionStatusImageView.image = [UIImage imageNamed:[sessionStatusImage objectForKey:[NSNumber numberWithInteger:PENDING]]];
-                    }
-                    else {
-                        _sessionStatusImageView.image = [UIImage imageNamed:[sessionStatusImage objectForKey:[NSNumber numberWithInteger:APPROVED]]];
-                    }
-                }
-                else {
-                    // Show Alert...
-                }
+            // Check there is no session registered at the same time
+            if ([[result objectForKey:@"oldSessionId"] intValue] == 0) {
+                [self updateSessionStatus:[[result objectForKey:@"status"] intValue]];
             }
-            
-        }];
-        [dataTask resume];
-    }
+            else {
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Info" message:@"You are already registered in another session at the same time" preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction *replaceAction = [UIAlertAction actionWithTitle:@"Replace" style:UIAlertActionStyleDefault handler:^(UIAlertAction* _Nonnull action) {
+                    
+                    NSURLSessionDataTask * dataTask = [[SharedObjects sharedSessionManager] dataTaskWithRequest:[ServiceURLs requestRegisterToSessionWithID:_session.sessionId enforce:@"true" status:NOT_ADDED] completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+                        
+                        [self updateSessionStatus:[[[responseObject objectForKey:@"result"] objectForKey:@"status"] intValue]];
+                    }];
+                    
+                    [dataTask resume];
+                }];
+                
+                UIAlertAction *ignoreAction = [UIAlertAction actionWithTitle:@"Ignore" style:UIAlertActionStyleDefault handler:nil];
+                
+                [alert addAction:replaceAction];
+                [alert addAction:ignoreAction];
+                [self presentViewController:alert animated:YES completion:nil];
+            }
+        }
+    }];
+    [dataTask resume];
+}
+
+-(void)updateSessionStatus:(int)status {
+    
+    // Update session status in Database
+    [[SessionDAO new] updateSessionUserStatus:_session status:status];
+    
+    // Update session status in View
+    _sessionStatusImageView.image = [UIImage imageNamed:[sessionStatusImage objectForKey:[NSNumber numberWithInteger:status]]];
 }
 
 @end

@@ -39,6 +39,6 @@
     -(id<NSFastEnumeration>)getUserSessionsByDate:(AgendaDay)agendaDay;
     
     //gets a list of user's subscribed sessions and update them to subscribed in the database for retrieval later in the user "my agenda" view
-    -(void)updateSessionUserStatus: (SessionDTO *) session;
+    -(void)updateSessionUserStatus: (SessionDTO *)session status:(int)status;
     
 @end
