@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030461581EAA9E700013097C /* SpeakerDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030461571EAA9E700013097C /* SpeakerDetailsViewController.m */; };
 		031558191EA240C200C6EB14 /* fields_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 031558181EA240C200C6EB14 /* fields_background.png */; };
 		0365A98E1EA39AE500A6B6A3 /* SessionDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0365A98D1EA39AE500A6B6A3 /* SessionDetailsViewController.m */; };
 		0365A9911EA401EE00A6B6A3 /* NameFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0365A9901EA401EE00A6B6A3 /* NameFormatter.m */; };
@@ -146,6 +147,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		030461561EAA9E700013097C /* SpeakerDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerDetailsViewController.h; sourceTree = "<group>"; };
+		030461571EAA9E700013097C /* SpeakerDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerDetailsViewController.m; sourceTree = "<group>"; };
 		031558181EA240C200C6EB14 /* fields_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fields_background.png; path = "MDW UI/fields_background.png"; sourceTree = "<group>"; };
 		0365A98C1EA39AE500A6B6A3 /* SessionDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionDetailsViewController.h; sourceTree = "<group>"; };
 		0365A98D1EA39AE500A6B6A3 /* SessionDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDetailsViewController.m; sourceTree = "<group>"; };
@@ -411,6 +414,8 @@
 				CC237F4E1EA5279800499446 /* Tickets.m */,
 				CC237F501EA53A4A00499446 /* MyContatct.h */,
 				CC237F511EA53A4A00499446 /* MyContatct.m */,
+				030461561EAA9E700013097C /* SpeakerDetailsViewController.h */,
+				030461571EAA9E700013097C /* SpeakerDetailsViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -824,6 +829,7 @@
 				4CBE19B01EA2432900C5C553 /* DateConverter.m in Sources */,
 				4CBE198B1EA1E63A00C5C553 /* SessionTypes.m in Sources */,
 				CC1150561EA130F800692A6E /* ThirdDaySessionsAgenda.m in Sources */,
+				030461581EAA9E700013097C /* SpeakerDetailsViewController.m in Sources */,
 				4CBE198A1EA1E63A00C5C553 /* AgendaDays.m in Sources */,
 				4CBE19A31EA1E86A00C5C553 /* SpeakerDAO.m in Sources */,
 				4CBE19A01EA1E85100C5C553 /* SessionDTO.m in Sources */,

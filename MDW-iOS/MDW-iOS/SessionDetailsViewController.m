@@ -13,10 +13,12 @@
 #import "SharedObjects.h"
 #import "ServiceURLs.h"
 #import "SessionDAO.h"
+#import "SpeakerDetailsViewController.h"
 
 @interface SessionDetailsViewController () {
     
     NSDictionary<NSNumber*, NSString*> *sessionStatusImage;
+    NSArray *speakers;
 }
 
 @end
@@ -62,7 +64,7 @@
     _sessionTime.text = [NSString stringWithFormat:@"%@ - %@", [DateConverter stringFromDate:_session.startDate], [DateConverter stringFromDate:_session.endDate]];
     _sessionLocation.text = _session.location;
     _sessionStatusImageView.image = [UIImage imageNamed:[sessionStatusImage objectForKey:[NSNumber numberWithInt:_session.status]]];
-    [_sessionDescriptionWebView loadHTMLString:_session.sessionDescription baseURL:nil];
+    [_sessionDescriptionWebView loadHTMLString:[NSString stringWithFormat:@"<div align='center'>%@<div>", _session.sessionDescription] baseURL:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,7 +72,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     if (navigationType == UIWebViewNavigationTypeLinkClicked) {
         [[UIApplication sharedApplication] openURL:[request URL] options:@{} completionHandler:nil];
         return NO;
@@ -78,7 +80,7 @@
     return YES;
 }
 
--(void)webViewDidFinishLoad:(UIWebView *)webView{
+-(void)webViewDidFinishLoad:(UIWebView *)webView {
     // Make web view fits its content
     CGRect frame = webView.frame;
     frame.size.height = 1;
@@ -97,31 +99,24 @@
         speakersLabel.text = @"Speakers";
         [_viewHolder addSubview:speakersLabel];
         
-        for (SpeakerDTO *speaker in _session.speakers) {
-            // Add Speaker UIImageView to scroll view
-            frame.size.height = frame.size.height + 35;
-            UIImageView *speakerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, frame.origin.y + frame.size.height, 40, 40)];
-            [speakerImageView SetwithImageInURL:speaker.imageURL andPlaceholder:@"speaker.png"];
-            [_viewHolder addSubview:speakerImageView];
-            
-            // Add Speaker's name UILabel to scroll view
-            UILabel *speakerNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(85, frame.origin.y + frame.size.height, 203, 21)];
-            speakerNameLabel.text = [[[NameFormatter alloc] initWithFirstName:speaker.firstName middleName:speaker.middleName lastName:speaker.lastName] fullName];
-            [_viewHolder addSubview:speakerNameLabel];
-            
-            // Add Speaker company name UILabel to scroll view
-            frame.size.height = frame.size.height + 20;
-            UITextView *speakerCompanyName = [[UITextView alloc] initWithFrame:CGRectMake(81, frame.origin.y + frame.size.height, 203, 21)];
-            speakerCompanyName.text = speaker.companyName;
-            speakerCompanyName.textColor = [UIColor lightGrayColor];
-            speakerCompanyName.font = [UIFont systemFontOfSize:13];
-            speakerCompanyName.editable = NO;
-            speakerCompanyName.scrollEnabled = NO;
-            speakerCompanyName.backgroundColor = [UIColor clearColor];
-            // Make speaker's company name text view fits its content
-            [self resizeTextView:speakerCompanyName];
-            [_viewHolder addSubview:speakerCompanyName];
+        speakers = (NSArray *)_session.speakers;
+        frame.size.height = frame.size.height + 35;
+        UITableView *speakersTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, frame.origin.y + frame.size.height, 288, 50)];
+        speakersTableView.backgroundColor = [UIColor clearColor];
+        speakersTableView.scrollEnabled = NO;
+        speakersTableView.bounces = NO;
+        speakersTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        speakersTableView.dataSource = self;
+        speakersTableView.delegate = self;
+        
+        // Make table view fits its content
+        CGFloat tableHeight = 0.0f;
+        for (int i = 0; i < [speakers count]; i ++) {
+            tableHeight += [self tableView:speakersTableView heightForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
         }
+        speakersTableView.frame = CGRectMake(speakersTableView.frame.origin.x, speakersTableView.frame.origin.y, speakersTableView.frame.size.width, tableHeight);
+        
+        [_viewHolder addSubview:speakersTableView];
     }
     
     // Make view holder fits its content
@@ -141,7 +136,7 @@
     [self.scrollView setContentSize:CGSizeMake(288, contentRect.size.height)];
 }
 
--(void)resizeTextView:(UITextView *)textView{
+-(void)resizeTextView:(UITextView *)textView {
     // Make text view fits its content
     CGRect frame = textView.frame;
     frame.size.height = 1;
@@ -151,15 +146,43 @@
     textView.frame = frame;
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [speakers count];
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 50;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *cellIdentifier = @"Cell";
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+        cell.backgroundColor = [UIColor clearColor];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    // Configure the cell...
+    [cell.imageView SetwithImageInURL:[speakers[indexPath.row] imageURL] andPlaceholder:@"speaker.png"];
+    cell.textLabel.text = [[[NameFormatter alloc] initWithFirstName:[speakers[indexPath.row] firstName] middleName:[speakers[indexPath.row] middleName] lastName:[speakers[indexPath.row] lastName]] fullName];
+    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    cell.textLabel.numberOfLines = 0;
+    cell.detailTextLabel.text = [speakers[indexPath.row] companyName];
+    cell.detailTextLabel.textColor = [UIColor grayColor];
+    cell.detailTextLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    cell.detailTextLabel.numberOfLines = 0;
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    SpeakerDetailsViewController *speakerDetailsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"speakerDetails"];
+    speakerDetailsViewController.speaker = speakers[indexPath.row];
+    [self.navigationController pushViewController:speakerDetailsViewController animated:YES];
+}
 
 - (IBAction)onStatusImageViewTapAction:(id)sender {
     NSURLSessionDataTask * dataTask = [[SharedObjects sharedSessionManager] dataTaskWithRequest:[ServiceURLs requestRegisterToSessionWithID:_session.sessionId enforce:@"false" status:_session.status] completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {

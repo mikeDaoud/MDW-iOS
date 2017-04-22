@@ -1583,6 +1583,56 @@
             </objects>
             <point key="canvasLocation" x="558.75" y="1277.1126760563379"/>
         </scene>
+        <!--Speaker Details View Controller-->
+        <scene sceneID="Emj-Mx-npl">
+            <objects>
+                <viewController storyboardIdentifier="speakerDetails" id="aHx-7R-abA" customClass="SpeakerDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jvt-Ia-X4I"/>
+                        <viewControllerLayoutGuide type="bottom" id="gok-bN-m4T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bX4-nE-0ld">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="ang-tJ-DZF">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="footer.png" translatesAutoresizingMaskIntoConstraints="NO" id="zz4-d4-gG8">
+                                <rect key="frame" x="82" y="520" width="156" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akF-Hg-gVG">
+                                <rect key="frame" x="16" y="77" width="288" height="435"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPV-9d-lho">
+                                        <rect key="frame" x="0.0" y="108" width="288" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IsU-fz-n6G">
+                                        <rect key="frame" x="88" y="0.0" width="112" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="akF-Hg-gVG" id="DFy-rX-qBL"/>
+                        <outlet property="speakerImageView" destination="IsU-fz-n6G" id="JIG-5Y-1mZ"/>
+                        <outlet property="speakerName" destination="nPV-9d-lho" id="b5R-59-hxf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SE6-MB-Hux" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="558.75" y="1948.943661971831"/>
+        </scene>
     </scenes>
     <resources>
         <image name="MDW 2016 Mobile APP150-47.png" width="164" height="163"/>

@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "SessionDTO.h"
 
-@interface SessionDetailsViewController : ViewController <UIWebViewDelegate>
+@interface SessionDetailsViewController : ViewController <UIWebViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property SessionDTO *session;
 

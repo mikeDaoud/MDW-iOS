@@ -15,6 +15,7 @@
 #import "SpeakerDTO.h"
 #import "SpeakerDAO.h"
 #import "NameFormatter.h"
+#import "SpeakerDetailsViewController.h"
 
 
 
@@ -126,7 +127,11 @@
     return cell;
 }
 
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    SpeakerDetailsViewController *speakerDetailsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"speakerDetails"];
+    speakerDetailsViewController.speaker = speakers[indexPath.row];
+    [self.navigationController pushViewController:speakerDetailsViewController animated:YES];
+}
 
 /*
 #pragma mark - Navigation
