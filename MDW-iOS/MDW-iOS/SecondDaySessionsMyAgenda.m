@@ -46,6 +46,7 @@
     self.mytableview.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
     //refresh table
     [refreshControl addTarget:self action:@selector(refreshMytableView) forControlEvents:UIControlEventValueChanged];
+      [self.mytableview  addSubview:refreshControl];
 }
 
 // reload the dataa

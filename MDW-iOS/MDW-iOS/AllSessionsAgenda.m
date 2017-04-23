@@ -49,11 +49,14 @@
         self.mytableview.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
     //refresh table
         [refreshControl addTarget:self action:@selector(refreshMytableView) forControlEvents:UIControlEventValueChanged];
+      [self.mytableview  addSubview:refreshControl];
 }
 
 // reload the dataa
 -(void) refreshMytableView
 {
+    NSLog(@"%@",@"na fi refresh");
+    
     [WebServiceDataFetching updateDataAndRefreshDelegate:self];
     
     //TODO: Move this method into the implementation of the protocol method

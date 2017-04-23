@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TableReloadDelegate.h"
 
-@interface ThirdDaySessionsMyAgenda : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface ThirdDaySessionsMyAgenda : UIViewController<UITableViewDataSource,UITableViewDelegate,TableReloadDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *mytableview;
 
 @end
