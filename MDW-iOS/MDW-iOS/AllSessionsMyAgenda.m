@@ -17,6 +17,7 @@
 #import "AgendaDays.h"
 #import "SessionTypes.h"
 #import "WebServiceDataFetching.h"
+#import "SessionDetailsViewController.h"
 
 
 @interface AllSessionsMyAgenda ()
@@ -158,6 +159,12 @@
 
 
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    SessionDetailsViewController *sessionDetailsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"sessionDetails"];
+    sessionDetailsViewController.session = sessions[indexPath.row];
+    sessionDetailsViewController.tableReloadDelegate = self;
+    [self.navigationController pushViewController:sessionDetailsViewController animated:YES];
+}
 
 
 -(void)reloadTableView{
