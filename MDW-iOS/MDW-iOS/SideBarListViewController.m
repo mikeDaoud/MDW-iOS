@@ -34,7 +34,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-  
 }
 
 #pragma mark - Table view data source
@@ -67,6 +66,18 @@
         [alertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             
             [[[UIApplication sharedApplication] keyWindow].rootViewController dismissViewControllerAnimated:YES completion:nil];
+            
+            //Creating an instance of SignIn ViewController
+            [[UIApplication sharedApplication] keyWindow].rootViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"signInView"];
+            
+            //Dismissing the current view
+//            [[[UIApplication sharedApplication] keyWindow].rootViewController dismissViewControllerAnimated:YES completion:^{
+//                                NSLog(@"Logged Outfrom the inside");
+//                            }];
+            
+//            [self dismissViewControllerAnimated:YES completion:^{
+//                NSLog(@"Logged Outfrom the inside");
+//            }];
             
             NSLog(@"Logged Out");
             
@@ -131,7 +142,6 @@
 }
 */
 
-
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -150,6 +160,11 @@
         
     }
 }
+
+//
+//-(void)dealloc{
+//    NSLog(@"deallocating the sidebarview");
+//}
 
 
 @end

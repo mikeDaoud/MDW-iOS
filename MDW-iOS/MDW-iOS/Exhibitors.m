@@ -82,7 +82,6 @@
     // Configure the cell...
     [cell setBackgroundColor: [UIColor clearColor]];
     
-    
     //getting Exhibitor object
     ExhibitorDTO * exhibitor = exhibitors[indexPath.row];
     
@@ -93,10 +92,7 @@
     //Setting the data
   //  NSString *fullName = [NSString stringWithFormat:@"%@ %@ %@",speaker.firstName,speaker.middleName,speaker.lastName];
     [name setText: exhibitor.companyName];
-
-    
     [img SetwithImageInURL:exhibitor.imageURL andPlaceholder:@"speaker.png"];
-    
     return cell;
 }
 

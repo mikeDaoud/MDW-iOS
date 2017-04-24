@@ -141,9 +141,6 @@
     }
 
     
-  
-    
-    
     return cell;
 }
 
@@ -160,6 +157,9 @@
 }
 
 -(void)showErrorMsgWithText:(NSString *)msg{
+    
+    [refreshControl endRefreshing];
+    
     UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Failed to Load Data" message:msg delegate:nil cancelButtonTitle:@"Retry" otherButtonTitles: nil];
     [alert show];
 }

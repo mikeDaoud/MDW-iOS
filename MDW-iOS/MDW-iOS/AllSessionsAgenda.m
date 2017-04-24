@@ -52,14 +52,17 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     
-    [self.mytableview setContentOffset:CGPointMake(0, -refreshControl.frame.size.height) animated:YES];
-    
-    [refreshControl beginRefreshing];
-
     //Getting Sessions, speakers and exhibitors data and adding it to database
-    [WebServiceDataFetching fetchSessionsFromWebServiceAndUpdateTable:self];
-    [WebServiceDataFetching fetchSpeakersFromWebServiceAndUpdateTable:nil];
-    [WebServiceDataFetching fetchExhibitorsFromWebServiceAndUpdateTable:nil];
+    
+    if (sessions.count < 1) {
+        [self.mytableview setContentOffset:CGPointMake(0, -refreshControl.frame.size.height) animated:YES];
+        [refreshControl beginRefreshing];
+
+        [WebServiceDataFetching fetchSessionsFromWebServiceAndUpdateTable:self];
+        [WebServiceDataFetching fetchSpeakersFromWebServiceAndUpdateTable:nil];
+        [WebServiceDataFetching fetchExhibitorsFromWebServiceAndUpdateTable:nil];
+    }
+    
 }
 
 // reload the dataa
@@ -160,6 +163,9 @@
 }
 
 -(void)showErrorMsgWithText:(NSString *)msg{
+    
+    [refreshControl endRefreshing];
+    
     UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Failed to Load Data" message:msg delegate:nil cancelButtonTitle:@"Retry" otherButtonTitles: nil];
     [alert show];
 }
@@ -207,5 +213,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//-(void)dealloc{
+//
+//    NSLog(@"deallocating the all sessions veiw controller");
+//}
 
 @end

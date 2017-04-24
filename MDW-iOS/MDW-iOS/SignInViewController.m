@@ -140,4 +140,8 @@
         [dataTask resume];
     
 }
+
+//-(void)dealloc{
+//    NSLog(@"deallocatoin the sign in view controller");
+//}
 @end
