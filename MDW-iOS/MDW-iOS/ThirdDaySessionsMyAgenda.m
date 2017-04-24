@@ -55,7 +55,7 @@
     
     //Getting Sessions, speakers and exhibitors data and adding it to database
     
-    if (sessions.count < 1) {
+    
         [self.mytableview setContentOffset:CGPointMake(0, -refreshControl.frame.size.height) animated:YES];
         [refreshControl beginRefreshing];
         
@@ -63,7 +63,7 @@
         [WebServiceDataFetching fetchSpeakersFromWebServiceAndUpdateTable:nil];
         [WebServiceDataFetching fetchExhibitorsFromWebServiceAndUpdateTable:nil];
         
-    }
+ 
     
 }
 
