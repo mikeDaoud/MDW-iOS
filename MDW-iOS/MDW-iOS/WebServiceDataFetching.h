@@ -20,14 +20,12 @@
 
 @interface WebServiceDataFetching : NSObject
 
-+(void)fetchSessionsFromWebService;
++(void)fetchSessionsFromWebServiceAndUpdateTable: ( id<TableReloadDelegate>) tableView;
 
-+(void)fetchSpeakersFromWebService;
++(void)fetchSpeakersFromWebServiceAndUpdateTable: ( id<TableReloadDelegate>) tableView;
 
-+(void)fetchExhibitorsFromWebService;
++(void)fetchExhibitorsFromWebServiceAndUpdateTable: ( id<TableReloadDelegate>) tableView;
 
 +(void)fetchImageWithURL: (NSString *) imageURL andRefreshImageView: (UIImageView *) imageView;
-
-+(void)updateDataAndRefreshDelegate: ( id<TableReloadDelegate> ) tableView;
 
 @end

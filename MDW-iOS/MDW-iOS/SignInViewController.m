@@ -16,6 +16,8 @@
 
 @interface SignInViewController ()
 
+@property UIActivityIndicatorView * indicator;
+
 
 @end
 
@@ -24,6 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Instantiation configuration and session objects.
+    
+//    _userEmail.rightViewMode = UITextFieldViewModeAlways;
     
     NSString * useremail = [[NSUserDefaults standardUserDefaults]objectForKey:@"userEmail"];
     
@@ -36,6 +40,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+
+    _indicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    _indicator.frame = CGRectMake(0.0, 0.0, 120.0, 120.0);
+    [_indicator setBackgroundColor:[UIColor colorWithWhite:0.0f alpha:0.6f]];
+    _indicator.center = self.view.center;
+    [self.view addSubview:_indicator];
+    [_indicator bringSubviewToFront:self.view];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
+    
 }
 
 /*
@@ -65,52 +81,59 @@
     NSString * email = _userEmail.text;
     NSString * password = _userPassword.text;
     
+    [_indicator startAnimating];
+    
         //Starting the login request
         NSURLSessionDataTask *dataTask = [[SharedObjects sharedSessionManager] dataTaskWithRequest:[ServiceURLs loginRequestWithUserEmail:email andPassword:password] completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
             if (error) {
                 NSLog(@"Error: %@", error);
                 
+                [_indicator stopAnimating];
+                
                 UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Failed to login" message:@"Problems with connection" delegate:nil cancelButtonTitle:@"Retry" otherButtonTitles: nil];
                 [alert show];
     
-            } else { //Login Success
-                NSLog(@"%@ ----  %@", response, responseObject);
+            } else {
+                //Login Success
                 _userPassword.text = @"";
                 
-                
-                //Storing user data in NSUserDefaults
-                NSDictionary * result = [responseObject objectForKey:@"result"];
-                Attendee * userData = [[Attendee alloc] initWithFirstName:[result objectForKey:@"firstName"]
-                                                               middleName:[result objectForKey:@"middleName"]
-                                                               lastName:[result objectForKey:@"lastName"]
-                                                               title:[result objectForKey:@"title"]
-                                                               companyName:[result objectForKey:@"companyName"]
-                                                               email:[result objectForKey:@"email"]
-                                                               mobile:nil
-                                                               imageURL:[result objectForKey:@"imageURL"]
-                                                               code:[result objectForKey:@"code"]];
-                [userData printObjectData];
-                
-                NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-                [defaults setObject:[NSKeyedArchiver archivedDataWithRootObject:userData] forKey:@"userData"];
-                [defaults setObject:email forKey:@"userEmail"];
-                [defaults setObject:@"yes" forKey:@"signedIn"];
-                [defaults synchronize];
-                
-                //Going to the Home view
-                SWRevealViewController * mainView = [self.storyboard instantiateViewControllerWithIdentifier:@"mainView"];
-                
-                [self presentViewController:mainView animated:YES completion:^{
-                    //TODO: dealloc view controller
+                if ([[responseObject objectForKey:@"status"] isEqualToString:@"view.success"]) {
+                    //Successfull login
+                    //Storing user data in NSUserDefaults
+                    NSDictionary * result = [responseObject objectForKey:@"result"];
+                    Attendee * userData = [[Attendee alloc] initWithFirstName:[result objectForKey:@"firstName"]
+                                                                   middleName:[result objectForKey:@"middleName"]
+                                                                     lastName:[result objectForKey:@"lastName"]
+                                                                        title:[result objectForKey:@"title"]
+                                                                  companyName:[result objectForKey:@"companyName"]
+                                                                        email:[result objectForKey:@"email"]
+                                                                       mobile:nil
+                                                                     imageURL:[result objectForKey:@"imageURL"]
+                                                                         code:[result objectForKey:@"code"]];
                     
-                }];
-                
-                //Getting Sessions, speakers and exhibitors data and adding it to database
-                [WebServiceDataFetching fetchSessionsFromWebService];
-                [WebServiceDataFetching fetchSpeakersFromWebService];
-                [WebServiceDataFetching fetchExhibitorsFromWebService];
-                [WebServiceDataFetching fetchImageWithURL:@"http://www.mobiledeveloperweekend.net/service/speakerImage?id=20624" andRefreshImageView:nil];
-                
+                    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+                    [defaults setObject:[NSKeyedArchiver archivedDataWithRootObject:userData] forKey:@"userData"];
+                    [defaults setObject:email forKey:@"userEmail"];
+                    [defaults setObject:@"yes" forKey:@"signedIn"];
+                    [defaults synchronize];
+                    
+                    //Going to the Home view
+                    SWRevealViewController * mainView = [self.storyboard instantiateViewControllerWithIdentifier:@"mainView"];
+                    
+                    [self presentViewController:mainView animated:YES completion:^{
+                        //TODO: dealloc view controller
+                    }];
+                    
+                    [_indicator stopAnimating];
+                    
+                }else{
+                    
+                    [_indicator stopAnimating];
+                    
+                    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Failed to login" message:[responseObject objectForKey:@"result"] delegate:nil cancelButtonTitle:@"Retry" otherButtonTitles: nil];
+                    [alert show];
+                    
+                }
                 
             }
         }];

@@ -14,12 +14,11 @@
 #import "UIImageView+UIImageView_CashingWebImage.h"
 #import "ExhibitorDAO.h"
 #import "ExhibitorDTO.h"
+#import "WebServiceDataFetching.h"
 
 
 @interface Exhibitors ()
 {
-    
-    
     NSArray *exhibitors;
     UIRefreshControl *refreshControl;
 }
@@ -50,15 +49,13 @@
     self.mytableview.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
     //refresh table
     [refreshControl addTarget:self action:@selector(refreshMytableView) forControlEvents:UIControlEventValueChanged];
-   
+   [self.mytableview  addSubview:refreshControl];
 }
 
 // reload the dataa
 -(void) refreshMytableView
 {
-    [self.mytableview reloadData];
-    [refreshControl endRefreshing];
-    
+    [WebServiceDataFetching fetchExhibitorsFromWebServiceAndUpdateTable:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -101,6 +98,17 @@
     [img SetwithImageInURL:exhibitor.imageURL andPlaceholder:@"speaker.png"];
     
     return cell;
+}
+
+-(void)reloadTableView{
+    exhibitors =  (NSArray *) [[ExhibitorDAO new] getExhibitors];
+    [self.mytableview reloadData];
+    [refreshControl endRefreshing];
+}
+
+-(void)showErrorMsgWithText:(NSString *)msg{
+    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Failed to Load Data" message:msg delegate:nil cancelButtonTitle:@"Retry" otherButtonTitles: nil];
+    [alert show];
 }
 
 

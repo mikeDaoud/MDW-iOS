@@ -10,7 +10,9 @@
 
 @protocol TableReloadDelegate <NSObject>
 
--(void)reloadTableViewWithArray: (NSArray *) newData;
+-(void)reloadTableView;
+
+-(void)showErrorMsgWithText: (NSString *) msg;
 
 //1. add the newData into the array holding the session or speakers or exhibitors
 //2. reload table data

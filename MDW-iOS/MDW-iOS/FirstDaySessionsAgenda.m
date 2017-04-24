@@ -17,6 +17,7 @@
 #import "AgendaDays.h"
 #import "SessionTypes.h"
 #import "SessionDetailsViewController.h"
+#import "WebServiceDataFetching.h"
 
 @interface FirstDaySessionsAgenda ()
 {
@@ -55,8 +56,7 @@
 // reload the dataa
 -(void) refreshMytableView
 {
-    [self.mytableview reloadData];
-    [refreshControl endRefreshing];
+    [WebServiceDataFetching fetchSessionsFromWebServiceAndUpdateTable:self];
     
 }
 //html label
@@ -146,6 +146,17 @@
     SessionDetailsViewController *sessionDetailsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"sessionDetails"];
     sessionDetailsViewController.session = sessions[indexPath.row];
     [self.navigationController pushViewController:sessionDetailsViewController animated:YES];
+}
+
+-(void)reloadTableView{
+    sessions =  (NSArray *) [[SessionDAO new] getSessionsByDate:DAY_ONE];
+    [self.mytableview reloadData];
+    [refreshControl endRefreshing];
+}
+
+-(void)showErrorMsgWithText:(NSString *)msg{
+    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Failed to Load Data" message:msg delegate:nil cancelButtonTitle:@"Retry" otherButtonTitles: nil];
+    [alert show];
 }
 
 /*

@@ -16,14 +16,13 @@
 #import "SpeakerDAO.h"
 #import "NameFormatter.h"
 #import "SpeakerDetailsViewController.h"
+#import "WebServiceDataFetching.h"
 
 
 
 
 @interface SpeakrsList ()
 {
-    
-    
     NSArray *speakers;
     UIRefreshControl *refreshControl;
 }
@@ -50,11 +49,13 @@
         speakers=[[NSArray alloc] init];
     }
     
+    
     refreshControl=[[UIRefreshControl alloc] init];
     //set background
     self.MYTABLEVIEW.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
     //refresh table
     [refreshControl addTarget:self action:@selector(refreshMytableView) forControlEvents:UIControlEventValueChanged];
+    [self.MYTABLEVIEW  addSubview:refreshControl];
 }
 
 
@@ -62,8 +63,7 @@
 // reload the dataa
 -(void) refreshMytableView
 {
-    [self.MYTABLEVIEW reloadData];
-    [refreshControl endRefreshing];
+    [WebServiceDataFetching fetchSpeakersFromWebServiceAndUpdateTable:self];
     
 }
 //html label
@@ -87,12 +87,10 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     return [speakers count];
    
 }
@@ -131,6 +129,17 @@
     SpeakerDetailsViewController *speakerDetailsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"speakerDetails"];
     speakerDetailsViewController.speaker = speakers[indexPath.row];
     [self.navigationController pushViewController:speakerDetailsViewController animated:YES];
+}
+
+-(void)reloadTableView{
+    speakers =  (NSArray *) [[SpeakerDAO new] getSpeakers];
+    [self.MYTABLEVIEW reloadData];
+    [refreshControl endRefreshing];
+}
+
+-(void)showErrorMsgWithText:(NSString *)msg{
+    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Failed to Load Data" message:msg delegate:nil cancelButtonTitle:@"Retry" otherButtonTitles: nil];
+    [alert show];
 }
 
 /*

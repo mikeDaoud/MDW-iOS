@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TableReloadDelegate.h"
 
-@interface Exhibitors : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface Exhibitors : UIViewController<UITableViewDataSource,UITableViewDelegate, TableReloadDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *mytableview;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *barbutton;
 

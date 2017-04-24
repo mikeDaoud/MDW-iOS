@@ -17,12 +17,14 @@
 #import "AgendaDays.h"
 #import "SessionTypes.h"
 #import "SessionDetailsViewController.h"
+#import "WebServiceDataFetching.h"
+
 
 @interface ThirdDaySessionsAgenda ()
 {
     
     
-    NSMutableArray *sessions;
+    NSArray *sessions;
     UIRefreshControl *refreshControl;
 }
 
@@ -58,8 +60,7 @@
 // reload the dataa
 -(void) refreshMytableView
 {
-    [self.mytableview reloadData];
-    [refreshControl endRefreshing];
+    [WebServiceDataFetching fetchSessionsFromWebServiceAndUpdateTable:self];
     
 }
 //html label
@@ -82,12 +83,10 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     return [sessions count];
   
 }
@@ -152,6 +151,17 @@
     SessionDetailsViewController *sessionDetailsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"sessionDetails"];
     sessionDetailsViewController.session = sessions[indexPath.row];
     [self.navigationController pushViewController:sessionDetailsViewController animated:YES];
+}
+
+-(void)reloadTableView{
+    sessions =  (NSArray *) [[SessionDAO new] getSessionsByDate:DAY_THREE];
+    [self.mytableview reloadData];
+    [refreshControl endRefreshing];
+}
+
+-(void)showErrorMsgWithText:(NSString *)msg{
+    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Failed to Load Data" message:msg delegate:nil cancelButtonTitle:@"Retry" otherButtonTitles: nil];
+    [alert show];
 }
 
 /*

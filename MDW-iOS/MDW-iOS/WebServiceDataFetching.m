@@ -17,23 +17,19 @@
 
 @implementation WebServiceDataFetching
 
-+(void)fetchSessionsFromWebService{
++(void)fetchSessionsFromWebServiceAndUpdateTable: ( id<TableReloadDelegate>) tableView{
     NSURLSessionDataTask *dataTask = [[SharedObjects sharedSessionManager] dataTaskWithRequest:[ServiceURLs allSessionsRequest] completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         if (error) {
             NSLog(@"Error: %@", error);
+            [tableView showErrorMsgWithText:@"Problems with connection"];
         } else {
-//            NSLog(@"%@ ----  %@", response, responseObject);
             NSMutableArray * sessions = [NSMutableArray new];
             NSDictionary * result = [responseObject objectForKey:@"result"];
             NSArray * agendas = [result objectForKey:@"agendas"];
             
-//            NSLog(@"---------------- no.of days in resulsts is %lu", (unsigned long)[agendas count]);
             for (NSDictionary *day in agendas) {
                 NSNumber * date = [day objectForKey:@"date"];
-                NSLog(@"DAte is ------------------- %@", date);
                 NSArray * daySessions = [day objectForKey:@"sessions"];
-//                NSLog(@"---------------- no.of sessions in the day are is %lu", (unsigned long)[daySessions count]);
-                //Getting list of sessions
                 for (NSDictionary * session in daySessions) {
                     
                     //getting session speakers
@@ -51,7 +47,6 @@
                                                        companyName:[speaker objectForKey:@"companyName"]
                                                        imageURL:[speaker objectForKey:@"imageURL"]
                                                        biography:[speaker objectForKey:@"biography"]];
-//                            [speakerDTO printObjectData];
                             [sessionSpearkers addObject:speakerDTO];
                         }
                     }
@@ -73,37 +68,31 @@
                                     sessionDescription:[session objectForKey:@"description"]
                                     speakers:sessionSpearkers
                                                 ];
-                    NSLog(@"Extracted date is: +++++++ %ld", [date longValue]);
-                    NSLog(@"Session DAte is: +++++++ %ld", sessiondto.date );
-                    NSLog(@"Session Speakers count: +++++++ %ld", [[sessiondto speakers] count]);
-                    NSLog(@"Original Speakers count: +++++++ %ld", [sessionSpearkers count]);
                     
                     [sessions addObject:sessiondto];
-//                    NSLog(@"---------------- no.ofsessions inside is %lu", (unsigned long)[sessions count]);
-                    
                 }
-                
                 
             }
             
-//            NSLog(@"---------------- no.ofsessions is %lu", (unsigned long)[sessions count]);
             
             //Cashing data to DB
             [[SessionDAO new] addSessions:sessions];
             
-            
-            
+            NSLog(@"Calling the table view refresh method ++++++++++++ ");
+            [tableView reloadTableView];
+            NSLog(@"Calling the table view refresh method ------------- ");
         }
     }];
     [dataTask resume];
 }
 
-+(void)fetchSpeakersFromWebService{
++(void)fetchSpeakersFromWebServiceAndUpdateTable: ( id<TableReloadDelegate>) tableView{
     
     NSURLSessionDataTask * dataTask = [[SharedObjects sharedSessionManager] dataTaskWithRequest:[ServiceURLs speakersRequest] completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         
         if (error) {
             NSLog(@"Error: %@", error);
+            [tableView showErrorMsgWithText:@"Problems with connection"];
         } else {
             NSMutableArray * speakersList = [[NSMutableArray alloc] init];
             NSArray * speakers = [responseObject objectForKey:@"result"];
@@ -122,13 +111,11 @@
                                            ];
                 [speakersList addObject:speakerdto];
             }
-            for (SpeakerDTO * s in speakersList) {
-//                [s printObjectData];
-            }
-//            NSLog(@"---------------- no.of Speakers is %lu", (unsigned long)[speakersList count]);
             
             //Caching data in DB
             [[SpeakerDAO new] addSpeakers:speakersList];
+            
+            [tableView reloadTableView];
         
         }
         
@@ -137,12 +124,13 @@
 
 }
 
-+(void)fetchExhibitorsFromWebService{
++(void)fetchExhibitorsFromWebServiceAndUpdateTable: ( id<TableReloadDelegate>) tableView{
 
     NSURLSessionDataTask * dataTask = [[SharedObjects sharedSessionManager] dataTaskWithRequest:[ServiceURLs exhibitorsDataRequest] completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         
         if (error) {
             NSLog(@"Error: %@", error);
+            [tableView showErrorMsgWithText:@"Problems with connection"];
         } else {
             NSMutableArray * exhibitorsList = [[NSMutableArray alloc] init];
             NSArray * exhibitors = [responseObject objectForKey:@"result"];
@@ -156,10 +144,10 @@
                 [exhibitorsList addObject:exhibitordto];
             }
             
-//            NSLog(@"---------------- no.of Exhibitors is %lu", (unsigned long)[exhibitorsList count]);
-            
             //Caching data in DB
             [[ExhibitorDAO new] addExhibitors:exhibitorsList];
+            
+            [tableView reloadTableView];
         }
         
     }];
@@ -173,10 +161,8 @@
     
     [[SharedObjects sharedHTTPSessionManager] GET:cutURL parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         
-//        NSLog(@"Image data: %@", responseObject);
         
         UIImage* img = (UIImage*) responseObject;
-        NSLog(@"Data Length ++==+=+=+====+=+=+==+=+=+=+= %lu", [UIImagePNGRepresentation(img) length]);
         
         //Caching the image in the database
         [[ImageDAO new] addImage:[[ImageDTO alloc] initWithImageURL:imageURL image:UIImageJPEGRepresentation(img, 0.7)]];
@@ -187,13 +173,5 @@
     }];
 }
 
-+(void)updateDataAndRefreshDelegate: ( id<TableReloadDelegate>) tableView{
-    
-    [self fetchSessionsFromWebService];
-    [self fetchSpeakersFromWebService];
-    [self fetchExhibitorsFromWebService];
-    
-//    [tableView reloadTableView];
-}
 
 @end

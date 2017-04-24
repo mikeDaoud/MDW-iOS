@@ -22,9 +22,11 @@
 
 @interface AllSessionsAgenda ()
 {
-    NSArray *sessions;
+    NSArray * sessions;
     UIRefreshControl *refreshControl;
 }
+
+@property UIActivityIndicatorView * indicator;
 
 @end
 
@@ -36,13 +38,9 @@
     self.mytableview.dataSource=self;
     
     
-//    NSArray * dbSessions =  (NSArray *) [[SessionDAO new] getSessionsByDate:[AgendaDays dateToAgendaDay:DAY_ONE]];
-    NSArray * dbSessions =  (NSArray *) [[SessionDAO new] getAllSessions];
-    if (dbSessions) {
-        sessions = dbSessions;
-    }else{
-        sessions=[[NSArray alloc] init];
-    }
+    sessions =  (NSArray *) [[SessionDAO new] getAllSessions];
+    
+    NSLog(@"Sessions length : %lu", (unsigned long)[sessions count]);
     
      refreshControl=[[UIRefreshControl alloc] init];
     //set background
@@ -52,18 +50,24 @@
       [self.mytableview  addSubview:refreshControl];
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    
+    [self.mytableview setContentOffset:CGPointMake(0, -refreshControl.frame.size.height) animated:YES];
+    
+    [refreshControl beginRefreshing];
+
+    //Getting Sessions, speakers and exhibitors data and adding it to database
+    [WebServiceDataFetching fetchSessionsFromWebServiceAndUpdateTable:self];
+    [WebServiceDataFetching fetchSpeakersFromWebServiceAndUpdateTable:nil];
+    [WebServiceDataFetching fetchExhibitorsFromWebServiceAndUpdateTable:nil];
+}
+
 // reload the dataa
 -(void) refreshMytableView
 {
-    NSLog(@"%@",@"na fi refresh");
-    
-    [WebServiceDataFetching updateDataAndRefreshDelegate:self];
-    
-    //TODO: Move this method into the implementation of the protocol method
-    [refreshControl endRefreshing];
+    [WebServiceDataFetching fetchSessionsFromWebServiceAndUpdateTable:self];
     
 }
-
 
 //html label
 -(NSAttributedString*) renderHTML:(NSString*) htmlString{
@@ -147,6 +151,17 @@
     SessionDetailsViewController *sessionDetailsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"sessionDetails"];
     sessionDetailsViewController.session = sessions[indexPath.row];
     [self.navigationController pushViewController:sessionDetailsViewController animated:YES];
+}
+
+-(void)reloadTableView{
+    sessions =  (NSArray *) [[SessionDAO new] getAllSessions];
+    [self.mytableview reloadData];
+    [refreshControl endRefreshing];
+}
+
+-(void)showErrorMsgWithText:(NSString *)msg{
+    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Failed to Load Data" message:msg delegate:nil cancelButtonTitle:@"Retry" otherButtonTitles: nil];
+    [alert show];
 }
 
 /*

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TableReloadDelegate.h"
 
-@interface SpeakrsList : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface SpeakrsList : UIViewController<UITableViewDataSource,UITableViewDelegate, TableReloadDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *MYTABLEVIEW;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *barButton;
 
