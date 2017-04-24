@@ -36,6 +36,7 @@
  
 
     NSString *encodedData=[ NSString stringWithFormat:@"BEGIN:VCARD\nVERSION:3.0\nN:%@;%@\nFN:\nORG:%@\nTITLE:%@\nTEL;CELL:%@\nEMAIL;WORK;INTERNET:%@\nURL:\nEND:VCARD", out.firstName, out.lastName, out.companyName, out.title, out.mobile, out.email];
+    NSLog(@"++++++++++++++++++++++++++ %@",out.mobile);
     
     NSError *error = nil;
     CGImageRef image = nil;

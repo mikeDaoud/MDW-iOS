@@ -107,7 +107,7 @@
                                                                         title:[result objectForKey:@"title"]
                                                                   companyName:[result objectForKey:@"companyName"]
                                                                         email:[result objectForKey:@"email"]
-                                                                       mobile:nil
+                                                                       mobile:[result objectForKey:@"mobiles"]
                                                                      imageURL:[result objectForKey:@"imageURL"]
                                                                          code:[result objectForKey:@"code"]];
                     
