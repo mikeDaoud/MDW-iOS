@@ -16,6 +16,7 @@
 #import "DateConverter.h"
 #import "AgendaDays.h"
 #import "SessionTypes.h"
+#import "WebServiceDataFetching.h"
 
 
 @interface AllSessionsMyAgenda ()
@@ -48,10 +49,27 @@
       [self.mytableview  addSubview:refreshControl];
 }
 
+
+
+-(void)viewDidAppear:(BOOL)animated{
+    
+    //Getting Sessions, speakers and exhibitors data and adding it to database
+    
+    if (sessions.count < 1) {
+        [self.mytableview setContentOffset:CGPointMake(0, -refreshControl.frame.size.height) animated:YES];
+        [refreshControl beginRefreshing];
+        
+        [WebServiceDataFetching fetchSessionsFromWebServiceAndUpdateTable:self];
+        [WebServiceDataFetching fetchSpeakersFromWebServiceAndUpdateTable:nil];
+        [WebServiceDataFetching fetchExhibitorsFromWebServiceAndUpdateTable:nil];
+        
+    }
+    
+}
+
 -(void) refreshMytableView
 {
-    [self.mytableview reloadData];
-    [refreshControl endRefreshing];
+     [WebServiceDataFetching fetchSessionsFromWebServiceAndUpdateTable:self];
     
 }
 //html label
@@ -136,6 +154,24 @@
     
     
     return cell;
+}
+
+
+
+
+
+-(void)reloadTableView{
+    sessions =  (NSArray *) [[SessionDAO new] getAllUserSessions];
+    [self.mytableview reloadData];
+    [refreshControl endRefreshing];
+}
+
+-(void)showErrorMsgWithText:(NSString *)msg{
+    
+    [refreshControl endRefreshing];
+    
+    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Failed to Load Data" message:msg delegate:nil cancelButtonTitle:@"Retry" otherButtonTitles: nil];
+    [alert show];
 }
 
 
