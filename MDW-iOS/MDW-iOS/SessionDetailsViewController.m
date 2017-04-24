@@ -192,29 +192,40 @@
         } else {
             NSDictionary *result = [responseObject objectForKey:@"result"];
             
-            // Check there is no session registered at the same time
-            if ([[result objectForKey:@"oldSessionId"] intValue] == 0) {
-                [self updateSessionStatus:[[result objectForKey:@"status"] intValue]];
-            }
-            else {
-                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Info" message:@"You are already registered in another session at the same time" preferredStyle:UIAlertControllerStyleAlert];
+            //checking if the response isn't "view.error"
+            if ([[responseObject objectForKey:@"status"] isEqualToString:@"view.success"]) {
                 
-                UIAlertAction *replaceAction = [UIAlertAction actionWithTitle:@"Replace" style:UIAlertActionStyleDefault handler:^(UIAlertAction* _Nonnull action) {
+                // Check there is no session registered at the same time
+                if ([[result objectForKey:@"oldSessionId"] intValue] == 0) {
+                    [self updateSessionStatus:[[result objectForKey:@"status"] intValue]];
+                }
+                else {
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Info" message:@"You are already registered in another session at the same time" preferredStyle:UIAlertControllerStyleAlert];
                     
-                    NSURLSessionDataTask * dataTask = [[SharedObjects sharedSessionManager] dataTaskWithRequest:[ServiceURLs requestRegisterToSessionWithID:_session.sessionId enforce:@"true" status:NOT_ADDED] completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+                    UIAlertAction *replaceAction = [UIAlertAction actionWithTitle:@"Replace" style:UIAlertActionStyleDefault handler:^(UIAlertAction* _Nonnull action) {
                         
-                        [self updateSessionStatus:[[[responseObject objectForKey:@"result"] objectForKey:@"status"] intValue]];
+                        NSURLSessionDataTask * dataTask = [[SharedObjects sharedSessionManager] dataTaskWithRequest:[ServiceURLs requestRegisterToSessionWithID:_session.sessionId enforce:@"true" status:NOT_ADDED] completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+                            
+                            [self updateSessionStatus:[[[responseObject objectForKey:@"result"] objectForKey:@"status"] intValue]];
+                        }];
+                        
+                        [dataTask resume];
                     }];
                     
-                    [dataTask resume];
-                }];
+                    UIAlertAction *ignoreAction = [UIAlertAction actionWithTitle:@"Ignore" style:UIAlertActionStyleDefault handler:nil];
+                    
+                    [alert addAction:replaceAction];
+                    [alert addAction:ignoreAction];
+                    [self presentViewController:alert animated:YES completion:nil];
+                }
                 
-                UIAlertAction *ignoreAction = [UIAlertAction actionWithTitle:@"Ignore" style:UIAlertActionStyleDefault handler:nil];
-                
-                [alert addAction:replaceAction];
-                [alert addAction:ignoreAction];
-                [self presentViewController:alert animated:YES completion:nil];
             }
+            else{
+                UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Failed to Register" message:@"Couldn't register to this session"delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                [alert show];
+            }
+            
+            
         }
     }];
     [dataTask resume];
