@@ -75,6 +75,10 @@
     
     return [exhibitors count];
 }
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+     [[UIApplication sharedApplication]openURL:[NSURL URLWithString:[exhibitors[indexPath.row] companyUrl] ]];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"forIndexPath:indexPath];
