@@ -10,6 +10,8 @@
 
 @protocol TableReloadDelegate <NSObject>
 
+-(void) refreshMytableView;
+
 -(void)reloadTableView;
 
 -(void)showErrorMsgWithText: (NSString *) msg;

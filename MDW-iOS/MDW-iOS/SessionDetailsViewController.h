@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SessionDTO.h"
+#import "TableReloadDelegate.h"
 
 @interface SessionDetailsViewController : ViewController <UIWebViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -23,6 +24,8 @@
 @property (strong, nonatomic) IBOutlet UIImageView *sessionStatusImageView;
 @property (strong, nonatomic) IBOutlet UILabel *sessionLocation;
 @property (strong, nonatomic) IBOutlet UIWebView *sessionDescriptionWebView;
+
+@property id<TableReloadDelegate> tableReloadDelegate;
 
 - (IBAction)onStatusImageViewTapAction:(id)sender;
 

@@ -21,6 +21,8 @@
     NSArray *speakers;
 }
 
+@property UIActivityIndicatorView * indicator;
+
 @end
 
 @implementation SessionDetailsViewController
@@ -65,6 +67,13 @@
     _sessionLocation.text = _session.location;
     _sessionStatusImageView.image = [UIImage imageNamed:[sessionStatusImage objectForKey:[NSNumber numberWithInt:_session.status]]];
     [_sessionDescriptionWebView loadHTMLString:[NSString stringWithFormat:@"<div align='center'>%@<div>", _session.sessionDescription] baseURL:nil];
+    
+    _indicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    _indicator.frame = CGRectMake(0.0, 0.0, 120.0, 120.0);
+    [_indicator setBackgroundColor:[UIColor colorWithWhite:0.0f alpha:0.6f]];
+    _indicator.center = self.view.center;
+    [self.view addSubview:_indicator];
+    [_indicator bringSubviewToFront:self.view];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,7 +83,7 @@
 
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     if (navigationType == UIWebViewNavigationTypeLinkClicked) {
-       [[UIApplication sharedApplication] openURL:[request URL] ];
+        [[UIApplication sharedApplication] openURL:[request URL] ];
         return NO;
     }
     return YES;
@@ -185,19 +194,28 @@
 }
 
 - (IBAction)onStatusImageViewTapAction:(id)sender {
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
+    
+    [_indicator startAnimating];
+    
     NSURLSessionDataTask * dataTask = [[SharedObjects sharedSessionManager] dataTaskWithRequest:[ServiceURLs requestRegisterToSessionWithID:_session.sessionId enforce:@"false" status:_session.status] completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         
         if (error) {
             NSLog(@"Error : %@", error);
         } else {
-            NSDictionary *result = [responseObject objectForKey:@"result"];
             
-            //checking if the response isn't "view.error"
-            if ([[responseObject objectForKey:@"status"] isEqualToString:@"view.success"]) {
+            if ([[responseObject objectForKey:@"result"] isKindOfClass:[NSDictionary class]]) {
                 
+                NSDictionary *result = [responseObject objectForKey:@"result"];
                 // Check there is no session registered at the same time
                 if ([[result objectForKey:@"oldSessionId"] intValue] == 0) {
+                    
                     [self updateSessionStatus:[[result objectForKey:@"status"] intValue]];
+                    
+                    [_indicator stopAnimating];
+                    
+                    [UIApplication sharedApplication].networkActivityIndicatorVisible = FALSE;
                 }
                 else {
                     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Info" message:@"You are already registered in another session at the same time" preferredStyle:UIAlertControllerStyleAlert];
@@ -206,7 +224,21 @@
                         
                         NSURLSessionDataTask * dataTask = [[SharedObjects sharedSessionManager] dataTaskWithRequest:[ServiceURLs requestRegisterToSessionWithID:_session.sessionId enforce:@"true" status:NOT_ADDED] completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
                             
-                            [self updateSessionStatus:[[[responseObject objectForKey:@"result"] objectForKey:@"status"] intValue]];
+                            if ([[responseObject objectForKey:@"result"] isKindOfClass:[NSDictionary class]]) {
+                                
+                                [self updateSessionStatus:[[[responseObject objectForKey:@"result"] objectForKey:@"status"] intValue]];
+                                
+                                [_tableReloadDelegate refreshMytableView];
+                                
+                                [_tableReloadDelegate reloadTableView];
+                                
+                                [_indicator stopAnimating];
+                                
+                                [UIApplication sharedApplication].networkActivityIndicatorVisible = FALSE;
+                            }
+                            else {
+                                [self showAlertForStatusError];
+                            }
                         }];
                         
                         [dataTask resume];
@@ -218,14 +250,10 @@
                     [alert addAction:ignoreAction];
                     [self presentViewController:alert animated:YES completion:nil];
                 }
-                
             }
-            else{
-                UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Failed to Register" message:@"Couldn't register to this session"delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-                [alert show];
+            else {
+                [self showAlertForStatusError];
             }
-            
-            
         }
     }];
     [dataTask resume];
@@ -238,6 +266,23 @@
     
     // Update session status in View
     _sessionStatusImageView.image = [UIImage imageNamed:[sessionStatusImage objectForKey:[NSNumber numberWithInteger:status]]];
+}
+
+-(void)showAlertForStatusError{
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Failed to Register" message:@"Couldn't register to this session" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction* _Nonnull action) {
+        
+        [_tableReloadDelegate refreshMytableView];
+        
+        [_tableReloadDelegate reloadTableView];
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

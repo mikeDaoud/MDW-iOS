@@ -42,12 +42,12 @@
     
     NSLog(@"Sessions length : %lu", (unsigned long)[sessions count]);
     
-     refreshControl=[[UIRefreshControl alloc] init];
+    refreshControl=[[UIRefreshControl alloc] init];
     //set background
-        self.mytableview.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
+    self.mytableview.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
     //refresh table
-        [refreshControl addTarget:self action:@selector(refreshMytableView) forControlEvents:UIControlEventValueChanged];
-      [self.mytableview  addSubview:refreshControl];
+    [refreshControl addTarget:self action:@selector(refreshMytableView) forControlEvents:UIControlEventValueChanged];
+    [self.mytableview  addSubview:refreshControl];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -57,7 +57,7 @@
     if (sessions.count < 1) {
         [self.mytableview setContentOffset:CGPointMake(0, -refreshControl.frame.size.height) animated:YES];
         [refreshControl beginRefreshing];
-
+        
         [WebServiceDataFetching fetchSessionsFromWebServiceAndUpdateTable:self];
         [WebServiceDataFetching fetchSpeakersFromWebServiceAndUpdateTable:nil];
         [WebServiceDataFetching fetchExhibitorsFromWebServiceAndUpdateTable:nil];
@@ -69,7 +69,7 @@
 -(void) refreshMytableView
 {
     [WebServiceDataFetching fetchSessionsFromWebServiceAndUpdateTable:self];
-      
+    
     
 }
 
@@ -94,7 +94,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+    
     return [sessions count];
 }
 
@@ -103,7 +103,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     // Configure the cell...
-     [cell setBackgroundColor: [UIColor clearColor]];
+    [cell setBackgroundColor: [UIColor clearColor]];
     
     //getting session object
     SessionDTO * session = sessions[indexPath.row];
@@ -124,8 +124,8 @@
     [t3 setText:date];
     
     
-//    [img setImage:[UIImage imageNamed:@"firstDay.png"]];
-   // [img SetwithImageInURL:@"http://www.mobiledeveloperweekend.net/service/speakerImage?id=20605" andPlaceholder:@"firstDay.png"];
+    //    [img setImage:[UIImage imageNamed:@"firstDay.png"]];
+    // [img SetwithImageInURL:@"http://www.mobiledeveloperweekend.net/service/speakerImage?id=20605" andPlaceholder:@"firstDay.png"];
     
     NSLog(@"================================%@", session.sessionType);
     
@@ -136,14 +136,14 @@
     }else if ([session.sessionType isEqualToString:@"Workshop"]){
         [img setImage:[UIImage imageNamed:@"workshop.png"]];
         // ADD the date to the label on the image
-           [t4 setText:[DateConverter dayStringFromDate:session.date]];
+        [t4 setText:[DateConverter dayStringFromDate:session.date]];
     }else if ([session.sessionType isEqualToString:@"Break"]){
         [img setImage:[UIImage imageNamed:@"breakicon.png"]];
         [t4 setText:@" "];
     }else if ([session.sessionType isEqualToString:@"Hackathon"]){
         [img setImage:[UIImage imageNamed:@"hacathon.png"]];
         // ADD the date to the label on the image
-           [t4 setText:[DateConverter dayStringFromDate:session.date]];
+        [t4 setText:[DateConverter dayStringFromDate:session.date]];
     }
     
     
@@ -154,6 +154,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     SessionDetailsViewController *sessionDetailsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"sessionDetails"];
     sessionDetailsViewController.session = sessions[indexPath.row];
+    sessionDetailsViewController.tableReloadDelegate = self;
     [self.navigationController pushViewController:sessionDetailsViewController animated:YES];
 }
 
@@ -172,48 +173,48 @@
 }
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 //-(void)dealloc{
 //

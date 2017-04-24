@@ -101,13 +101,20 @@
                     //Successfull login
                     //Storing user data in NSUserDefaults
                     NSDictionary * result = [responseObject objectForKey:@"result"];
+                    
+                    NSString * mobile;
+                    
+                    if ([[result objectForKey:@"mobiles"] count] > 0) {
+                        mobile = [result objectForKey:@"mobiles"][0];
+                    }
+                    
                     Attendee * userData = [[Attendee alloc] initWithFirstName:[result objectForKey:@"firstName"]
                                                                    middleName:[result objectForKey:@"middleName"]
                                                                      lastName:[result objectForKey:@"lastName"]
                                                                         title:[result objectForKey:@"title"]
                                                                   companyName:[result objectForKey:@"companyName"]
                                                                         email:[result objectForKey:@"email"]
-                                                                       mobile:[result objectForKey:@"mobiles"][0]
+                                                                       mobile:mobile
                                                                      imageURL:[result objectForKey:@"imageURL"]
                                                                          code:[result objectForKey:@"code"]];
                     
