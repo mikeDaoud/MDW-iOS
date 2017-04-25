@@ -43,6 +43,10 @@
     
     
     sessions=[[NSMutableArray alloc] init];
+    NSAttributedString *title=[[NSAttributedString alloc]initWithString:@"Fetching data"];
+    [refreshControl setAttributedTitle:title];
+    [refreshControl setTintColor:[UIColor blackColor]];
+    
     refreshControl=[[UIRefreshControl alloc] init];
     //set background
     self.mytableview.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];

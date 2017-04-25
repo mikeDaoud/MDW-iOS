@@ -102,6 +102,11 @@
         
 
     }
+    else if (indexPath.row == 6)
+    {
+        
+        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"http://jets.iti.gov.eg/pageView/4371"]];
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

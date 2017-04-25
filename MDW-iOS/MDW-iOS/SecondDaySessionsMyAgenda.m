@@ -44,6 +44,10 @@
     
     
     refreshControl=[[UIRefreshControl alloc] init];
+    NSAttributedString *title=[[NSAttributedString alloc]initWithString:@"Fetching data"];
+    [refreshControl setAttributedTitle:title];
+    [refreshControl setTintColor:[UIColor blackColor]];
+    
     //set background
     self.mytableview.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
     //refresh table
