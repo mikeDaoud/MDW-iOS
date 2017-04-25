@@ -203,6 +203,11 @@
         
         if (error) {
             NSLog(@"Error : %@", error);
+            [_indicator stopAnimating];
+            
+            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Cann't connect" message:@"Failed to connect to the server" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alert show];
+            
         } else {
             
             if ([[responseObject objectForKey:@"result"] isKindOfClass:[NSDictionary class]]) {
@@ -284,5 +289,6 @@
     [alert addAction:okAction];
     [self presentViewController:alert animated:YES completion:nil];
 }
+
 
 @end

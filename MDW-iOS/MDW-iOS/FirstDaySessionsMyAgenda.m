@@ -35,14 +35,17 @@
     self.mytableview.dataSource=self;
     
     NSArray * dbSessions =  (NSArray *) [[SessionDAO new] getUserSessionsByDate:DAY_ONE];
+    
+    NSLog(@"ARray length is:               %lu", (unsigned long)[dbSessions count]);
     if (dbSessions) {
         sessions = dbSessions;
+        NSLog(@"ARray length is:               %lu", (unsigned long)[sessions count]);
     }else{
         sessions=[[NSArray alloc] init];
     }
     
     
-    sessions=[[NSMutableArray alloc] init];
+//    sessions=[[NSMutableArray alloc] init];
     NSAttributedString *title=[[NSAttributedString alloc]initWithString:@"Fetching data"];
     [refreshControl setAttributedTitle:title];
     [refreshControl setTintColor:[UIColor blackColor]];
@@ -165,6 +168,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     SessionDetailsViewController *sessionDetailsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"sessionDetails"];
     sessionDetailsViewController.session = sessions[indexPath.row];
     sessionDetailsViewController.tableReloadDelegate = self;
