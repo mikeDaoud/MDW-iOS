@@ -30,6 +30,8 @@
 		4CBE19AC1EA22B7900C5C553 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBE19A71EA1EBCB00C5C553 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4CBE19B01EA2432900C5C553 /* DateConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE19AF1EA2432900C5C553 /* DateConverter.m */; };
 		4CBEEB901E99F11B006F848F /* ServiceURLs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */; };
+		4CC2F4B51EAF81DE0078C74C /* no_sessions_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC2F4B31EAF81DE0078C74C /* no_sessions_home.png */; };
+		4CC2F4B61EAF81DE0078C74C /* no_sessions_day.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC2F4B41EAF81DE0078C74C /* no_sessions_day.png */; };
 		4CC3F83C1EA5DB060041F84E /* SharedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC3F83B1EA5DB060041F84E /* SharedObjects.m */; };
 		4CC5466C1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5466B1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m */; };
 		4CC7D4131EA26377000B7E70 /* breakicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC7D4121EA26377000B7E70 /* breakicon.png */; };
@@ -191,6 +193,8 @@
 		4CBE19AF1EA2432900C5C553 /* DateConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateConverter.m; sourceTree = "<group>"; };
 		4CBEEB8E1E99F11B006F848F /* ServiceURLs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceURLs.h; path = "utility Classes/ServiceURLs.h"; sourceTree = "<group>"; };
 		4CBEEB8F1E99F11B006F848F /* ServiceURLs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceURLs.m; path = "utility Classes/ServiceURLs.m"; sourceTree = "<group>"; };
+		4CC2F4B31EAF81DE0078C74C /* no_sessions_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = no_sessions_home.png; path = "MDW UI/no_sessions_home.png"; sourceTree = "<group>"; };
+		4CC2F4B41EAF81DE0078C74C /* no_sessions_day.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = no_sessions_day.png; path = "MDW UI/no_sessions_day.png"; sourceTree = "<group>"; };
 		4CC3F83A1EA5DB060041F84E /* SharedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedObjects.h; sourceTree = "<group>"; };
 		4CC3F83B1EA5DB060041F84E /* SharedObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedObjects.m; sourceTree = "<group>"; };
 		4CC3F83E1EA5ED5D0041F84E /* TableReloadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableReloadDelegate.h; sourceTree = "<group>"; };
@@ -473,6 +477,8 @@
 		4CC7D40D1EA262AC000B7E70 /* agenda_icons */ = {
 			isa = PBXGroup;
 			children = (
+				4CC2F4B31EAF81DE0078C74C /* no_sessions_home.png */,
+				4CC2F4B41EAF81DE0078C74C /* no_sessions_day.png */,
 				4CC7D4121EA26377000B7E70 /* breakicon.png */,
 				4CC7D4141EA2638D000B7E70 /* session.png */,
 				4CC7D4161EA26397000B7E70 /* hacathon.png */,
@@ -711,6 +717,7 @@
 				CC64AA2A1E9F1DB90058EB6A /* Icon-76@2x 2.png in Resources */,
 				CC64AA221E9F1DB90058EB6A /* Icon-40@3x 3.png in Resources */,
 				CC64AA2D1E9F1DB90058EB6A /* Icon-83.5@2x.png in Resources */,
+				4CC2F4B61EAF81DE0078C74C /* no_sessions_day.png in Resources */,
 				CC64AA301E9F1DB90058EB6A /* Icon-Small@2x 2.png in Resources */,
 				CC64AA3B1E9F1DB90058EB6A /* loginTextBoxsBackGround.png in Resources */,
 				CC64AA281E9F1DB90058EB6A /* Icon-76 2.png in Resources */,
@@ -736,6 +743,7 @@
 				4CEF75A21E99694500AA3E07 /* Main.storyboard in Resources */,
 				CC64AA421E9F1DB90058EB6A /* myTicketBackground.png in Resources */,
 				CC64AA4E1E9F1DB90058EB6A /* splash (2).png in Resources */,
+				4CC2F4B51EAF81DE0078C74C /* no_sessions_home.png in Resources */,
 				CC64AA361E9F1DB90058EB6A /* leftSideMenuBackground.png in Resources */,
 				CC64AA461E9F1DB90058EB6A /* reveal-icon.png in Resources */,
 				CC64AA2E1E9F1DB90058EB6A /* Icon-Small 2.png in Resources */,

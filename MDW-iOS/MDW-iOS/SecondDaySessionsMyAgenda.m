@@ -56,20 +56,24 @@
 }
 
 
+-(void)viewWillAppear:(BOOL)animated{
+    if (sessions.count < 1) {
+        [_mytableview setHidden:YES];
+    }
+}
+
 -(void)viewDidAppear:(BOOL)animated{
     
     //Getting Sessions, speakers and exhibitors data and adding it to database
     
    
-        [self.mytableview setContentOffset:CGPointMake(0, -refreshControl.frame.size.height) animated:YES];
-        [refreshControl beginRefreshing];
+//        [self.mytableview setContentOffset:CGPointMake(0, -refreshControl.frame.size.height) animated:YES];
+//        [refreshControl beginRefreshing];
         
-        [WebServiceDataFetching fetchSessionsFromWebServiceAndUpdateTable:self];
-        [WebServiceDataFetching fetchSpeakersFromWebServiceAndUpdateTable:nil];
-        [WebServiceDataFetching fetchExhibitorsFromWebServiceAndUpdateTable:nil];
+//        [WebServiceDataFetching fetchSessionsFromWebServiceAndUpdateTable:self];
+//        [WebServiceDataFetching fetchSpeakersFromWebServiceAndUpdateTable:nil];
+//        [WebServiceDataFetching fetchExhibitorsFromWebServiceAndUpdateTable:nil];
         
-
-    
 }
 
 -(void) refreshMytableView
@@ -96,12 +100,10 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     return [sessions count];
    
 }

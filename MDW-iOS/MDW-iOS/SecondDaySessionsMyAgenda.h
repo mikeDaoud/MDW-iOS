@@ -11,4 +11,5 @@
 
 @interface SecondDaySessionsMyAgenda :UIViewController<UITableViewDataSource,UITableViewDelegate,TableReloadDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *mytableview;
+@property (strong, nonatomic) IBOutlet UIImageView *overlay;
 @end
