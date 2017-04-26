@@ -35,13 +35,6 @@
     [super viewDidLoad];
     self.mytableview.delegate=self;
     self.mytableview.dataSource=self;
-  
-    NSArray * dbSessions =  (NSArray *) [[SessionDAO new] getUserSessionsByDate:DAY_THREE];
-    if (dbSessions) {
-        sessions = dbSessions;
-    }else{
-        sessions=[[NSArray alloc] init];
-    }
     refreshControl=[[UIRefreshControl alloc] init];
     NSAttributedString *title=[[NSAttributedString alloc]initWithString:@"Fetching data"];
     [refreshControl setAttributedTitle:title];
@@ -55,9 +48,19 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+
+    
+    NSArray * dbSessions =  (NSArray *) [[SessionDAO new] getUserSessionsByDate:DAY_THREE];
+    if (dbSessions) {
+        sessions = dbSessions;
+    }else{
+        sessions=[[NSArray alloc] init];
+    }
+
     if (sessions.count < 1) {
         [_mytableview setHidden:YES];
     }
+        [self.mytableview reloadData];
 }
 
 -(void)viewDidAppear:(BOOL)animated{

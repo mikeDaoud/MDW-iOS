@@ -203,6 +203,14 @@
         
         if (error) {
             NSLog(@"Error : %@", error);
+            
+            [_indicator stopAnimating];
+            
+            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Failed to Connect" message: @"Couldn't connect to Server \nPLease check your internet connection" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alert show];
+            
+            
+            
         } else {
             
             if ([[responseObject objectForKey:@"result"] isKindOfClass:[NSDictionary class]]) {
@@ -212,6 +220,8 @@
                 if ([[result objectForKey:@"oldSessionId"] intValue] == 0) {
                     
                     [self updateSessionStatus:[[result objectForKey:@"status"] intValue]];
+                    
+                    [_tableReloadDelegate reloadTableView];
                     
                     [_indicator stopAnimating];
                     
