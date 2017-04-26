@@ -34,8 +34,18 @@
     self.mytableview.delegate=self;
     self.mytableview.dataSource=self;
     
+    NSArray * dbSessions =  (NSArray *) [[SessionDAO new] getUserSessionsByDate:DAY_ONE];
     
-   // sessions=[[NSMutableArray alloc] init];
+    NSLog(@"ARray length is:               %lu", (unsigned long)[dbSessions count]);
+    if (dbSessions) {
+        sessions = dbSessions;
+        NSLog(@"ARray length is:               %lu", (unsigned long)[sessions count]);
+    }else{
+        sessions=[[NSArray alloc] init];
+    }
+    
+    
+//    sessions=[[NSMutableArray alloc] init];
     NSAttributedString *title=[[NSAttributedString alloc]initWithString:@"Fetching data"];
     [refreshControl setAttributedTitle:title];
     [refreshControl setTintColor:[UIColor blackColor]];

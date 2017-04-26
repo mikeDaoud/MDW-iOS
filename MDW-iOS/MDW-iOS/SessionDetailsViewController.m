@@ -203,10 +203,9 @@
         
         if (error) {
             NSLog(@"Error : %@", error);
-            
             [_indicator stopAnimating];
             
-            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Failed to Connect" message: @"Couldn't connect to Server \nPLease check your internet connection" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Cann't connect" message:@"Failed to connect to the server" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
             [alert show];
             
             
