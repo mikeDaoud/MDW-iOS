@@ -12,7 +12,6 @@
 		0365A98E1EA39AE500A6B6A3 /* SessionDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0365A98D1EA39AE500A6B6A3 /* SessionDetailsViewController.m */; };
 		0365A9911EA401EE00A6B6A3 /* NameFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0365A9901EA401EE00A6B6A3 /* NameFormatter.m */; };
 		4C81C1301E9FB7580076D2F4 /* loginHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C81C12F1E9FB7580076D2F4 /* loginHeader.png */; };
-		4C81C1321E9FB7680076D2F4 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C81C1311E9FB7680076D2F4 /* background.png */; };
 		4C81C1351E9FB9F20076D2F4 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1341E9FB9F20076D2F4 /* SignInViewController.m */; };
 		4C81C13A1E9FDE7D0076D2F4 /* WebServiceDataFetching.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C81C1391E9FDE7D0076D2F4 /* WebServiceDataFetching.m */; };
 		4CBE198A1EA1E63A00C5C553 /* AgendaDays.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE19871EA1E63A00C5C553 /* AgendaDays.m */; };
@@ -35,8 +34,6 @@
 		4CC3F83C1EA5DB060041F84E /* SharedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC3F83B1EA5DB060041F84E /* SharedObjects.m */; };
 		4CC5466C1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5466B1EA026DE00CA0B62 /* UIImageView+UIImageView_CashingWebImage.m */; };
 		4CC7D4131EA26377000B7E70 /* breakicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC7D4121EA26377000B7E70 /* breakicon.png */; };
-		4CC7D4151EA2638D000B7E70 /* session.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC7D4141EA2638D000B7E70 /* session.png */; };
-		4CC7D4171EA26397000B7E70 /* hacathon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC7D4161EA26397000B7E70 /* hacathon.png */; };
 		4CC7D4191EA263B0000B7E70 /* workshop.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC7D4181EA263B0000B7E70 /* workshop.png */; };
 		4CEF75991E99694500AA3E07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF75981E99694500AA3E07 /* main.m */; };
 		4CEF759C1E99694500AA3E07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF759B1E99694500AA3E07 /* AppDelegate.m */; };
@@ -63,7 +60,6 @@
 		CC64AA101E9F1DB90058EB6A /* agenda.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9CB1E9F1DB80058EB6A /* agenda.png */; };
 		CC64AA111E9F1DB90058EB6A /* allDays.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9CC1E9F1DB80058EB6A /* allDays.png */; };
 		CC64AA121E9F1DB90058EB6A /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9CD1E9F1DB80058EB6A /* background.png */; };
-		CC64AA131E9F1DB90058EB6A /* breakicon.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9CE1E9F1DB80058EB6A /* breakicon.png */; };
 		CC64AA141E9F1DB90058EB6A /* calender.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9CF1E9F1DB80058EB6A /* calender.png */; };
 		CC64AA151E9F1DB90058EB6A /* contact.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9D01E9F1DB80058EB6A /* contact.png */; };
 		CC64AA161E9F1DB90058EB6A /* emailIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9D11E9F1DB80058EB6A /* emailIcon.png */; };
@@ -102,7 +98,6 @@
 		CC64AA371E9F1DB90058EB6A /* leftSideMenuHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9F21E9F1DB80058EB6A /* leftSideMenuHeader.png */; };
 		CC64AA381E9F1DB90058EB6A /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9F31E9F1DB80058EB6A /* location.png */; };
 		CC64AA391E9F1DB90058EB6A /* loginButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9F41E9F1DB80058EB6A /* loginButton.png */; };
-		CC64AA3A1E9F1DB90058EB6A /* loginHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9F51E9F1DB80058EB6A /* loginHeader.png */; };
 		CC64AA3B1E9F1DB90058EB6A /* loginTextBoxsBackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9F61E9F1DB80058EB6A /* loginTextBoxsBackGround.png */; };
 		CC64AA3C1E9F1DB90058EB6A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9F71E9F1DB80058EB6A /* logo.png */; };
 		CC64AA3D1E9F1DB90058EB6A /* logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64A9F81E9F1DB80058EB6A /* logo1.png */; };
@@ -128,7 +123,6 @@
 		CC64AA511E9F1DB90058EB6A /* starclicked.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64AA0C1E9F1DB90058EB6A /* starclicked.png */; };
 		CC64AA521E9F1DB90058EB6A /* thirdDay.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64AA0D1E9F1DB90058EB6A /* thirdDay.png */; };
 		CC64AA531E9F1DB90058EB6A /* ticket.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64AA0E1E9F1DB90058EB6A /* ticket.png */; };
-		CC64AA541E9F1DB90058EB6A /* workshop.png in Resources */ = {isa = PBXBuildFile; fileRef = CC64AA0F1E9F1DB90058EB6A /* workshop.png */; };
 		CC74FAB51EA36A210067C73A /* SpeakrsList.m in Sources */ = {isa = PBXBuildFile; fileRef = CC74FAB41EA36A210067C73A /* SpeakrsList.m */; };
 		CC7E39491E9E6349002EE671 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E39481E9E6349002EE671 /* SWRevealViewController.m */; };
 		EC3AC7F7B5922D3846D3E198 /* libPods-MDW-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D11EF6796886A51818D1FAE /* libPods-MDW-iOS.a */; };
@@ -712,7 +706,6 @@
 				CC64AA251E9F1DB90058EB6A /* Icon-60@2x.png in Resources */,
 				CC64AA2F1E9F1DB90058EB6A /* Icon-Small.png in Resources */,
 				CC64AA1B1E9F1DB90058EB6A /* Icon-40 2.png in Resources */,
-				CC64AA3A1E9F1DB90058EB6A /* loginHeader.png in Resources */,
 				CC64AA471E9F1DB90058EB6A /* secondDay.png in Resources */,
 				CC64AA2A1E9F1DB90058EB6A /* Icon-76@2x 2.png in Resources */,
 				CC64AA221E9F1DB90058EB6A /* Icon-40@3x 3.png in Resources */,
@@ -724,7 +717,6 @@
 				CC64AA3F1E9F1DB90058EB6A /* MDW 2016 Mobile APP150-47.png in Resources */,
 				CC64AA491E9F1DB90058EB6A /* sessionapproved.png in Resources */,
 				CC64AA391E9F1DB90058EB6A /* loginButton.png in Resources */,
-				4C81C1321E9FB7680076D2F4 /* background.png in Resources */,
 				CC64AA351E9F1DB90058EB6A /* jetsmoblab.PNG in Resources */,
 				CC64AA1A1E9F1DB90058EB6A /* hacathon.png in Resources */,
 				4CC7D4131EA26377000B7E70 /* breakicon.png in Resources */,
@@ -736,7 +728,6 @@
 				CC64AA291E9F1DB90058EB6A /* Icon-76.png in Resources */,
 				CC64AA201E9F1DB90058EB6A /* Icon-40@2x.png in Resources */,
 				CC64AA521E9F1DB90058EB6A /* thirdDay.png in Resources */,
-				4CC7D4171EA26397000B7E70 /* hacathon.png in Resources */,
 				CC64AA4C1E9F1DB90058EB6A /* sideMenuBackGround.png in Resources */,
 				4CC7D4191EA263B0000B7E70 /* workshop.png in Resources */,
 				CC64AA3D1E9F1DB90058EB6A /* logo1.png in Resources */,
@@ -748,14 +739,12 @@
 				CC64AA461E9F1DB90058EB6A /* reveal-icon.png in Resources */,
 				CC64AA2E1E9F1DB90058EB6A /* Icon-Small 2.png in Resources */,
 				CC64AA411E9F1DB90058EB6A /* myContactBackground.png in Resources */,
-				4CC7D4151EA2638D000B7E70 /* session.png in Resources */,
 				CC64AA161E9F1DB90058EB6A /* emailIcon.png in Resources */,
 				CC64AA4D1E9F1DB90058EB6A /* speaker.png in Resources */,
 				CC64AA141E9F1DB90058EB6A /* calender.png in Resources */,
 				CC64AA261E9F1DB90058EB6A /* Icon-60@3x 2.png in Resources */,
 				CC64AA331E9F1DB90058EB6A /* Icon-Small@3x.png in Resources */,
 				CC64AA151E9F1DB90058EB6A /* contact.png in Resources */,
-				CC64AA131E9F1DB90058EB6A /* breakicon.png in Resources */,
 				CC64AA1F1E9F1DB90058EB6A /* Icon-40@2x 3.png in Resources */,
 				CC64AA341E9F1DB90058EB6A /* info.png in Resources */,
 				CC64AA531E9F1DB90058EB6A /* ticket.png in Resources */,
@@ -769,7 +758,6 @@
 				CC64AA271E9F1DB90058EB6A /* Icon-60@3x.png in Resources */,
 				CC64AA3C1E9F1DB90058EB6A /* logo.png in Resources */,
 				CC64AA371E9F1DB90058EB6A /* leftSideMenuHeader.png in Resources */,
-				CC64AA541E9F1DB90058EB6A /* workshop.png in Resources */,
 				CC64AA111E9F1DB90058EB6A /* allDays.png in Resources */,
 				CC64AA171E9F1DB90058EB6A /* exihiptors.png in Resources */,
 				CC64AA441E9F1DB90058EB6A /* profile.png in Resources */,
