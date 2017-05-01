@@ -24,6 +24,8 @@
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor orangeColor]}];
     [self setTitle:@"MDW"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
+    
+    [self.tabBar setTintColor:[UIColor orangeColor]];
 }
 
 - (void)didReceiveMemoryWarning {

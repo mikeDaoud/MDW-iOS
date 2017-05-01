@@ -22,6 +22,7 @@
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor orangeColor]}];
     [self setTitle:@"MDW"];
+    [self.tabBar setTintColor:[UIColor orangeColor]];
 
     
     
